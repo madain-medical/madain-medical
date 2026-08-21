@@ -17,10 +17,16 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 .nav-btn:hover{background:#243b53}
 .main{margin-left:240px;padding:30px}
 .section{display:none}
-.header,.section-title,.dashboard-card,.year-card,.semester,.subject,.lecture,.founder,.support,.coming,.ai-box{background:white;border-radius:14px;box-shadow:0 3px 15px rgba(0,0,0,.06)}
+.header,.section-title,.dashboard-card,.year-card,.semester,.subject,.lecture,.founder,.support,.coming,.ai-box,.rules-box{
+background:white;border-radius:14px;box-shadow:0 3px 15px rgba(0,0,0,.06)
+}
 .header{padding:28px;margin-bottom:22px}
-.header h1,.section-title h2,.year-card h3,.subject h4,.lecture h3,.founder h3,.coming h2{color:#102a43}
-.header p,.year-card p,.section-title p,.lecture p,.role,.coming p{color:#627d98}
+.header h1,.section-title h2,.year-card h3,.subject h4,.lecture h3,.founder h3,.coming h2{
+color:#102a43
+}
+.header p,.year-card p,.section-title p,.lecture p,.role,.coming p{
+color:#627d98
+}
 .dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
 .dashboard-card,.year-card{padding:22px;cursor:pointer;transition:.2s}
 .dashboard-card:hover,.year-card:hover{transform:translateY(-3px)}
@@ -45,14 +51,16 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 .founder h3{margin-bottom:7px}
 .support{padding:22px;line-height:1.8}
 .support a{color:#102a43;font-weight:bold}
-
 .ai-box{padding:25px;max-width:800px}
 #aiQuestion{width:100%;height:140px;padding:15px;border:1px solid #d9e2ec;border-radius:10px;font-size:16px;resize:vertical;margin-bottom:12px}
 #askButton{background:#102a43;color:white;border:0;padding:12px 20px;border-radius:8px;font-size:15px;cursor:pointer}
 #askButton:hover{background:#243b53}
 #aiLoading{margin-top:18px;color:#627d98}
 #aiAnswer{margin-top:18px;padding:18px;background:#f4f7fa;border-radius:10px;line-height:1.7;white-space:pre-wrap}
-
+.rules-box{padding:28px;line-height:2;text-align:right;direction:rtl}
+.rules-box h2{color:#102a43;margin-bottom:18px}
+.rules-box p{margin-bottom:15px;color:#486581}
+.rules-box ul{padding-right:25px;color:#486581}
 @media(max-width:800px){
 .sidebar{position:relative;width:100%;height:auto}
 .main{margin-left:0;padding:18px}
@@ -73,12 +81,12 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <button class="nav-btn" onclick="show('dashboard')">🏠 Dashboard</button>
 <button class="nav-btn" onclick="show('academic')">🎓 Academic Years</button>
-<button class="nav-btn" onclick="show('library')">📚 Madain Medical Association</button>
+<button class="nav-btn" onclick="show('library')">📚 Medical Library</button>
 <button class="nav-btn" onclick="show('ai')">🤖 Ask B7 AI</button>
 
 <div class="nav-title">Information</div>
 
-<button class="nav-btn" onclick="show('founders')">👥 Founders</button>
+<button class="nav-btn" onclick="show('founders')">👥 Members</button>
 <button class="nav-btn" onclick="show('support')">✉️ Support</button>
 
 </aside>
@@ -104,7 +112,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <div class="dashboard-card" onclick="show('library')">
 <div class="dashboard-icon">📚</div>
-<h3>Madain Medical Association</h3>
+<h3>Medical Library</h3>
 <p>Medical books and resources.</p>
 </div>
 
@@ -116,8 +124,8 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <div class="dashboard-card" onclick="show('founders')">
 <div class="dashboard-icon">👥</div>
-<h3>Founders</h3>
-<p>Meet the founders.</p>
+<h3>Members</h3>
+<p>Meet the team behind the platform.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('support')">
@@ -126,7 +134,63 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 <p>Contact us.</p>
 </div>
 
+<div class="dashboard-card" onclick="show('rules')">
+<div class="dashboard-icon">📜</div>
+<h3>Rules & Privacy</h3>
+<p>Important information and policies.</p>
 </div>
+
+</div>
+</section>
+
+
+<!-- RULES -->
+
+<section id="rules" class="section">
+
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
+
+<div class="rules-box">
+
+<h2>القوانين والخصوصية</h2>
+
+<p>
+نشكركم على استخدام منصة
+<strong>Madain Medical Association</strong>.
+تم إنشاء هذه المنصة لخدمة الطلاب وتسهيل الوصول إلى
+المصادر والمواد التعليمية الطبية.
+</p>
+
+<p>
+نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير
+هذه المنصة، ونسأل الله أن يجزيهم خير الجزاء وأن يجعل هذا
+العمل نافعاً للطلاب والعلم.
+</p>
+
+<p>
+<strong>الخصوصية وحماية البيانات:</strong>
+نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها
+بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.
+</p>
+
+<p>
+المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط،
+ولا يُعتبر بديلاً عن استشارة الطبيب أو المصادر الطبية
+المعتمدة.
+</p>
+
+<p>
+يُمنع استخدام المنصة في أي نشاط غير قانوني أو محاولة
+الوصول غير المصرح به إلى بيانات أو أنظمة المنصة.
+</p>
+
+<p>
+باستخدامك لهذه المنصة، فإنك توافق على الالتزام بهذه
+القوانين والسياسات واحترام حقوق أصحاب المحتوى.
+</p>
+
+</div>
+
 </section>
 
 
@@ -435,7 +499,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <div class="subject"><h4>Pediatrics 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject"><h4>Obstetrics 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Obstetrics & Gynaecology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 <div class="subject"><h4>Psychiatry 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
@@ -456,7 +520,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <div class="subject"><h4>Pediatrics 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject"><h4>Obstetrics 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Obstetrics & Gynaecology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 <div class="subject"><h4>Psychiatry 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
@@ -534,7 +598,7 @@ Ask B7 AI
 </section>
 
 
-<!-- MADAIN MEDICAL ASSOCIATION -->
+<!-- LIBRARY -->
 
 <section id="library" class="section">
 
@@ -544,7 +608,7 @@ Ask B7 AI
 ← Dashboard
 </button>
 
-<h2>📚 Madain Medical Association</h2>
+<h2>📚 Madain Medical Association Library</h2>
 
 </div>
 
@@ -556,7 +620,7 @@ Ask B7 AI
 </section>
 
 
-<!-- FOUNDERS -->
+<!-- FOUNDERS / MEMBERS -->
 
 <section id="founders" class="section">
 
@@ -566,7 +630,7 @@ Ask B7 AI
 ← Dashboard
 </button>
 
-<h2>👥 Founders</h2>
+<h2>👥 Members</h2>
 
 </div>
 
@@ -578,11 +642,6 @@ Ask B7 AI
 </div>
 
 <div class="founder">
-<h3>Mohand Siddiq Mohammed Ahmed</h3>
-<div class="role">Co-Founder</div>
-</div>
-
-<div class="founder">
 <h3>Ehab Hamdy</h3>
 <div class="role">Member</div>
 </div>
@@ -590,6 +649,11 @@ Ask B7 AI
 <div class="founder">
 <h3>Abrar Hijazi</h3>
 <div class="role">Member</div>
+</div>
+
+<div class="founder">
+<h3>Mohannad Siddig Mohamed Ahmed</h3>
+<div class="role">Co-Founder</div>
 </div>
 
 </div>
@@ -633,6 +697,7 @@ almdainb7@gmail.com
 
 const sections=[
 "dashboard",
+"rules",
 "academic",
 "first",
 "second",
@@ -687,7 +752,6 @@ const loading=document.getElementById("aiLoading");
 
 const button=document.getElementById("askButton");
 
-
 if(!question){
 
 answer.textContent="Please write your question first.";
@@ -696,13 +760,11 @@ return;
 
 }
 
-
 loading.style.display="block";
 
 answer.textContent="";
 
 button.disabled=true;
-
 
 try{
 
@@ -720,9 +782,7 @@ message:question
 
 });
 
-
 const data=await response.json();
-
 
 if(!response.ok){
 
@@ -730,9 +790,7 @@ throw new Error(data.error || "Something went wrong.");
 
 }
 
-
 answer.textContent=data.reply || "No answer received.";
-
 
 }catch(error){
 
