@@ -17,7 +17,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 .nav-btn:hover{background:#243b53}
 .main{margin-left:240px;padding:30px}
 .section{display:none}
-.header,.section-title,.dashboard-card,.year-card,.semester,.subject,.lecture,.founder,.support,.coming{background:white;border-radius:14px;box-shadow:0 3px 15px rgba(0,0,0,.06)}
+.header,.section-title,.dashboard-card,.year-card,.semester,.subject,.lecture,.founder,.support,.coming,.ai-box{background:white;border-radius:14px;box-shadow:0 3px 15px rgba(0,0,0,.06)}
 .header{padding:28px;margin-bottom:22px}
 .header h1,.section-title h2,.year-card h3,.subject h4,.lecture h3,.founder h3,.coming h2{color:#102a43}
 .header p,.year-card p,.section-title p,.lecture p,.role,.coming p{color:#627d98}
@@ -45,6 +45,13 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 .founder h3{margin-bottom:7px}
 .support{padding:22px;line-height:1.8}
 .support a{color:#102a43;font-weight:bold}
+
+.ai-box{padding:25px;max-width:800px}
+#aiQuestion{width:100%;height:140px;padding:15px;border:1px solid #d9e2ec;border-radius:10px;font-size:16px;resize:vertical;margin-bottom:12px}
+#askButton{background:#102a43;color:white;border:0;padding:12px 20px;border-radius:8px;font-size:15px;cursor:pointer}
+#askButton:hover{background:#243b53}
+#aiLoading{margin-top:18px;color:#627d98}
+#aiAnswer{margin-top:18px;padding:18px;background:#f4f7fa;border-radius:10px;line-height:1.7;white-space:pre-wrap}
 
 @media(max-width:800px){
 .sidebar{position:relative;width:100%;height:auto}
@@ -78,7 +85,6 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <main class="main">
 
-
 <!-- DASHBOARD -->
 
 <section id="dashboard" class="section">
@@ -105,7 +111,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 <div class="dashboard-card" onclick="show('ai')">
 <div class="dashboard-icon">🤖</div>
 <h3>Ask B7 AI</h3>
-<p>Your academic AI assistant.</p>
+<p>Your academic medical assistant.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('founders')">
@@ -124,7 +130,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </section>
 
 
-<!-- ACADEMIC -->
+<!-- ACADEMIC YEARS -->
 
 <section id="academic" class="section">
 
@@ -177,11 +183,13 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 
 <div class="semester">
+
 <h3>Semester 1</h3>
 
 <div class="subject-grid">
 
-<div class="subject"><h4>Biology</h4>
+<div class="subject">
+<h4>Biology</h4>
 <button onclick="show('biology')">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
@@ -203,6 +211,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 
 <div class="semester">
+
 <h3>Semester 2</h3>
 
 <div class="subject-grid">
@@ -241,6 +250,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 
 <div class="semester">
+
 <h3>Semester 3</h3>
 
 <div class="subject-grid">
@@ -259,6 +269,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 
 <div class="semester">
+
 <h3>Semester 4</h3>
 
 <div class="subject-grid">
@@ -299,6 +310,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 
 <div class="semester">
+
 <h3>Semester 5</h3>
 
 <div class="subject-grid">
@@ -320,8 +332,8 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 </div>
 
-
 <div class="semester">
+
 <h3>Semester 6</h3>
 
 <div class="subject-grid">
@@ -354,6 +366,7 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 
 <div class="semester">
+
 <h3>Semester 7</h3>
 
 <div class="subject-grid">
@@ -375,8 +388,8 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 </div>
 </div>
 
-
 <div class="semester">
+
 <h3>Semester 8</h3>
 
 <div class="subject-grid">
@@ -426,13 +439,8 @@ body{font-family:Arial,sans-serif;background:#f4f7fa;color:#1f2937}
 
 <div class="lecture">
 
-<h3>
-Lecture 2 — The Cell Structure and Function
-</h3>
-
-<p>
-Biology Lecture
-</p>
+<h3>Lecture 2 — The Cell Structure and Function</h3>
+<p>Biology Lecture</p>
 
 <a href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf" target="_blank">
 Open Lecture
@@ -441,6 +449,43 @@ Open Lecture
 <a href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf" target="_blank">
 Download
 </a>
+
+</div>
+</section>
+
+
+<!-- AI -->
+
+<section id="ai" class="section">
+
+<div class="section-title">
+
+<button class="back" onclick="show('dashboard')">
+← Dashboard
+</button>
+
+<h2>🤖 Ask B7 AI</h2>
+
+<p>Your academic medical assistant</p>
+
+</div>
+
+<div class="ai-box">
+
+<textarea
+id="aiQuestion"
+placeholder="Ask B7 AI a medical question..."
+></textarea>
+
+<button id="askButton" onclick="askAI()">
+Ask B7 AI
+</button>
+
+<div id="aiLoading" style="display:none">
+⏳ Thinking...
+</div>
+
+<div id="aiAnswer"></div>
 
 </div>
 
@@ -452,8 +497,13 @@ Download
 <section id="library" class="section">
 
 <div class="section-title">
-<button class="back" onclick="show('dashboard')">← Dashboard</button>
+
+<button class="back" onclick="show('dashboard')">
+← Dashboard
+</button>
+
 <h2>📚 Medical Library</h2>
+
 </div>
 
 <div class="coming">
@@ -464,30 +514,18 @@ Download
 </section>
 
 
-<!-- AI -->
-
-<section id="ai" class="section">
-
-<div class="section-title">
-<button class="back" onclick="show('dashboard')">← Dashboard</button>
-<h2>🤖 Ask B7 AI</h2>
-</div>
-
-<div class="coming">
-<h2>Ask B7 AI</h2>
-<p>AI Academic Assistant — Coming Soon</p>
-</div>
-
-</section>
-
-
 <!-- FOUNDERS -->
 
 <section id="founders" class="section">
 
 <div class="section-title">
-<button class="back" onclick="show('dashboard')">← Dashboard</button>
+
+<button class="back" onclick="show('dashboard')">
+← Dashboard
+</button>
+
 <h2>👥 Founders</h2>
+
 </div>
 
 <div class="founders">
@@ -517,8 +555,13 @@ Download
 <section id="support" class="section">
 
 <div class="section-title">
-<button class="back" onclick="show('dashboard')">← Dashboard</button>
+
+<button class="back" onclick="show('dashboard')">
+← Dashboard
+</button>
+
 <h2>✉️ Contact & Support</h2>
+
 </div>
 
 <div class="support">
@@ -550,8 +593,8 @@ const sections=[
 "fourth",
 "fifth",
 "biology",
-"library",
 "ai",
+"library",
 "founders",
 "support"
 ];
@@ -581,12 +624,91 @@ behavior:"smooth"
 
 }
 
+
 function soon(){
 alert("Coming Soon 🚀");
 }
 
+
+async function askAI(){
+
+const question=document.getElementById("aiQuestion").value.trim();
+
+const answer=document.getElementById("aiAnswer");
+
+const loading=document.getElementById("aiLoading");
+
+const button=document.getElementById("askButton");
+
+
+if(!question){
+
+answer.textContent="Please write your question first.";
+
+return;
+
+}
+
+
+loading.style.display="block";
+
+answer.textContent="";
+
+button.disabled=true;
+
+
+try{
+
+const response=await fetch("/api/chat",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+message:question
+})
+
+});
+
+
+const data=await response.json();
+
+
+if(!response.ok){
+
+throw new Error(data.error || "Something went wrong.");
+
+}
+
+
+answer.textContent=data.reply || "No answer received.";
+
+
+}catch(error){
+
+answer.textContent=
+"Sorry, something went wrong. Please try again.";
+
+console.error(error);
+
+}finally{
+
+loading.style.display="none";
+
+button.disabled=false;
+
+}
+
+}
+
+
 window.onload=function(){
+
 show("dashboard");
+
 };
 
 </script>
