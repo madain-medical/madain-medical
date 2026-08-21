@@ -3,274 +3,351 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B7 Gallery | Medical Library</title>
+
+<title>B7 Gallery | Academic Library</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #1f2937;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fa;
+    color:#1f2937;
 }
 
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background: #102a43;
-    color: white;
-    padding: 25px 18px;
-    overflow-y: auto;
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#102a43;
+    color:white;
+    padding:25px 18px;
 }
 
-.logo {
-    text-align: center;
-    margin-bottom: 30px;
+.logo{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.logo img {
-    width: 95px;
-    height: 95px;
-    object-fit: contain;
-    border-radius: 12px;
-    background: white;
-    padding: 5px;
+.logo img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    background:white;
+    padding:5px;
+    border-radius:12px;
 }
 
-.logo h2 {
-    margin-top: 12px;
-    font-size: 21px;
+.logo h2{
+    margin-top:12px;
+    font-size:21px;
 }
 
-.nav-title {
-    font-size: 12px;
-    color: #9fb3c8;
-    margin: 25px 10px 10px;
-    text-transform: uppercase;
+.nav-title{
+    font-size:11px;
+    color:#9fb3c8;
+    margin:25px 10px 10px;
+    text-transform:uppercase;
 }
 
-.nav-btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 7px 0;
-    border: none;
-    border-radius: 8px;
-    background: transparent;
-    color: white;
-    text-align: left;
-    cursor: pointer;
-    font-size: 15px;
+.nav-btn{
+    width:100%;
+    padding:13px;
+    margin:5px 0;
+    border:none;
+    border-radius:8px;
+    background:transparent;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    font-size:15px;
 }
 
-.nav-btn:hover {
-    background: #243b53;
+.nav-btn:hover{
+    background:#243b53;
 }
 
-/* Main */
-.main {
-    margin-left: 250px;
-    padding: 35px;
+/* MAIN */
+
+.main{
+    margin-left:250px;
+    padding:35px;
 }
 
-.header {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+.header{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
 }
 
-.header h1 {
-    font-size: 30px;
-    margin-bottom: 8px;
+.header h1{
+    font-size:30px;
+    color:#102a43;
+    margin-bottom:8px;
 }
 
-.header p {
-    color: #627d98;
+.header p{
+    color:#627d98;
 }
 
-/* Sections */
-.section {
-    margin-bottom: 40px;
+/* DASHBOARD */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
 }
 
-.section h2 {
-    margin-bottom: 18px;
-    color: #102a43;
+.dashboard-card{
+    background:white;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+    cursor:pointer;
+    transition:.2s;
 }
 
-.year {
-    background: white;
-    border-radius: 14px;
-    padding: 22px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+.dashboard-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
 }
 
-.year-title {
-    font-size: 22px;
-    color: #102a43;
-    margin-bottom: 18px;
+.dashboard-icon{
+    font-size:35px;
+    margin-bottom:15px;
 }
 
-.semester {
-    margin-bottom: 25px;
+.dashboard-card h3{
+    color:#102a43;
+    margin-bottom:8px;
 }
 
-.semester h4 {
-    color: #486581;
-    margin-bottom: 12px;
+.dashboard-card p{
+    color:#627d98;
+    line-height:1.5;
 }
 
-.subjects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 15px;
+/* SECTIONS */
+
+.section{
+    display:none;
 }
 
-.subject {
-    border: 1px solid #d9e2ec;
-    border-radius: 12px;
-    padding: 18px;
-    background: #fafbfc;
-    transition: 0.2s;
+.section-title{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
 }
 
-.subject:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+.section-title h2{
+    color:#102a43;
+    margin-bottom:8px;
 }
 
-.subject h3 {
-    margin-bottom: 14px;
-    color: #243b53;
-    font-size: 17px;
+/* YEARS */
+
+.year-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
-.subject button {
-    border: none;
-    padding: 9px 12px;
-    margin: 4px 3px 0 0;
-    border-radius: 7px;
-    cursor: pointer;
-    background: #102a43;
-    color: white;
+.year-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+    cursor:pointer;
+    transition:.2s;
 }
 
-.subject button:hover {
-    background: #243b53;
+.year-card:hover{
+    transform:translateY(-3px);
 }
 
-/* Lecture */
-.lecture {
-    background: white;
-    border-radius: 14px;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-left: 5px solid #102a43;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+.year-card h3{
+    color:#102a43;
+    margin-bottom:8px;
 }
 
-.lecture h3 {
-    margin-bottom: 8px;
+.year-card p{
+    color:#627d98;
 }
 
-.lecture p {
-    color: #627d98;
-    margin-bottom: 14px;
+/* SEMESTERS */
+
+.semester{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    margin-bottom:20px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
 }
 
-.lecture a {
-    display: inline-block;
-    text-decoration: none;
-    background: #102a43;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 7px;
-    margin-right: 7px;
+.semester h3{
+    color:#486581;
+    margin-bottom:15px;
 }
 
-.lecture a:hover {
-    background: #243b53;
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
 }
 
-/* Coming Soon */
-.coming {
-    text-align: center;
-    padding: 50px 20px;
-    background: white;
-    border-radius: 14px;
-    color: #627d98;
+.subject{
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:18px;
+    background:#fafbfc;
 }
 
-.coming h2 {
-    color: #102a43;
-    margin-bottom: 10px;
+.subject h4{
+    color:#243b53;
+    margin-bottom:12px;
 }
 
-/* Founders */
-.founders {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
+.subject button{
+    border:none;
+    padding:8px 11px;
+    margin:3px;
+    border-radius:7px;
+    cursor:pointer;
+    background:#102a43;
+    color:white;
 }
 
-.founder {
-    background: white;
-    padding: 22px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+.subject button:hover{
+    background:#243b53;
 }
 
-.founder h3 {
-    margin-bottom: 7px;
-    color: #102a43;
+/* LECTURES */
+
+.lecture{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    margin-bottom:15px;
+    border-left:5px solid #102a43;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
 }
 
-.role {
-    color: #627d98;
+.lecture h3{
+    color:#102a43;
+    margin-bottom:8px;
 }
 
-/* Support */
-.support {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    line-height: 1.8;
+.lecture p{
+    color:#627d98;
+    margin-bottom:15px;
 }
 
-.support a {
-    color: #102a43;
-    font-weight: bold;
+.lecture a{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:7px;
+    margin-right:5px;
 }
 
-/* Mobile */
-@media (max-width: 800px) {
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
+/* COMING */
+
+.coming{
+    background:white;
+    padding:60px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+}
+
+.coming h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.coming p{
+    color:#627d98;
+}
+
+/* FOUNDERS */
+
+.founders{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.founder{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+}
+
+.founder h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.role{
+    color:#627d98;
+}
+
+/* SUPPORT */
+
+.support{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    line-height:1.8;
+}
+
+.support a{
+    color:#102a43;
+    font-weight:bold;
+}
+
+/* BACK BUTTON */
+
+.back{
+    border:none;
+    background:#102a43;
+    color:white;
+    padding:10px 16px;
+    border-radius:7px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
     }
 
-    .main {
-        margin-left: 0;
-        padding: 20px;
+    .main{
+        margin-left:0;
+        padding:20px;
     }
 
-    .nav-btn {
-        display: inline-block;
-        width: auto;
-        margin-right: 5px;
-    }
 }
 </style>
 </head>
@@ -278,437 +355,827 @@ body {
 <body>
 
 <!-- SIDEBAR -->
+
 <aside class="sidebar">
 
-    <div class="logo">
-        <img src="IMG_7662.JPG" alt="College Logo">
-        <h2>B7 Gallery</h2>
-    </div>
+<div class="logo">
 
-    <div class="nav-title">Academic Years</div>
+<img src="IMG_7662.JPG" alt="College Logo">
 
-    <button class="nav-btn" onclick="showSection('first')">
-        First Year
-    </button>
+<h2>B7 Gallery</h2>
 
-    <button class="nav-btn" onclick="showSection('second')">
-        Second Year
-    </button>
+</div>
 
-    <button class="nav-btn" onclick="showSection('third')">
-        Third Year
-    </button>
+<div class="nav-title">
+Main
+</div>
 
-    <button class="nav-btn" onclick="showSection('fourth')">
-        Fourth Year
-    </button>
+<button class="nav-btn" onclick="show('dashboard')">
+🏠 Dashboard
+</button>
 
-    <button class="nav-btn" onclick="showSection('fifth')">
-        Fifth Year
-    </button>
+<button class="nav-btn" onclick="show('academic')">
+🎓 Academic Years
+</button>
 
-    <div class="nav-title">Library</div>
+<button class="nav-btn" onclick="show('library')">
+📚 Medical Library
+</button>
 
-    <button class="nav-btn" onclick="showSection('library')">
-        📚 Medical Library
-    </button>
+<button class="nav-btn" onclick="show('ai')">
+🤖 Ask B7 AI
+</button>
 
-    <button class="nav-btn" onclick="showSection('ai')">
-        🤖 Ask B7 AI
-    </button>
+<div class="nav-title">
+Information
+</div>
 
-    <button class="nav-btn" onclick="showSection('founders')">
-        👥 Founders
-    </button>
+<button class="nav-btn" onclick="show('founders')">
+👥 Founders
+</button>
 
-    <button class="nav-btn" onclick="showSection('support')">
-        ✉️ Support
-    </button>
+<button class="nav-btn" onclick="show('support')">
+✉️ Support
+</button>
 
 </aside>
 
 
-<!-- MAIN -->
 <main class="main">
 
-    <div class="header">
-        <h1>Welcome to B7 Gallery</h1>
-        <p>Your academic medical library</p>
-    </div>
 
+<!-- DASHBOARD -->
 
-    <!-- FIRST YEAR -->
-    <section id="first" class="section">
+<section id="dashboard" class="section">
 
-        <div class="year">
+<div class="header">
 
-            <div class="year-title">
-                First Year
-            </div>
+<h1>
+Welcome to B7 Gallery
+</h1>
 
-            <div class="semester">
-                <h4>Semester 1</h4>
+<p>
+Academic Medical Library & Learning Platform
+</p>
 
-                <div class="subjects">
+</div>
 
-                    <div class="subject">
-                        <h3>Biology</h3>
-                        <button onclick="showBiologyLectures()">📚 Lectures</button>
-                        <button onclick="comingSoon()">📝 MCQs</button>
-                    </div>
 
-                    <div class="subject">
-                        <h3>Physics</h3>
-                        <button onclick="comingSoon()">📚 Lectures</button>
-                        <button onclick="comingSoon()">📝 MCQs</button>
-                    </div>
+<div class="dashboard">
 
-                    <div class="subject">
-                        <h3>Chemistry</h3>
-                        <button onclick="comingSoon()">📚 Lectures</button>
-                        <button onclick="comingSoon()">📝 MCQs</button>
-                    </div>
+<div class="dashboard-card"
+onclick="show('academic')">
 
-                    <div class="subject">
-                        <h3>English</h3>
-                        <button onclick="comingSoon()">📚 Lectures</button>
-                        <button onclick="comingSoon()">📝 MCQs</button>
-                    </div>
+<div class="dashboard-icon">
+🎓
+</div>
 
-                    <div class="subject">
-                        <h3>Introduction to Medicine</h3>
-                        <button onclick="comingSoon()">📚 Lectures</button>
-                        <button onclick="comingSoon()">📝 MCQs</button>
-                    </div>
+<h3>
+Academic Years
+</h3>
 
-                    <div class="subject">
-                        <h3>Computer</h3>
-                        <button onclick="comingSoon()">📚 Lectures</button>
-                        <button onclick="comingSoon()">📝 MCQs</button>
-                    </div>
+<p>
+Access courses, semesters, lectures and MCQs.
+</p>
 
-                </div>
-            </div>
+</div>
 
 
-            <div class="semester">
-                <h4>Semester 2</h4>
+<div class="dashboard-card"
+onclick="show('library')">
 
-                <div class="subjects">
+<div class="dashboard-icon">
+📚
+</div>
 
-                    <div class="subject"><h3>Blood & Immune System</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<h3>
+Medical Library
+</h3>
 
-                    <div class="subject"><h3>Cardiology</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<p>
+Books, references and academic resources.
+</p>
 
-                    <div class="subject"><h3>Respiratory System</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+</div>
 
-                    <div class="subject"><h3>Biochemistry</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
 
-                    <div class="subject"><h3>Hemostasis</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<div class="dashboard-card"
+onclick="show('ai')">
 
-                    <div class="subject"><h3>Histology</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<div class="dashboard-icon">
+🤖
+</div>
 
-                    <div class="subject"><h3>Embryology</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<h3>
+Ask B7 AI
+</h3>
 
-                    <div class="subject"><h3>English 2</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<p>
+Your academic AI assistant.
+</p>
 
-                </div>
-            </div>
+</div>
 
-        </div>
 
-    </section>
+<div class="dashboard-card"
+onclick="show('founders')">
 
+<div class="dashboard-icon">
+👥
+</div>
 
-    <!-- SECOND YEAR -->
-    <section id="second" class="section">
+<h3>
+Founders
+</h3>
 
-        <div class="year">
+<p>
+Meet the founders of B7 Gallery.
+</p>
 
-            <div class="year-title">
-                Second Year
-            </div>
+</div>
 
-            <div class="semester">
-                <h4>Semester 3</h4>
 
-                <div class="subjects">
+<div class="dashboard-card"
+onclick="show('support')">
 
-                    <div class="subject"><h3>Gastrointestinal System (GIT)</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<div class="dashboard-icon">
+✉️
+</div>
 
-                    <div class="subject"><h3>Musculoskeletal System</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<h3>
+Contact & Support
+</h3>
 
-                    <div class="subject"><h3>Nutrition & Metabolism</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<p>
+Contact us for problems or suggestions.
+</p>
 
-                    <div class="subject"><h3>Reproductive System</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+</div>
 
-                    <div class="subject"><h3>Urinary System</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+</div>
 
-                </div>
-            </div>
+</section>
 
 
-            <div class="semester">
-                <h4>Semester 4</h4>
+<!-- ACADEMIC YEARS -->
 
-                <div class="subjects">
+<section id="academic" class="section">
 
-                    <div class="subject"><h3>Neuroanatomy</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<div class="section-title">
 
-                    <div class="subject"><h3>Genetics</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<button class="back"
+onclick="show('dashboard')">
+← Back
+</button>
 
-                    <div class="subject"><h3>Health Management</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<h2>
+🎓 Academic Years
+</h2>
 
-                    <div class="subject"><h3>Special Senses</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<p>
+Select your academic year.
+</p>
 
-                    <div class="subject"><h3>Practical Physiology</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+</div>
 
-                    <div class="subject"><h3>Head & Neck</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
 
-                    <div class="subject"><h3>Behavioral Science</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<div class="year-grid">
 
-                    <div class="subject"><h3>Endocrine System</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
 
-                    <div class="subject"><h3>Psychology</h3><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+<div class="year-card"
+onclick="show('first')">
 
-                </div>
-            </div>
+<h3>
+First Year
+</h3>
 
-        </div>
+<p>
+Semester 1 & Semester 2
+</p>
 
-    </section>
+</div>
 
 
-    <!-- THIRD YEAR -->
-    <section id="third" class="section">
+<div class="year-card"
+onclick="show('second')">
 
-        <div class="coming">
-            <h2>Third Year</h2>
-            <p>Coming Soon</p>
-        </div>
+<h3>
+Second Year
+</h3>
 
-    </section>
+<p>
+Semester 3 & Semester 4
+</p>
 
+</div>
 
-    <!-- FOURTH YEAR -->
-    <section id="fourth" class="section">
 
-        <div class="coming">
-            <h2>Fourth Year</h2>
-            <p>Coming Soon</p>
-        </div>
+<div class="year-card"
+onclick="show('third')">
 
-    </section>
+<h3>
+Third Year
+</h3>
 
+<p>
+Coming Soon
+</p>
 
-    <!-- FIFTH YEAR -->
-    <section id="fifth" class="section">
+</div>
 
-        <div class="coming">
-            <h2>Fifth Year</h2>
-            <p>Coming Soon</p>
-        </div>
 
-    </section>
+<div class="year-card"
+onclick="show('fourth')">
 
+<h3>
+Fourth Year
+</h3>
 
-    <!-- BIOLOGY LECTURES -->
-    <section id="biologyLectures" class="section" style="display:none;">
+<p>
+Coming Soon
+</p>
 
-        <div class="year">
+</div>
 
-            <div class="year-title">
-                Biology — Lectures
-            </div>
 
-            <div class="lecture">
+<div class="year-card"
+onclick="show('fifth')">
 
-                <h3>
-                    Lecture 2 — The Cell Structure and Function
-                </h3>
+<h3>
+Fifth Year
+</h3>
 
-                <p>
-                    Biology lecture available for viewing and download.
-                </p>
+<p>
+Coming Soon
+</p>
 
-                <a
-                href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-                target="_blank">
-                    Open Lecture
-                </a>
+</div>
 
-                <a
-                href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-                target="_blank">
-                    Download
-                </a>
+</div>
 
-            </div>
+</section>
 
-        </div>
 
-    </section>
+<!-- FIRST YEAR -->
 
+<section id="first" class="section">
 
-    <!-- LIBRARY -->
-    <section id="library" class="section">
+<button class="back"
+onclick="show('academic')">
+← Academic Years
+</button>
 
-        <div class="coming">
+<div class="section-title">
 
-            <h2>📚 Medical Library</h2>
+<h2>
+First Year
+</h2>
 
-            <p>
-                Lectures, MCQs, books and academic resources will be added soon.
-            </p>
+<p>
+Semesters and courses
+</p>
 
-        </div>
+</div>
 
-    </section>
 
+<div class="semester">
 
-    <!-- AI -->
-    <section id="ai" class="section">
+<h3>
+Semester 1
+</h3>
 
-        <div class="coming">
+<div class="subject-grid">
 
-            <h2>🤖 Ask B7 AI</h2>
 
-            <p>
-                AI academic assistant — Coming Soon
-            </p>
+<div class="subject">
 
-        </div>
+<h4>
+Biology
+</h4>
 
-    </section>
+<button onclick="show('biologyLectures')">
+📚 Lectures
+</button>
 
+<button onclick="comingSoon()">
+📝 MCQs
+</button>
 
-    <!-- FOUNDERS -->
-    <section id="founders" class="section">
+</div>
 
-        <h2>👥 Founders</h2>
 
-        <div class="founders">
+<div class="subject">
+<h4>Physics</h4>
 
-            <div class="founder">
-                <h3>Abdelmonem Taj Eldin Hassan</h3>
-                <div class="role">Founder</div>
-            </div>
+<button onclick="comingSoon()">📚 Lectures</button>
+<button onclick="comingSoon()">📝 MCQs</button>
 
-            <div class="founder">
-                <h3>Ehab Hamdy</h3>
-                <div class="role">Co-Founder</div>
-            </div>
+</div>
 
-            <div class="founder">
-                <h3>Abrar Hijazi</h3>
-                <div class="role">Co-Founder</div>
-            </div>
 
-        </div>
+<div class="subject">
+<h4>Chemistry</h4>
 
-    </section>
+<button onclick="comingSoon()">📚 Lectures</button>
+<button onclick="comingSoon()">📝 MCQs</button>
 
+</div>
 
-    <!-- SUPPORT -->
-    <section id="support" class="section">
 
-        <h2>✉️ Contact & Support</h2>
+<div class="subject">
+<h4>English</h4>
 
-        <div class="support">
+<button onclick="comingSoon()">📚 Lectures</button>
+<button onclick="comingSoon()">📝 MCQs</button>
 
-            <p>
-                If you have a problem, suggestion, or question,
-                feel free to contact us.
-            </p>
+</div>
 
-            <p>
-                Email:
-                <a href="mailto:almdainb7@gmail.com">
-                    almdainb7@gmail.com
-                </a>
-            </p>
 
-        </div>
+<div class="subject">
+<h4>Introduction to Medicine</h4>
 
-    </section>
+<button onclick="comingSoon()">📚 Lectures</button>
+<button onclick="comingSoon()">📝 MCQs</button>
+
+</div>
+
+
+<div class="subject">
+<h4>Computer</h4>
+
+<button onclick="comingSoon()">📚 Lectures</button>
+<button onclick="comingSoon()">📝 MCQs</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="semester">
+
+<h3>
+Semester 2
+</h3>
+
+<div class="subject-grid">
+
+<div class="subject"><h4>Blood & Immune System</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Cardiology</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Respiratory System</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Biochemistry</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Hemostasis</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Histology</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Embryology</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>English 2</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SECOND YEAR -->
+
+<section id="second" class="section">
+
+<button class="back"
+onclick="show('academic')">
+← Academic Years
+</button>
+
+<div class="section-title">
+
+<h2>
+Second Year
+</h2>
+
+</div>
+
+
+<div class="semester">
+
+<h3>
+Semester 3
+</h3>
+
+<div class="subject-grid">
+
+<div class="subject"><h4>Gastrointestinal System (GIT)</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Musculoskeletal System</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Nutrition & Metabolism</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Reproductive System</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Urinary System</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+</div>
+
+</div>
+
+
+<div class="semester">
+
+<h3>
+Semester 4
+</h3>
+
+<div class="subject-grid">
+
+<div class="subject"><h4>Neuroanatomy</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Genetics</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Health Management</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Special Senses</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Practical Physiology</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Head & Neck</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Behavioral Science</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Endocrine System</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+<div class="subject"><h4>Psychology</h4><button onclick="comingSoon()">📚 Lectures</button><button onclick="comingSoon()">📝 MCQs</button></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- THIRD -->
+
+<section id="third" class="section">
+
+<button class="back"
+onclick="show('academic')">
+← Academic Years
+</button>
+
+<div class="coming">
+
+<h2>
+Third Year
+</h2>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOURTH -->
+
+<section id="fourth" class="section">
+
+<button class="back"
+onclick="show('academic')">
+← Academic Years
+</button>
+
+<div class="coming">
+
+<h2>
+Fourth Year
+</h2>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FIFTH -->
+
+<section id="fifth" class="section">
+
+<button class="back"
+onclick="show('academic')">
+← Academic Years
+</button>
+
+<div class="coming">
+
+<h2>
+Fifth Year
+</h2>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+</section>
+
+
+<!-- BIOLOGY LECTURES -->
+
+<section id="biologyLectures" class="section">
+
+<button class="back"
+onclick="show('first')">
+← Biology
+</button>
+
+<div class="section-title">
+
+<h2>
+📚 Biology — Lectures
+</h2>
+
+<p>
+Available lectures
+</p>
+
+</div>
+
+
+<div class="lecture">
+
+<h3>
+Lecture 2 — The Cell Structure and Function
+</h3>
+
+<p>
+Biology lecture
+</p>
+
+<a
+href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
+target="_blank">
+
+Open Lecture
+
+</a>
+
+
+<a
+href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
+target="_blank">
+
+Download
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- LIBRARY -->
+
+<section id="library" class="section">
+
+<div class="section-title">
+
+<button class="back"
+onclick="show('dashboard')">
+← Dashboard
+</button>
+
+<h2>
+📚 Medical Library
+</h2>
+
+</div>
+
+<div class="coming">
+
+<h2>
+Coming Soon
+</h2>
+
+<p>
+Medical books and references will be added here.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- AI -->
+
+<section id="ai" class="section">
+
+<div class="section-title">
+
+<button class="back"
+onclick="show('dashboard')">
+← Dashboard
+</button>
+
+<h2>
+🤖 Ask B7 AI
+</h2>
+
+</div>
+
+<div class="coming">
+
+<h2>
+Ask B7 AI
+</h2>
+
+<p>
+AI academic assistant — Coming Soon
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOUNDERS -->
+
+<section id="founders" class="section">
+
+<div class="section-title">
+
+<button class="back"
+onclick="show('dashboard')">
+← Dashboard
+</button>
+
+<h2>
+👥 Founders
+</h2>
+
+</div>
+
+
+<div class="founders">
+
+
+<div class="founder">
+
+<h3>
+Abdelmonem Taj Eldin Hassan
+</h3>
+
+<div class="role">
+Founder
+</div>
+
+</div>
+
+
+<div class="founder">
+
+<h3>
+Ehab Hamdy
+</h3>
+
+<div class="role">
+Co-Founder
+</div>
+
+</div>
+
+
+<div class="founder">
+
+<h3>
+Abrar Hijazi
+</h3>
+
+<div class="role">
+Co-Founder
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section id="support" class="section">
+
+<div class="section-title">
+
+<button class="back"
+onclick="show('dashboard')">
+← Dashboard
+</button>
+
+<h2>
+✉️ Contact & Support
+</h2>
+
+</div>
+
+
+<div class="support">
+
+<p>
+For problems, suggestions or questions, contact us:
+</p>
+
+<p>
+Email:
+<a href="mailto:almdainb7@gmail.com">
+almdainb7@gmail.com
+</a>
+</p>
+
+</div>
+
+</section>
+
 
 </main>
 
 
 <script>
 
-function hideAllSections() {
+const sections = [
+"dashboard",
+"academic",
+"first",
+"second",
+"third",
+"fourth",
+"fifth",
+"biologyLectures",
+"library",
+"ai",
+"founders",
+"support"
+];
 
-    const sections = [
-        "first",
-        "second",
-        "third",
-        "fourth",
-        "fifth",
-        "library",
-        "ai",
-        "founders",
-        "support",
-        "biologyLectures"
-    ];
+function hideAll(){
 
-    sections.forEach(function(id) {
+sections.forEach(function(id){
 
-        const element = document.getElementById(id);
+const element =
+document.getElementById(id);
 
-        if (element) {
-            element.style.display = "none";
-        }
+if(element){
+element.style.display="none";
+}
 
-    });
+});
 
 }
 
 
-function showSection(id) {
+function show(id){
 
-    hideAllSections();
+hideAll();
 
-    const section = document.getElementById(id);
+const element =
+document.getElementById(id);
 
-    if (section) {
-        section.style.display = "block";
-    }
+if(element){
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+element.style.display="block";
+
+}
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 }
 
 
-function showBiologyLectures() {
+function comingSoon(){
 
-    hideAllSections();
-
-    document.getElementById("biologyLectures").style.display = "block";
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+alert("Coming Soon 🚀");
 
 }
 
 
-function comingSoon() {
+window.onload=function(){
 
-    alert("Coming Soon 🚀");
-
-}
-
-
-/* Show First Year when website opens */
-
-window.onload = function() {
-
-    showSection("first");
+show("dashboard");
 
 };
 
