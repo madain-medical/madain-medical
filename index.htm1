@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>B7 Gallery | Almadain College</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f6f9fc;
+    color: #172b4d;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #e6edf3;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #0b6477;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.logo span {
+    font-size: 12px;
+    color: #7b8a9a;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-button {
+    background: transparent;
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    color: #526777;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background: #eef6f8;
+    color: #0b6477;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1100px;
+
+    margin: 35px auto 0;
+
+    padding: 55px 35px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7f8,
+            #f7fbff
+        );
+
+    border: 1px solid #e0eef2;
+
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    background: white;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    color: #0b6477;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    margin: 5px 0 12px;
+
+    font-size: 42px;
+}
+
+.hero p {
+    color: #687b8c;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+.hero-button {
+    margin-top: 25px;
+
+    background: #0b6477;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.hero-button:hover {
+    background: #084d5c;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 55px 20px;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    margin-bottom: 7px;
+
+    font-size: 27px;
+}
+
+.section-header p {
+    color: #7b8a9a;
+}
+
+
+/* =========================
+   YEAR CARDS
+========================= */
+
+.year-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(190px, 1fr));
+
+    gap: 18px;
+}
+
+.year-card {
+    background: white;
+
+    border: 1px solid #e6edf3;
+
+    border-radius: 17px;
+
+    padding: 24px;
+
+    transition: 0.2s;
+
+    text-align: left;
+}
+
+.year-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(20,50,80,0.08);
+}
+
+.year-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: #eef7f8;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+.year-card h3 {
+    margin: 0 0 7px;
+}
+
+.year-card p {
+    color: #7b8a9a;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    background: #0b6477;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 17px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.button:hover {
+    background: #084d5c;
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.page {
+    display: none;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 45px 20px;
+}
+
+.page-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.page-title h1 {
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    color: #7b8a9a;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+    background: white;
+
+    border: 1px solid #dce6ed;
+
+    color: #526777;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+}
+
+.back-button:hover {
+    background: #f3f8fa;
+}
+
+
+/* =========================
+   SEMESTERS
+========================= */
+
+.semester {
+    margin-bottom: 50px;
+}
+
+.semester-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.semester-number {
+    background: #0b6477;
+
+    color: white;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.semester-header h2 {
+    margin: 0;
+}
+
+
+/* =========================
+   COURSES
+========================= */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 18px;
+}
+
+.course {
+    background: white;
+
+    border: 1px solid #e6edf3;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    transition: 0.2s;
+}
+
+.course:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(20,50,80,0.07);
+}
+
+.course-icon {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.course h3 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+}
+
+.course p {
+    color: #7b8a9a;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    min-height: 40px;
+}
+
+
+/* =========================
+   RESOURCE PAGE
+========================= */
+
+.resource-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 18px;
+}
+
+.resource {
+    background: white;
+
+    border: 1px solid #e6edf3;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    transition: 0.2s;
+}
+
+.resource:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(20,50,80,0.07);
+}
+
+.resource-icon {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.resource h2 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+}
+
+.resource p {
+    color: #7b8a9a;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+
+    background: #142f46;
+
+    color: white;
+
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #b9c8d3;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        margin: 20px 15px 0;
+
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .page {
+        padding: 35px 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            B7
+        </div>
+
+        <div>
+
+            <h1>B7 Gallery</h1>
+
+            <span>Medical Digital Library</span>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <button
+            class="nav-button"
+            onclick="openPage('homePage')">
+
+            Home
+
+        </button>
+
+
+        <button
+            class="nav-button"
+            onclick="openPage('homePage')">
+
+            Academic Years
+
+        </button>
+
+
+        <button
+            class="nav-button"
+            onclick="alert('About B7 Gallery coming soon.')">
+
+            About
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<div id="homePage">
+
+
+    <section class="hero">
+
+        <div class="hero-badge">
+            Almadain College
+        </div>
+
+
+        <h2>
+            Welcome to B7 Gallery
+        </h2>
+
+
+        <p>
+
+            A simple and organized digital library
+            for medical students.
+
+        </p>
+
+
+        <button
+            class="hero-button"
+            onclick="openPage('academicPage')">
+
+            Explore Academic Years
+
+        </button>
+
+    </section>
+
+
+
+    <section class="section" id="academicPageSection">
+
+        <div class="section-header">
+
+            <h2>
+                Academic Years
+            </h2>
+
+            <p>
+                Choose your academic year to explore the courses.
+            </p>
+
+        </div>
+
+
+        <div class="year-grid">
+
+
+            <!-- FIRST YEAR -->
+
+            <div class="year-card">
+
+                <div class="year-icon">
+                    🧬
+                </div>
+
+                <h3>
+                    First Year
+                </h3>
+
+                <p>
+                    Medical Foundation
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openPage('firstYearPage')">
+
+                    Explore
+
+                </button>
+
+            </div>
+
+
+
+            <!-- SECOND YEAR -->
+
+            <div class="year-card">
+
+                <div class="year-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Second Year
+                </h3>
+
+                <p>
+                    Pre-Clinical Sciences
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openPage('secondYearPage')">
+
+                    Explore
+
+                </button>
+
+            </div>
+
+
+
+            <!-- THIRD -->
+
+            <div class="year-card">
+
+                <div class="year-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Third Year
+                </h3>
+
+                <p>
+                    Coming Soon
+                </p>
+
+                <button class="button">
+                    Coming Soon
+                </button>
+
+            </div>
+
+
+
+            <!-- FOURTH -->
+
+            <div class="year-card">
+
+                <div class="year-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Fourth Year
+                </h3>
+
+                <p>
+                    Coming Soon
+                </p>
+
+                <button class="button">
+                    Coming Soon
+                </button>
+
+            </div>
+
+
+
+            <!-- FIFTH -->
+
+            <div class="year-card">
+
+                <div class="year-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Fifth Year
+                </h3>
+
+                <p>
+                    Coming Soon
+                </p>
+
+                <button class="button">
+                    Coming Soon
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- =========================
+     FIRST YEAR
+========================= -->
+
+<div id="firstYearPage" class="page">
+
+
+    <div class="page-title">
+
+        <h1>
+            First Year
+        </h1>
+
+        <p>
+            Almadain College • Medical Foundation
+        </p>
+
+        <button
+            class="back-button"
+            onclick="openPage('homePage')">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+
+
+    <!-- SEMESTER 1 -->
+
+    <div class="semester">
+
+        <div class="semester-header">
+
+            <div class="semester-number">
+                1
+            </div>
+
+            <h2>
+                Semester 1
+            </h2>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <div class="course">
+
+                <div class="course-icon">🧬</div>
+
+                <h3>Biology</h3>
+
+                <p>
+                    Medical Biology Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Biology','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">⚛️</div>
+
+                <h3>Physics</h3>
+
+                <p>
+                    Medical Physics Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Physics','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🧪</div>
+
+                <h3>Chemistry</h3>
+
+                <p>
+                    Medical Chemistry Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Chemistry','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🌐</div>
+
+                <h3>English</h3>
+
+                <p>
+                    English Course Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('English','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🩺</div>
+
+                <h3>
+                    Introduction to Medicine
+                </h3>
+
+                <p>
+                    Introduction to Medicine Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Introduction to Medicine','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">💻</div>
+
+                <h3>Computer</h3>
+
+                <p>
+                    Computer Course Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Computer','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SEMESTER 2 -->
+
+    <div class="semester">
+
+        <div class="semester-header">
+
+            <div class="semester-number">
+                2
+            </div>
+
+            <h2>
+                Semester 2
+            </h2>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <div class="course">
+
+                <div class="course-icon">🩸</div>
+
+                <h3>
+                    Blood & Immune System
+                </h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Blood & Immune System','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">❤️</div>
+
+                <h3>Cardiology</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Cardiology','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🫁</div>
+
+                <h3>
+                    Respiratory System
+                </h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Respiratory System','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🧪</div>
+
+                <h3>Biochemistry</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Biochemistry','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🩸</div>
+
+                <h3>Hemostasis</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Hemostasis','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🔬</div>
+
+                <h3>Histology</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Histology','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">👶</div>
+
+                <h3>Embryology</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Embryology','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🌐</div>
+
+                <h3>English 2</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('English 2','firstYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     SECOND YEAR
+========================= -->
+
+<div id="secondYearPage" class="page">
+
+
+    <div class="page-title">
+
+        <h1>
+            Second Year
+        </h1>
+
+        <p>
+            Almadain College • Pre-Clinical Sciences
+        </p>
+
+        <button
+            class="back-button"
+            onclick="openPage('homePage')">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+
+
+    <!-- SEMESTER 3 -->
+
+    <div class="semester">
+
+        <div class="semester-header">
+
+            <div class="semester-number">
+                3
+            </div>
+
+            <h2>
+                Semester 3
+            </h2>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <div class="course">
+
+                <div class="course-icon">🫃</div>
+
+                <h3>
+                    Gastrointestinal System
+                </h3>
+
+                <p>
+                    GIT Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Gastrointestinal System (GIT)','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🦴</div>
+
+                <h3>
+                    Musculoskeletal System
+                </h3>
+
+                <p>
+                    Musculoskeletal Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Musculoskeletal System','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🥗</div>
+
+                <h3>
+                    Nutrition & Metabolism
+                </h3>
+
+                <p>
+                    Nutrition and Metabolism Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Nutrition & Metabolism','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🧬</div>
+
+                <h3>
+                    Reproductive System
+                </h3>
+
+                <p>
+                    Reproductive System Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Reproductive System','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🫘</div>
+
+                <h3>
+                    Urinary System
+                </h3>
+
+                <p>
+                    Urinary System Resources
+                </p>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Urinary System','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SEMESTER 4 -->
+
+    <div class="semester">
+
+        <div class="semester-header">
+
+            <div class="semester-number">
+                4
+            </div>
+
+            <h2>
+                Semester 4
+            </h2>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <div class="course">
+
+                <div class="course-icon">🧠</div>
+
+                <h3>Neuroanatomy</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Neuroanatomy','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🧬</div>
+
+                <h3>Genetics</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Genetics','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">📊</div>
+
+                <h3>Health Management</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Health Management','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">👁️</div>
+
+                <h3>Special Senses</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Special Senses','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🫀</div>
+
+                <h3>Practical Physiology</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Practical Physiology','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🧑‍⚕️</div>
+
+                <h3>Head & Neck</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Head & Neck','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🧠</div>
+
+                <h3>Behavioral Science</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Behavioral Science','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">🦋</div>
+
+                <h3>Endocrine System</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Endocrine System','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-icon">💭</div>
+
+                <h3>Psychology</h3>
+
+                <button
+                    class="button"
+                    onclick="openCourse('Psychology','secondYearPage')">
+
+                    Open Course
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     COURSE PAGE
+========================= -->
+
+<div id="coursePage" class="page">
+
+
+    <div class="page-title">
+
+        <h1 id="courseTitle">
+            Course
+        </h1>
+
+        <p>
+            Almadain College Medical Library
+        </p>
+
+        <button
+            class="back-button"
+            onclick="openPage(previousPage)">
+
+            ← Back to Year
+
+        </button>
+
+    </div>
+
+
+    <div class="resource-grid">
+
+
+        <div class="resource">
+
+            <div class="resource-icon">
+                📚
+            </div>
+
+            <h2>
+                Lectures
+            </h2>
+
+            <p>
+                Course lectures will be added later.
+            </p>
+
+            <button class="button">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="resource">
+
+            <div class="resource-icon">
+                📄
+            </div>
+
+            <h2>
+                PDF Resources
+            </h2>
+
+            <p>
+                Course PDF files will be added later.
+            </p>
+
+            <button class="button">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="resource">
+
+            <div class="resource-icon">
+                📝
+            </div>
+
+            <h2>
+                Summaries
+            </h2>
+
+            <p>
+                Course summaries will be added later.
+            </p>
+
+            <button class="button">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="resource">
+
+            <div class="resource-icon">
+                ❓
+            </div>
+
+            <h2>
+                MCQs
+            </h2>
+
+            <p>
+                Multiple choice questions will be added later.
+            </p>
+
+            <button class="button">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="resource">
+
+            <div class="resource-icon">
+                📋
+            </div>
+
+            <h2>
+                Previous Exams
+            </h2>
+
+            <p>
+                Previous examinations will be added later.
+            </p>
+
+            <button class="button">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="resource">
+
+            <div class="resource-icon">
+                📖
+            </div>
+
+            <h2>
+                Books & References
+            </h2>
+
+            <p>
+                Books and recommended references will be added later.
+            </p>
+
+            <button class="button">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        B7 Gallery
+    </h3>
+
+    <p>
+        Medical Digital Library
+    </p>
+
+    <p>
+        Almadain College © 2026
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+let previousPage = "homePage";
+
+
+function hideAllPages() {
+
+    document.getElementById("homePage").style.display = "none";
+
+    document.getElementById("firstYearPage").style.display = "none";
+
+    document.getElementById("secondYearPage").style.display = "none";
+
+    document.getElementById("coursePage").style.display = "none";
+
+}
+
+
+function openPage(pageId) {
+
+    hideAllPages();
+
+    document.getElementById(pageId).style.display = "block";
+
+    window.scrollTo(0, 0);
+
+}
+
+
+function openCourse(courseName, yearPage) {
+
+    previousPage = yearPage;
+
+    document.getElementById("courseTitle").textContent = courseName;
+
+    hideAllPages();
+
+    document.getElementById("coursePage").style.display = "block";
+
+    window.scrollTo(0, 0);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
