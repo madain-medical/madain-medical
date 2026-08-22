@@ -4,11 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Madain Medical Association</title>
-
 
 <style>
 
@@ -23,7 +21,6 @@ font-family:Arial,sans-serif;
 background:#f4f7fa;
 color:#1f2937
 }
-
 
 /* SIDEBAR */
 
@@ -80,7 +77,6 @@ cursor:pointer
 background:#243b53
 }
 
-
 /* MAIN */
 
 .main{
@@ -91,7 +87,6 @@ padding:30px
 .section{
 display:none
 }
-
 
 /* GENERAL BOXES */
 
@@ -107,13 +102,10 @@ display:none
 .coming,
 .ai-box,
 .rules-box{
-
 background:white;
 border-radius:14px;
 box-shadow:0 3px 15px rgba(0,0,0,.06)
-
 }
-
 
 .header{
 padding:28px;
@@ -127,9 +119,7 @@ margin-bottom:22px
 .lecture h3,
 .founder h3,
 .coming h2{
-
 color:#102a43
-
 }
 
 .header p,
@@ -138,11 +128,8 @@ color:#102a43
 .lecture p,
 .role,
 .coming p{
-
 color:#627d98
-
 }
-
 
 /* DASHBOARD */
 
@@ -174,8 +161,7 @@ color:#102a43;
 margin-bottom:7px
 }
 
-
-/* BACK BUTTON */
+/* BACK */
 
 .back{
 border:0;
@@ -191,7 +177,6 @@ margin-bottom:16px
 background:#243b53
 }
 
-
 /* YEARS */
 
 .year-grid{
@@ -199,7 +184,6 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
 gap:16px
 }
-
 
 /* SEMESTER */
 
@@ -212,7 +196,6 @@ margin-bottom:18px
 color:#486581;
 margin-bottom:14px
 }
-
 
 /* SUBJECTS */
 
@@ -247,7 +230,6 @@ font-size:12px
 background:#243b53
 }
 
-
 /* LECTURES */
 
 .lecture{
@@ -281,8 +263,7 @@ background:#243b53;
 transform:translateY(-1px)
 }
 
-
-/* DOWNLOAD BUTTON */
+/* DOWNLOAD */
 
 .lecture .download-btn{
 background:#147d64
@@ -292,14 +273,12 @@ background:#147d64
 background:#0f684f
 }
 
-
 /* COMING */
 
 .coming{
 text-align:center;
 padding:55px 20px
 }
-
 
 /* FOUNDERS */
 
@@ -317,7 +296,6 @@ padding:22px
 margin-bottom:7px
 }
 
-
 /* SUPPORT */
 
 .support{
@@ -329,7 +307,6 @@ line-height:1.8
 color:#102a43;
 font-weight:bold
 }
-
 
 /* AI */
 
@@ -377,7 +354,6 @@ line-height:1.7;
 white-space:pre-wrap
 }
 
-
 /* RULES */
 
 .rules-box{
@@ -401,7 +377,6 @@ color:#486581
 padding-right:25px;
 color:#486581
 }
-
 
 /* MOBILE */
 
@@ -431,9 +406,7 @@ margin:6px 0
 
 </head>
 
-
 <body>
-
 
 <!-- SIDEBAR -->
 
@@ -452,77 +425,45 @@ Madain Medical Association
 
 </div>
 
-
 <div class="nav-title">
 Main
 </div>
 
-
-<button
-class="nav-btn"
-onclick="show('dashboard')"
->
+<button class="nav-btn" onclick="show('dashboard')">
 🏠 Dashboard
 </button>
 
-
-<button
-class="nav-btn"
-onclick="show('academic')"
->
+<button class="nav-btn" onclick="show('academic')">
 🎓 Academic Years
 </button>
 
-
-<button
-class="nav-btn"
-onclick="show('library')"
->
+<button class="nav-btn" onclick="show('library')">
 📚 Medical Library
 </button>
 
-
-<button
-class="nav-btn"
-onclick="show('ai')"
->
+<button class="nav-btn" onclick="show('ai')">
 🤖 Ask B7 AI
 </button>
-
 
 <div class="nav-title">
 Information
 </div>
 
-
-<button
-class="nav-btn"
-onclick="show('founders')"
->
+<button class="nav-btn" onclick="show('founders')">
 👥 Members
 </button>
 
-
-<button
-class="nav-btn"
-onclick="show('support')"
->
+<button class="nav-btn" onclick="show('support')">
 ✉️ Support
 </button>
 
 </aside>
 
-
-
 <main class="main">
 
+<!-- DASHBOARD -->
 
-<!-- ================= DASHBOARD ================= -->
-
-<section
-id="dashboard"
-class="section"
->
+<section id="dashboard" class="section">
 
 <div class="header">
 
@@ -536,149 +477,55 @@ Academic Medical Library & Learning Platform
 
 </div>
 
-
 <div class="dashboard">
 
-
-<div
-class="dashboard-card"
-onclick="show('academic')"
->
-
-<div class="dashboard-icon">
-🎓
+<div class="dashboard-card" onclick="show('academic')">
+<div class="dashboard-icon">🎓</div>
+<h3>Academic Years</h3>
+<p>Access all academic years and subjects.</p>
 </div>
 
-<h3>
-Academic Years
-</h3>
-
-<p>
-Access all academic years and subjects.
-</p>
-
+<div class="dashboard-card" onclick="show('library')">
+<div class="dashboard-icon">📚</div>
+<h3>Medical Library</h3>
+<p>Medical books and resources.</p>
 </div>
 
-
-<div
-class="dashboard-card"
-onclick="show('library')"
->
-
-<div class="dashboard-icon">
-📚
+<div class="dashboard-card" onclick="show('ai')">
+<div class="dashboard-icon">🤖</div>
+<h3>Ask B7 AI</h3>
+<p>Your academic medical assistant.</p>
 </div>
 
-<h3>
-Medical Library
-</h3>
-
-<p>
-Medical books and resources.
-</p>
-
+<div class="dashboard-card" onclick="show('founders')">
+<div class="dashboard-icon">👥</div>
+<h3>Members</h3>
+<p>Meet the team behind the platform.</p>
 </div>
 
-
-<div
-class="dashboard-card"
-onclick="show('ai')"
->
-
-<div class="dashboard-icon">
-🤖
+<div class="dashboard-card" onclick="show('support')">
+<div class="dashboard-icon">✉️</div>
+<h3>Contact & Support</h3>
+<p>Contact us.</p>
 </div>
 
-<h3>
-Ask B7 AI
-</h3>
-
-<p>
-Your academic medical assistant.
-</p>
-
-</div>
-
-
-<div
-class="dashboard-card"
-onclick="show('founders')"
->
-
-<div class="dashboard-icon">
-👥
-</div>
-
-<h3>
-Members
-</h3>
-
-<p>
-Meet the team behind the platform.
-</p>
-
-</div>
-
-
-<div
-class="dashboard-card"
-onclick="show('support')"
->
-
-<div class="dashboard-icon">
-✉️
-</div>
-
-<h3>
-Contact & Support
-</h3>
-
-<p>
-Contact us.
-</p>
-
-</div>
-
-
-<div
-class="dashboard-card"
-onclick="show('rules')"
->
-
-<div class="dashboard-icon">
-📜
-</div>
-
-<h3>
-Rules & Privacy
-</h3>
-
-<p>
-Important information and policies.
-</p>
-
+<div class="dashboard-card" onclick="show('rules')">
+<div class="dashboard-icon">📜</div>
+<h3>Rules & Privacy</h3>
+<p>Important information and policies.</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- RULES -->
 
+<section id="rules" class="section">
 
-<!-- ================= RULES ================= -->
-
-<section
-id="rules"
-class="section"
->
-
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
-
 
 <div class="rules-box">
 
@@ -700,9 +547,7 @@ onclick="show('dashboard')"
 </p>
 
 <p>
-<strong>
-الخصوصية وحماية البيانات:
-</strong>
+<strong>الخصوصية وحماية البيانات:</strong>
 نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها
 بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.
 </p>
@@ -727,410 +572,205 @@ onclick="show('dashboard')"
 
 </section>
 
+<!-- ACADEMIC YEARS -->
 
-
-<!-- ================= ACADEMIC YEARS ================= -->
-
-<section
-id="academic"
-class="section"
->
+<section id="academic" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
-<h2>
-🎓 Academic Years
-</h2>
+<h2>🎓 Academic Years</h2>
 
-<p>
-Select your academic year.
-</p>
+<p>Select your academic year.</p>
 
 </div>
-
 
 <div class="year-grid">
 
-
-<div
-class="year-card"
-onclick="show('first')"
->
-
-<h3>
-First Year
-</h3>
-
-<p>
-Semester 1 & 2
-</p>
-
+<div class="year-card" onclick="show('first')">
+<h3>First Year</h3>
+<p>Semester 1 & 2</p>
 </div>
 
-
-<div
-class="year-card"
-onclick="show('second')"
->
-
-<h3>
-Second Year
-</h3>
-
-<p>
-Semester 3 & 4
-</p>
-
+<div class="year-card" onclick="show('second')">
+<h3>Second Year</h3>
+<p>Semester 3 & 4</p>
 </div>
 
-
-<div
-class="year-card"
-onclick="show('third')"
->
-
-<h3>
-Third Year
-</h3>
-
-<p>
-Semester 5 & 6
-</p>
-
+<div class="year-card" onclick="show('third')">
+<h3>Third Year</h3>
+<p>Semester 5 & 6</p>
 </div>
 
-
-<div
-class="year-card"
-onclick="show('fourth')"
->
-
-<h3>
-Fourth Year
-</h3>
-
-<p>
-Semester 7 & 8
-</p>
-
+<div class="year-card" onclick="show('fourth')">
+<h3>Fourth Year</h3>
+<p>Semester 7 & 8</p>
 </div>
 
-
-<div
-class="year-card"
-onclick="show('fifth')"
->
-
-<h3>
-Fifth Year
-</h3>
-
-<p>
-Semester 9 & 10
-</p>
-
+<div class="year-card" onclick="show('fifth')">
+<h3>Fifth Year</h3>
+<p>Semester 9 & 10</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- FIRST YEAR -->
 
+<section id="first" class="section">
 
-<!-- ================= FIRST YEAR ================= -->
-
-<section
-id="first"
-class="section"
->
-
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
-
 <div class="section-title">
 
-<h2>
-First Year
-</h2>
+<h2>First Year</h2>
 
-<p>
-Semester 1 & 2
-</p>
+<p>Semester 1 & 2</p>
 
 </div>
-
-
 
 <!-- SEMESTER 1 -->
 
 <div class="semester">
 
-<h3>
-Semester 1
-</h3>
-
+<h3>Semester 1</h3>
 
 <div class="subject-grid">
 
-
 <div class="subject">
-
-<h4>
-Biology
-</h4>
-
-<button onclick="show('biology')">
-📚 Lectures
-</button>
-
-<button onclick="soon()">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
-
+<h4>Biology</h4>
+<button onclick="show('biology')">📚 Lectures</button>
+<button onclick="soon()">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
-
-<h4>
-Physics
-</h4>
-
+<h4>Physics</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Chemistry
-</h4>
-
+<h4>Chemistry</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-English
-</h4>
-
+<h4>English</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Introduction to Medicine
-</h4>
-
+<h4>Introduction to Medicine</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Computer
-</h4>
-
+<h4>Computer</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 </div>
 
 </div>
-
-
 
 <!-- SEMESTER 2 -->
 
 <div class="semester">
 
-<h3>
-Semester 2
-</h3>
-
+<h3>Semester 2</h3>
 
 <div class="subject-grid">
 
-
 <div class="subject">
 
-<h4>
-Blood & Immune System
-</h4>
+<h4>Blood & Immune System</h4>
 
 <button onclick="show('blood')">
 📚 Lectures
 </button>
 
-<button onclick="soon()">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
+<button onclick="soon()">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 
 </div>
 
-
 <div class="subject">
-
-<h4>
-Cardiology
-</h4>
-
+<h4>Cardiology</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Respiratory System
-</h4>
-
-<button onclick="show('respiratory')">
-📚 Lectures
-</button>
-
-<button onclick="soon()">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
-
+<h4>Respiratory System</h4>
+<button onclick="show('respiratory')">📚 Lectures</button>
+<button onclick="soon()">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
-
-<h4>
-Biochemistry
-</h4>
-
+<h4>Biochemistry</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Hemostasis
-</h4>
-
-<button onclick="show('hemostasis')">
-📚 Lectures
-</button>
-
+<h4>Hemostasis</h4>
+<button onclick="show('blood')">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Histology
-</h4>
-
+<h4>Histology</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-Embryology
-</h4>
-
+<h4>Embryology</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
-
 <div class="subject">
-
-<h4>
-English 2
-</h4>
-
+<h4>English 2</h4>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 </div>
@@ -1139,22 +779,13 @@ English 2
 
 </section>
 
+<!-- BLOOD -->
 
+<section id="blood" class="section">
 
-<!-- ================= BLOOD & IMMUNE SYSTEM ================= -->
-
-<section
-id="blood"
-class="section"
->
-
-<button
-class="back"
-onclick="show('first')"
->
+<button class="back" onclick="show('first')">
 ← Semester 2
 </button>
-
 
 <div class="section-title">
 
@@ -1162,267 +793,9 @@ onclick="show('first')"
 🩸 Blood & Immune System — Lectures
 </h2>
 
-<p>
-Semester 2
-</p>
+<p>Semester 2</p>
 
 </div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 1 — Introduction to Blood
-</h3>
-
-<p>
-Introduction to Hematology
-</p>
-
-<a
-href="https://docs.google.com/file/d/1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 2 — Red Blood Cells
-</h3>
-
-<p>
-Red Blood Cells
-</p>
-
-<a
-href="https://docs.google.com/file/d/1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 3 — Blood Indices
-</h3>
-
-<p>
-Blood Indices
-</p>
-
-<a
-href="https://docs.google.com/file/d/1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 4 — WBCs
-</h3>
-
-<p>
-White Blood Cells
-</p>
-
-<a
-href="https://docs.google.com/file/d/14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 5 — My Blood Groups
-</h3>
-
-<p>
-Blood Groups
-</p>
-
-<a
-href="https://docs.google.com/file/d/1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 6 — Hemostasis
-</h3>
-
-<p>
-Hemostasis
-</p>
-
-<a
-href="https://docs.google.com/file/d/1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 7 — Immunity 1
-</h3>
-
-<p>
-Immunity
-</p>
-
-<a
-href="https://docs.google.com/file/d/1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-
-<div class="lecture">
-
-<h3>
-Lecture 8 — Immunity 2
-</h3>
-
-<p>
-Immunity
-</p>
-
-<a
-href="https://docs.google.com/file/d/1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= HEMOSTASIS ================= -->
-
-<section
-id="hemostasis"
-class="section"
->
-
-<button
-class="back"
-onclick="show('first')"
->
-← Semester 2
-</button>
-
-
-<div class="section-title">
-
-<h2>
-🩸 Hemostasis — Lectures
-</h2>
-
-<p>
-Semester 2
-</p>
-
-</div>
-
 
 <!-- 1 -->
 
@@ -1432,12 +805,10 @@ Semester 2
 Lecture 1 — Introduction to Hematology
 </h3>
 
-<p>
-Introduction to hematology
-</p>
+<p>Introduction to hematology</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/Introduction%20to%20hematology.pptx"
+href="https://docs.google.com/file/d/1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1454,7 +825,6 @@ download
 
 </div>
 
-
 <!-- 2 -->
 
 <div class="lecture">
@@ -1463,12 +833,10 @@ download
 Lecture 2 — Red Blood Cells
 </h3>
 
-<p>
-Red Blood cells
-</p>
+<p>Red Blood Cells</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/Red%20Blood%20cells%20-%20Copy.pptx"
+href="https://docs.google.com/file/d/1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1485,7 +853,6 @@ download
 
 </div>
 
-
 <!-- 3 -->
 
 <div class="lecture">
@@ -1494,12 +861,10 @@ download
 Lecture 3 — Blood Indices
 </h3>
 
-<p>
-Blood indices
-</p>
+<p>Blood Indices</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/Blood%20indecies%20%282%29.pptx"
+href="https://docs.google.com/file/d/1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1508,14 +873,13 @@ rel="noopener noreferrer"
 
 <a
 class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Blood%20indecies%20%282%29.pptx"
+href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Blood%20indecies%20(2).pptx"
 download
 >
 ⬇️ Download
 </a>
 
 </div>
-
 
 <!-- 4 -->
 
@@ -1525,12 +889,10 @@ download
 Lecture 4 — WBCs
 </h3>
 
-<p>
-White Blood Cells
-</p>
+<p>White Blood Cells</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/WBCs.ppt"
+href="https://docs.google.com/file/d/14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1547,7 +909,6 @@ download
 
 </div>
 
-
 <!-- 5 -->
 
 <div class="lecture">
@@ -1556,12 +917,10 @@ download
 Lecture 5 — My Blood Groups
 </h3>
 
-<p>
-Blood Groups
-</p>
+<p>Blood Groups</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/my%20blood%20groubs.pptx"
+href="https://docs.google.com/file/d/1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1578,7 +937,6 @@ download
 
 </div>
 
-
 <!-- 6 -->
 
 <div class="lecture">
@@ -1587,12 +945,10 @@ download
 Lecture 6 — Hemostasis
 </h3>
 
-<p>
-Hemostasis
-</p>
+<p>Hemostasis</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/HEMOSTASIS.pptx"
+href="https://docs.google.com/file/d/1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1609,7 +965,6 @@ download
 
 </div>
 
-
 <!-- 7 -->
 
 <div class="lecture">
@@ -1618,12 +973,10 @@ download
 Lecture 7 — Immunity 1
 </h3>
 
-<p>
-Immunity
-</p>
+<p>Immunity</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/Immunity%20%281%29.ppt"
+href="https://docs.google.com/file/d/1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1632,14 +985,13 @@ rel="noopener noreferrer"
 
 <a
 class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Immunity%20%281%29.ppt"
+href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Immunity%20(1).ppt"
 download
 >
 ⬇️ Download
 </a>
 
 </div>
-
 
 <!-- 8 -->
 
@@ -1649,12 +1001,10 @@ download
 Lecture 8 — Immunity 2
 </h3>
 
-<p>
-Immunity
-</p>
+<p>Immunity</p>
 
 <a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/Immunity%202.ppt"
+href="https://docs.google.com/file/d/1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q/edit?usp=docslist_api&filetype=mspresentation"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -1673,22 +1023,13 @@ download
 
 </section>
 
+<!-- RESPIRATORY -->
 
+<section id="respiratory" class="section">
 
-<!-- ================= RESPIRATORY ================= -->
-
-<section
-id="respiratory"
-class="section"
->
-
-<button
-class="back"
-onclick="show('first')"
->
+<button class="back" onclick="show('first')">
 ← Semester 2
 </button>
-
 
 <div class="section-title">
 
@@ -1696,22 +1037,15 @@ onclick="show('first')"
 🫁 Respiratory System — Lectures
 </h2>
 
-<p>
-Semester 2
-</p>
+<p>Semester 2</p>
 
 </div>
 
-
 <div class="lecture">
 
-<h3>
-Lecture 1 — Nose and Nasal Cavity
-</h3>
+<h3>Lecture 1 — Nose and Nasal Cavity</h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
 <a
 href="https://drive.google.com/drive/folders/1-4HNHHdRXAh7E-u8hY1Pg-8nqz_rZwOx"
@@ -1731,16 +1065,11 @@ download
 
 </div>
 
-
 <div class="lecture">
 
-<h3>
-Lecture 2 — Pharynx
-</h3>
+<h3>Lecture 2 — Pharynx</h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
 <a
 href="https://drive.google.com/file/d/1rb4E6ggw7eDa9FaZ0L0QDXfjK1dJeUP9/view"
@@ -1760,16 +1089,11 @@ download
 
 </div>
 
-
 <div class="lecture">
 
-<h3>
-Lecture 3 — Larynx
-</h3>
+<h3>Lecture 3 — Larynx</h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
 <a
 href="https://drive.google.com/file/d/1GTklMSsgQLSWcZa6O9vYWmyHsL5l7cpB/view?usp=drivesdk"
@@ -1789,16 +1113,11 @@ download
 
 </div>
 
-
 <div class="lecture">
 
-<h3>
-Lecture 4 — Larynx 1
-</h3>
+<h3>Lecture 4 — Larynx 1</h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
 <a
 href="https://drive.google.com/file/d/1u0MnTg1enVKjRb9h6R5P1RhzjTVRIu-K/view?usp=drivesdk"
@@ -1818,16 +1137,11 @@ download
 
 </div>
 
-
 <div class="lecture">
 
-<h3>
-Lecture 5 — Trachea
-</h3>
+<h3>Lecture 5 — Trachea</h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
 <a
 href="https://drive.google.com/file/d/1c71fgs2jKCzKXUEaO_vbZgFc4_m-w2d_/view?usp=drivesdk"
@@ -1849,45 +1163,26 @@ download
 
 </section>
 
+<!-- SECOND YEAR -->
 
+<section id="second" class="section">
 
-<!-- ================= SECOND YEAR ================= -->
-
-<section
-id="second"
-class="section"
->
-
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
-
 <div class="section-title">
 
-<h2>
-Second Year
-</h2>
-
-<p>
-Semester 3 & 4
-</p>
+<h2>Second Year</h2>
+<p>Semester 3 & 4</p>
 
 </div>
 
-
 <div class="semester">
 
-<h3>
-Semester 3
-</h3>
-
+<h3>Semester 3</h3>
 
 <div class="subject-grid">
-
 
 <div class="subject">
 <h4>Gastrointestinal System (GIT)</h4>
@@ -1897,7 +1192,6 @@ Semester 3
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
 <h4>Musculoskeletal System</h4>
 <button onclick="soon()">📚 Lectures</button>
@@ -1905,7 +1199,6 @@ Semester 3
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
-
 
 <div class="subject">
 <h4>Nutrition & Metabolism</h4>
@@ -1915,7 +1208,6 @@ Semester 3
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
 <h4>Reproductive System</h4>
 <button onclick="soon()">📚 Lectures</button>
@@ -1923,7 +1215,6 @@ Semester 3
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
-
 
 <div class="subject">
 <h4>Urinary System</h4>
@@ -1937,16 +1228,11 @@ Semester 3
 
 </div>
 
-
 <div class="semester">
 
-<h3>
-Semester 4
-</h3>
-
+<h3>Semester 4</h3>
 
 <div class="subject-grid">
-
 
 <div class="subject">
 <h4>Neuroanatomy</h4>
@@ -1956,7 +1242,6 @@ Semester 4
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
 <h4>Genetics</h4>
 <button onclick="soon()">📚 Lectures</button>
@@ -1964,7 +1249,6 @@ Semester 4
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
-
 
 <div class="subject">
 <h4>Health Management</h4>
@@ -1974,7 +1258,6 @@ Semester 4
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
 <h4>Special Senses</h4>
 <button onclick="soon()">📚 Lectures</button>
@@ -1982,7 +1265,6 @@ Semester 4
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
-
 
 <div class="subject">
 <h4>Practical Physiology</h4>
@@ -1992,7 +1274,6 @@ Semester 4
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
 <h4>Head & Neck</h4>
 <button onclick="soon()">📚 Lectures</button>
@@ -2000,7 +1281,6 @@ Semester 4
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
-
 
 <div class="subject">
 <h4>Behavioral Science</h4>
@@ -2010,7 +1290,6 @@ Semester 4
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
-
 <div class="subject">
 <h4>Endocrine System</h4>
 <button onclick="soon()">📚 Lectures</button>
@@ -2018,7 +1297,6 @@ Semester 4
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
 </div>
-
 
 <div class="subject">
 <h4>Psychology</h4>
@@ -2034,166 +1312,60 @@ Semester 4
 
 </section>
 
+<!-- THIRD YEAR -->
 
+<section id="third" class="section">
 
-<!-- ================= THIRD YEAR ================= -->
-
-<section
-id="third"
-class="section"
->
-
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
-
 <div class="section-title">
 
-<h2>
-Third Year
-</h2>
-
-<p>
-Semester 5 & 6
-</p>
+<h2>Third Year</h2>
+<p>Semester 5 & 6</p>
 
 </div>
-
 
 <div class="semester">
 
-<h3>
-Semester 5
-</h3>
-
+<h3>Semester 5</h3>
 
 <div class="subject-grid">
 
+<div class="subject"><h4>Pathology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Pathology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Pharmacology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Medicine 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Pharmacology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Microbiology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Surgery 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Medicine 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Communicable and Non-communicable Diseases</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-
-<div class="subject">
-<h4>Microbiology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Surgery 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Communicable and Non-communicable Diseases</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Environmental</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Environmental</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 </div>
 
 </div>
-
 
 <div class="semester">
 
-<h3>
-Semester 6
-</h3>
-
+<h3>Semester 6</h3>
 
 <div class="subject-grid">
 
+<div class="subject"><h4>Pharmacology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Pharmacology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Medicine 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Surgery 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Medicine 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Pathology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-
-<div class="subject">
-<h4>Surgery 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Pathology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Environmental Health</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Environmental Health</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 </div>
 
@@ -2201,175 +1373,62 @@ Semester 6
 
 </section>
 
+<!-- FOURTH YEAR -->
 
+<section id="fourth" class="section">
 
-<!-- ================= FOURTH YEAR ================= -->
-
-<section
-id="fourth"
-class="section"
->
-
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
-
 <div class="section-title">
 
-<h2>
-Fourth Year
-</h2>
-
-<p>
-Semester 7 & 8
-</p>
+<h2>Fourth Year</h2>
+<p>Semester 7 & 8</p>
 
 </div>
-
 
 <div class="semester">
 
-<h3>
-Semester 7
-</h3>
-
+<h3>Semester 7</h3>
 
 <div class="subject-grid">
 
+<div class="subject"><h4>Surgery</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Surgery</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Medicine</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Obstetrics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Medicine</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Pediatrics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Research Methodology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Obstetrics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Forensic</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-
-<div class="subject">
-<h4>Pediatrics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Research Methodology</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Forensic</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Medical Ethics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Medical Ethics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 </div>
 
 </div>
-
 
 <div class="semester">
 
-<h3>
-Semester 8
-</h3>
-
+<h3>Semester 8</h3>
 
 <div class="subject-grid">
 
+<div class="subject"><h4>Medicine</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Medicine</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Surgery</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Obstetrics & Gynaecology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Surgery</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Pediatrics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Toxicology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Obstetrics & Gynaecology</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Pediatrics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Toxicology</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Research</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Research</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 </div>
 
@@ -2377,166 +1436,60 @@ Semester 8
 
 </section>
 
+<!-- FIFTH YEAR -->
 
+<section id="fifth" class="section">
 
-<!-- ================= FIFTH YEAR ================= -->
-
-<section
-id="fifth"
-class="section"
->
-
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
-
 <div class="section-title">
 
-<h2>
-Fifth Year
-</h2>
-
-<p>
-Semester 9 & 10
-</p>
+<h2>Fifth Year</h2>
+<p>Semester 9 & 10</p>
 
 </div>
-
 
 <div class="semester">
 
-<h3>
-Semester 9
-</h3>
-
+<h3>Semester 9</h3>
 
 <div class="subject-grid">
 
+<div class="subject"><h4>Medicine 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Medicine 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Surgery 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Pediatrics 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Surgery 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Obstetrics & Gynaecology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Psychiatry 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Pediatrics 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Obstetrics & Gynaecology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Psychiatry 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Ophthalmology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Ophthalmology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 </div>
 
 </div>
-
 
 <div class="semester">
 
-<h3>
-Semester 10
-</h3>
-
+<h3>Semester 10</h3>
 
 <div class="subject-grid">
 
+<div class="subject"><h4>Medicine 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Medicine 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Surgery 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Pediatrics 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Surgery 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Obstetrics & Gynaecology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
+<div class="subject"><h4>Psychiatry 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
-<div class="subject">
-<h4>Pediatrics 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Obstetrics & Gynaecology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Psychiatry 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-
-<div class="subject">
-<h4>Ophthalmology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
+<div class="subject"><h4>Ophthalmology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
 
 </div>
 
@@ -2544,35 +1497,20 @@ Semester 10
 
 </section>
 
+<!-- BIOLOGY -->
 
+<section id="biology" class="section">
 
-<!-- ================= BIOLOGY ================= -->
-
-<section
-id="biology"
-class="section"
->
-
-<button
-class="back"
-onclick="show('first')"
->
+<button class="back" onclick="show('first')">
 ← Biology
 </button>
 
-
 <div class="section-title">
 
-<h2>
-📚 Biology — Lectures
-</h2>
-
-<p>
-Available lectures
-</p>
+<h2>📚 Biology — Lectures</h2>
+<p>Available lectures</p>
 
 </div>
-
 
 <div class="lecture">
 
@@ -2580,9 +1518,7 @@ Available lectures
 Lecture 2 — The Cell Structure and Function
 </h3>
 
-<p>
-Biology Lecture
-</p>
+<p>Biology Lecture</p>
 
 <a
 href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
@@ -2604,34 +1540,21 @@ download
 
 </section>
 
+<!-- AI -->
 
-
-<!-- ================= AI ================= -->
-
-<section
-id="ai"
-class="section"
->
+<section id="ai" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
-<h2>
-🤖 Ask B7 AI
-</h2>
+<h2>🤖 Ask B7 AI</h2>
 
-<p>
-Your academic medical assistant
-</p>
+<p>Your academic medical assistant</p>
 
 </div>
-
 
 <div class="ai-box">
 
@@ -2640,7 +1563,6 @@ id="aiQuestion"
 placeholder="Ask B7 AI a medical question..."
 ></textarea>
 
-
 <button
 id="askButton"
 onclick="askAI()"
@@ -2648,38 +1570,23 @@ onclick="askAI()"
 Ask B7 AI
 </button>
 
-
-<div
-id="aiLoading"
-style="display:none"
->
+<div id="aiLoading" style="display:none">
 ⏳ Thinking...
 </div>
 
-
-<div
-id="aiAnswer"
-></div>
+<div id="aiAnswer"></div>
 
 </div>
 
 </section>
 
+<!-- LIBRARY -->
 
-
-<!-- ================= LIBRARY ================= -->
-
-<section
-id="library"
-class="section"
->
+<section id="library" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -2689,12 +1596,9 @@ onclick="show('dashboard')"
 
 </div>
 
-
 <div class="coming">
 
-<h2>
-Coming Soon
-</h2>
+<h2>Coming Soon</h2>
 
 <p>
 Medical books and references will be added here.
@@ -2704,33 +1608,21 @@ Medical books and references will be added here.
 
 </section>
 
+<!-- MEMBERS -->
 
-
-<!-- ================= MEMBERS ================= -->
-
-<section
-id="founders"
-class="section"
->
+<section id="founders" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
-<h2>
-👥 Members
-</h2>
+<h2>👥 Members</h2>
 
 </div>
 
-
 <div class="founders">
-
 
 <div class="founder">
 
@@ -2744,7 +1636,6 @@ Founder
 
 </div>
 
-
 <div class="founder">
 
 <h3>
@@ -2757,7 +1648,6 @@ Member
 
 </div>
 
-
 <div class="founder">
 
 <h3>
@@ -2769,7 +1659,6 @@ Member
 </div>
 
 </div>
-
 
 <div class="founder">
 
@@ -2787,30 +1676,19 @@ Co-Founder
 
 </section>
 
+<!-- SUPPORT -->
 
-
-<!-- ================= SUPPORT ================= -->
-
-<section
-id="support"
-class="section"
->
+<section id="support" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
-<h2>
-✉️ Contact & Support
-</h2>
+<h2>✉️ Contact & Support</h2>
 
 </div>
-
 
 <div class="support">
 
@@ -2818,30 +1696,22 @@ onclick="show('dashboard')"
 For problems, suggestions or questions, contact us.
 </p>
 
-
 <p>
-
 Email:
-
 <a href="mailto:almdainb7@gmail.com">
 almdainb7@gmail.com
 </a>
-
 </p>
 
 </div>
 
 </section>
 
-
 </main>
-
-
 
 <script>
 
 const sections=[
-
 "dashboard",
 "rules",
 "academic",
@@ -2852,15 +1722,12 @@ const sections=[
 "fifth",
 "biology",
 "blood",
-"hemostasis",
 "respiratory",
 "ai",
 "library",
 "founders",
 "support"
-
 ];
-
 
 function show(id){
 
@@ -2869,40 +1736,27 @@ sections.forEach(function(name){
 const element=document.getElementById(name);
 
 if(element){
-
 element.style.display="none";
-
 }
 
 });
-
 
 const selected=document.getElementById(id);
 
 if(selected){
-
 selected.style.display="block";
-
 }
 
-
 window.scrollTo({
-
 top:0,
-
 behavior:"smooth"
-
 });
 
 }
 
-
 function soon(){
-
 alert("Coming Soon 🚀");
-
 }
-
 
 async function askAI(){
 
@@ -2918,7 +1772,6 @@ document.getElementById("aiLoading");
 const button=
 document.getElementById("askButton");
 
-
 if(!question){
 
 answer.textContent=
@@ -2928,13 +1781,9 @@ return;
 
 }
 
-
 loading.style.display="block";
-
 answer.textContent="";
-
 button.disabled=true;
-
 
 try{
 
@@ -2943,22 +1792,16 @@ const response=await fetch("/api/chat",{
 method:"POST",
 
 headers:{
-
 "Content-Type":"application/json"
-
 },
 
 body:JSON.stringify({
-
 message:question
-
 })
 
 });
 
-
 const data=await response.json();
-
 
 if(!response.ok){
 
@@ -2968,10 +1811,8 @@ data.error || "Something went wrong."
 
 }
 
-
 answer.textContent=
 data.reply || "No answer received.";
-
 
 }catch(error){
 
@@ -2983,23 +1824,17 @@ console.error(error);
 }finally{
 
 loading.style.display="none";
-
 button.disabled=false;
 
 }
 
 }
 
-
 window.onload=function(){
-
 show("dashboard");
-
 };
 
 </script>
 
-
 </body>
-
 </html>
