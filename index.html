@@ -742,11 +742,19 @@ Academic Medical Library & Learning Platform
 </div>
 
 <div class="subject">
+
 <h4>Hemostasis</h4>
-<button onclick="show('blood')">📚 Lectures</button>
+
+<!-- FIXED: Hemostasis now opens its own page -->
+
+<button onclick="show('hemostasis')">
+📚 Lectures
+</button>
+
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
+
 </div>
 
 <div class="subject">
@@ -791,6 +799,36 @@ Academic Medical Library & Learning Platform
 
 <h2>
 🩸 Blood & Immune System — Lectures
+</h2>
+
+<p>Semester 2</p>
+
+</div>
+
+<div class="coming">
+
+<h2>Blood & Immune System</h2>
+
+<p>
+Blood & Immune System lectures will be added here.
+</p>
+
+</div>
+
+</section>
+
+<!-- HEMOSTASIS -->
+
+<section id="hemostasis" class="section">
+
+<button class="back" onclick="show('first')">
+← Semester 2
+</button>
+
+<div class="section-title">
+
+<h2>
+🩸 Hemostasis — Lectures
 </h2>
 
 <p>Semester 2</p>
@@ -914,7 +952,7 @@ download
 <div class="lecture">
 
 <h3>
-Lecture 5 — My Blood Groups
+Lecture 5 — Blood Groups
 </h3>
 
 <p>Blood Groups</p>
@@ -1722,6 +1760,7 @@ const sections=[
 "fifth",
 "biology",
 "blood",
+"hemostasis",
 "respiratory",
 "ai",
 "library",
@@ -1834,7 +1873,4 @@ window.onload=function(){
 show("dashboard");
 };
 
-</script>
-
-</body>
-</html>
+</scr
