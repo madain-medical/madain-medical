@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Madain Medical Association</title>
 
 <style>
+
 *{
 box-sizing:border-box;
 margin:0;
-padding:0;
+padding:0
 }
 
 body{
 font-family:Arial,sans-serif;
 background:#f4f7fa;
-color:#1f2937;
+color:#1f2937
 }
 
 .sidebar{
@@ -26,13 +31,12 @@ width:240px;
 height:100vh;
 background:#102a43;
 color:white;
-padding:22px 16px;
-overflow-y:auto;
+padding:22px 16px
 }
 
 .logo{
 text-align:center;
-margin-bottom:25px;
+margin-bottom:25px
 }
 
 .logo img{
@@ -41,19 +45,18 @@ height:85px;
 object-fit:contain;
 background:white;
 padding:5px;
-border-radius:12px;
+border-radius:12px
 }
 
 .logo h2{
-margin-top:8px;
-font-size:20px;
+margin-top:8px
 }
 
 .nav-title{
 color:#9fb3c8;
 font-size:11px;
 margin:22px 8px 8px;
-text-transform:uppercase;
+text-transform:uppercase
 }
 
 .nav-btn{
@@ -66,20 +69,20 @@ margin:3px 0;
 border-radius:8px;
 text-align:left;
 font-size:15px;
-cursor:pointer;
+cursor:pointer
 }
 
 .nav-btn:hover{
-background:#243b53;
+background:#243b53
 }
 
 .main{
 margin-left:240px;
-padding:30px;
+padding:30px
 }
 
 .section{
-display:none;
+display:none
 }
 
 .header,
@@ -94,14 +97,16 @@ display:none;
 .coming,
 .ai-box,
 .rules-box{
+
 background:white;
 border-radius:14px;
-box-shadow:0 3px 15px rgba(0,0,0,.06);
+box-shadow:0 3px 15px rgba(0,0,0,.06)
+
 }
 
 .header{
 padding:28px;
-margin-bottom:22px;
+margin-bottom:22px
 }
 
 .header h1,
@@ -111,7 +116,9 @@ margin-bottom:22px;
 .lecture h3,
 .founder h3,
 .coming h2{
-color:#102a43;
+
+color:#102a43
+
 }
 
 .header p,
@@ -120,35 +127,37 @@ color:#102a43;
 .lecture p,
 .role,
 .coming p{
-color:#627d98;
+
+color:#627d98
+
 }
 
 .dashboard{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:18px;
+gap:18px
 }
 
 .dashboard-card,
 .year-card{
 padding:22px;
 cursor:pointer;
-transition:.2s;
+transition:.2s
 }
 
 .dashboard-card:hover,
 .year-card:hover{
-transform:translateY(-3px);
+transform:translateY(-3px)
 }
 
 .dashboard-icon{
 font-size:32px;
-margin-bottom:10px;
+margin-bottom:10px
 }
 
 .dashboard-card h3{
 color:#102a43;
-margin-bottom:7px;
+margin-bottom:7px
 }
 
 .back{
@@ -158,39 +167,39 @@ color:white;
 padding:9px 14px;
 border-radius:7px;
 cursor:pointer;
-margin-bottom:16px;
+margin-bottom:16px
 }
 
 .year-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:16px;
+gap:16px
 }
 
 .semester{
 padding:20px;
-margin-bottom:18px;
+margin-bottom:18px
 }
 
 .semester h3{
 color:#486581;
-margin-bottom:14px;
+margin-bottom:14px
 }
 
 .subject-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:13px;
+gap:13px
 }
 
 .subject{
 padding:16px;
 border:1px solid #d9e2ec;
-box-shadow:none;
+box-shadow:none
 }
 
 .subject h4{
-margin-bottom:10px;
+margin-bottom:10px
 }
 
 .subject button{
@@ -201,86 +210,85 @@ padding:8px 9px;
 margin:2px;
 border-radius:6px;
 cursor:pointer;
-font-size:12px;
+font-size:12px
 }
 
 .subject button:hover{
-background:#243b53;
+background:#243b53
 }
 
 .lecture{
 padding:20px;
 margin-bottom:14px;
-border-left:5px solid #102a43;
+border-left:5px solid #102a43
 }
 
 .lecture h3{
-margin-bottom:7px;
+margin-bottom:7px
 }
 
 .lecture p{
-margin-bottom:13px;
+margin-bottom:13px
 }
 
-.lecture-buttons{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-}
+/* PDF BUTTONS */
 
-.lecture-buttons a{
+.lecture a{
 display:inline-block;
 background:#102a43;
 color:white;
 text-decoration:none;
 padding:10px 14px;
 border-radius:7px;
+margin-right:5px;
+margin-top:5px;
+cursor:pointer
 }
 
-.lecture-buttons a:hover{
-background:#243b53;
+.lecture a:hover{
+background:#243b53
 }
 
-.lecture-buttons .download{
-background:#2f855a;
+.download{
+background:#2f855a !important
 }
 
-.lecture-buttons .download:hover{
-background:#276749;
+.download:hover{
+background:#276749 !important
 }
 
 .coming{
 text-align:center;
-padding:55px 20px;
+padding:55px 20px
 }
 
 .founders{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:16px;
+gap:16px
 }
 
 .founder{
-padding:22px;
+padding:22px
 }
 
 .founder h3{
-margin-bottom:7px;
+margin-bottom:7px
 }
 
 .support{
 padding:22px;
-line-height:1.8;
+line-height:1.8
 }
 
 .support a{
 color:#102a43;
-font-weight:bold;
+font-weight:bold
 }
 
 .ai-box{
 padding:25px;
-max-width:800px;
+max-width:800px
 }
 
 #aiQuestion{
@@ -291,7 +299,7 @@ border:1px solid #d9e2ec;
 border-radius:10px;
 font-size:16px;
 resize:vertical;
-margin-bottom:12px;
+margin-bottom:12px
 }
 
 #askButton{
@@ -301,12 +309,16 @@ border:0;
 padding:12px 20px;
 border-radius:8px;
 font-size:15px;
-cursor:pointer;
+cursor:pointer
+}
+
+#askButton:hover{
+background:#243b53
 }
 
 #aiLoading{
 margin-top:18px;
-color:#627d98;
+color:#627d98
 }
 
 #aiAnswer{
@@ -315,24 +327,29 @@ padding:18px;
 background:#f4f7fa;
 border-radius:10px;
 line-height:1.7;
-white-space:pre-wrap;
+white-space:pre-wrap
 }
 
 .rules-box{
 padding:28px;
 line-height:2;
 text-align:right;
-direction:rtl;
+direction:rtl
 }
 
 .rules-box h2{
 color:#102a43;
-margin-bottom:18px;
+margin-bottom:18px
 }
 
 .rules-box p{
 margin-bottom:15px;
-color:#486581;
+color:#486581
+}
+
+.rules-box ul{
+padding-right:25px;
+color:#486581
 }
 
 @media(max-width:800px){
@@ -340,19 +357,24 @@ color:#486581;
 .sidebar{
 position:relative;
 width:100%;
-height:auto;
+height:auto
 }
 
 .main{
 margin-left:0;
-padding:18px;
+padding:18px
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
+
+
+<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -360,15 +382,11 @@ padding:18px;
 
 <img src="IMG_7662.JPG" alt="College Logo">
 
-<h2>
-Madain Medical Association
-</h2>
+<h2>Madain Medical Association</h2>
 
 </div>
 
-<div class="nav-title">
-Main
-</div>
+<div class="nav-title">Main</div>
 
 <button class="nav-btn" onclick="show('dashboard')">
 🏠 Dashboard
@@ -386,9 +404,7 @@ Main
 🤖 Ask B7 AI
 </button>
 
-<div class="nav-title">
-Information
-</div>
+<div class="nav-title">Information</div>
 
 <button class="nav-btn" onclick="show('founders')">
 👥 Members
@@ -422,9 +438,13 @@ Academic Medical Library & Learning Platform
 
 <div class="dashboard">
 
-<div class="dashboard-card" onclick="show('academic')">
 
-<div class="dashboard-icon">🎓</div>
+<div class="dashboard-card"
+onclick="show('academic')">
+
+<div class="dashboard-icon">
+🎓
+</div>
 
 <h3>
 Academic Years
@@ -437,9 +457,12 @@ Access all academic years and subjects.
 </div>
 
 
-<div class="dashboard-card" onclick="show('library')">
+<div class="dashboard-card"
+onclick="show('library')">
 
-<div class="dashboard-icon">📚</div>
+<div class="dashboard-icon">
+📚
+</div>
 
 <h3>
 Medical Library
@@ -452,9 +475,12 @@ Medical books and resources.
 </div>
 
 
-<div class="dashboard-card" onclick="show('ai')">
+<div class="dashboard-card"
+onclick="show('ai')">
 
-<div class="dashboard-icon">🤖</div>
+<div class="dashboard-icon">
+🤖
+</div>
 
 <h3>
 Ask B7 AI
@@ -467,9 +493,12 @@ Your academic medical assistant.
 </div>
 
 
-<div class="dashboard-card" onclick="show('founders')">
+<div class="dashboard-card"
+onclick="show('founders')">
 
-<div class="dashboard-icon">👥</div>
+<div class="dashboard-icon">
+👥
+</div>
 
 <h3>
 Members
@@ -482,9 +511,12 @@ Meet the team behind the platform.
 </div>
 
 
-<div class="dashboard-card" onclick="show('support')">
+<div class="dashboard-card"
+onclick="show('support')">
 
-<div class="dashboard-icon">✉️</div>
+<div class="dashboard-icon">
+✉️
+</div>
 
 <h3>
 Contact & Support
@@ -497,9 +529,12 @@ Contact us.
 </div>
 
 
-<div class="dashboard-card" onclick="show('rules')">
+<div class="dashboard-card"
+onclick="show('rules')">
 
-<div class="dashboard-icon">📜</div>
+<div class="dashboard-icon">
+📜
+</div>
 
 <h3>
 Rules & Privacy
@@ -511,6 +546,7 @@ Important information and policies.
 
 </div>
 
+
 </div>
 
 </section>
@@ -520,8 +556,11 @@ Important information and policies.
 
 <section id="rules" class="section">
 
-<button class="back" onclick="show('dashboard')">
+<button class="back"
+onclick="show('dashboard')">
+
 ← Dashboard
+
 </button>
 
 <div class="rules-box">
@@ -539,30 +578,40 @@ Important information and policies.
 
 <p>
 نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير
-هذه المنصة، ونسأل الله أن يجزيهم خير الجزاء وأن يجعل هذا
-العمل نافعاً للطلاب والعلم.
+هذه المنصة.
 </p>
 
 <p>
-<strong>الخصوصية وحماية البيانات:</strong>
+
+<strong>
+الخصوصية وحماية البيانات:
+</strong>
+
 نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها
 بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.
+
 </p>
 
 <p>
+
 المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط،
 ولا يُعتبر بديلاً عن استشارة الطبيب أو المصادر الطبية
 المعتمدة.
+
 </p>
 
 <p>
+
 يُمنع استخدام المنصة في أي نشاط غير قانوني أو محاولة
 الوصول غير المصرح به إلى بيانات أو أنظمة المنصة.
+
 </p>
 
 <p>
+
 باستخدامك لهذه المنصة، فإنك توافق على الالتزام بهذه
 القوانين والسياسات واحترام حقوق أصحاب المحتوى.
+
 </p>
 
 </div>
@@ -576,8 +625,11 @@ Important information and policies.
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
+<button class="back"
+onclick="show('dashboard')">
+
 ← Dashboard
+
 </button>
 
 <h2>
@@ -590,9 +642,12 @@ Select your academic year.
 
 </div>
 
+
 <div class="year-grid">
 
-<div class="year-card" onclick="show('first')">
+
+<div class="year-card"
+onclick="show('first')">
 
 <h3>
 First Year
@@ -604,7 +659,9 @@ Semester 1 & 2
 
 </div>
 
-<div class="year-card" onclick="show('second')">
+
+<div class="year-card"
+onclick="show('second')">
 
 <h3>
 Second Year
@@ -616,7 +673,9 @@ Semester 3 & 4
 
 </div>
 
-<div class="year-card" onclick="show('third')">
+
+<div class="year-card"
+onclick="show('third')">
 
 <h3>
 Third Year
@@ -628,7 +687,9 @@ Semester 5 & 6
 
 </div>
 
-<div class="year-card" onclick="show('fourth')">
+
+<div class="year-card"
+onclick="show('fourth')">
 
 <h3>
 Fourth Year
@@ -640,7 +701,9 @@ Semester 7 & 8
 
 </div>
 
-<div class="year-card" onclick="show('fifth')">
+
+<div class="year-card"
+onclick="show('fifth')">
 
 <h3>
 Fifth Year
@@ -652,6 +715,7 @@ Semester 9 & 10
 
 </div>
 
+
 </div>
 
 </section>
@@ -661,8 +725,11 @@ Semester 9 & 10
 
 <section id="first" class="section">
 
-<button class="back" onclick="show('academic')">
+<button class="back"
+onclick="show('academic')">
+
 ← Academic Years
+
 </button>
 
 <div class="section-title">
@@ -685,6 +752,7 @@ Semester 1
 </h3>
 
 <div class="subject-grid">
+
 
 <div class="subject">
 
@@ -713,7 +781,9 @@ Biology
 
 <div class="subject">
 
-<h4>Physics</h4>
+<h4>
+Physics
+</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -725,7 +795,9 @@ Biology
 
 <div class="subject">
 
-<h4>Chemistry</h4>
+<h4>
+Chemistry
+</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -737,7 +809,9 @@ Biology
 
 <div class="subject">
 
-<h4>English</h4>
+<h4>
+English
+</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -749,7 +823,9 @@ Biology
 
 <div class="subject">
 
-<h4>Introduction to Medicine</h4>
+<h4>
+Introduction to Medicine
+</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -761,7 +837,9 @@ Biology
 
 <div class="subject">
 
-<h4>Computer</h4>
+<h4>
+Computer
+</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -770,10 +848,13 @@ Biology
 
 </div>
 
-</div>
 
 </div>
 
+</div>
+
+
+<!-- SEMESTER 2 -->
 
 <div class="semester">
 
@@ -812,7 +893,7 @@ Cardiology
 </div>
 
 
-<!-- RESPIRATORY BUTTON -->
+<!-- RESPIRATORY -->
 
 <div class="subject">
 
@@ -821,7 +902,9 @@ Respiratory System
 </h4>
 
 <button onclick="show('respiratory')">
+
 📚 Lectures
+
 </button>
 
 <button onclick="soon()">
@@ -908,6 +991,7 @@ English 2
 
 </div>
 
+
 </div>
 
 </div>
@@ -915,47 +999,45 @@ English 2
 </section>
 
 
-<!-- ================================================= -->
 <!-- RESPIRATORY -->
-<!-- ================================================= -->
 
 <section id="respiratory" class="section">
 
-<button class="back" onclick="show('first')">
+<button class="back"
+onclick="show('first')">
+
 ← Semester 2
+
 </button>
 
 <div class="section-title">
 
 <h2>
-🫁 Respiratory System
+🫁 Respiratory System — Lectures
 </h2>
 
 <p>
-Lectures
+Available lectures
 </p>
 
 </div>
 
 
-<!-- 1 -->
+<!-- LECTURE 1 -->
 
 <div class="lecture">
 
 <h3>
-1 — Nose and Nasal Cavity
+Lecture 1 — Nose and Nasal Cavity
 </h3>
 
 <p>
-Nose, nasal cavity and paranasal sinuses
+Respiratory System Lecture
 </p>
 
-<div class="lecture-buttons">
-
 <a
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/Nose%20.nasel%20cavity%20and%20paranasel%20sinuses%202.pdf"
-target="_blank"
-rel="noopener">
+href="./nose-and-nasal-cavity.pdf"
+target="_blank">
 
 📖 Open Lecture
 
@@ -963,8 +1045,8 @@ rel="noopener">
 
 <a
 class="download"
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/Nose%20.nasel%20cavity%20and%20paranasel%20sinuses%202.pdf"
-download="Nose and Nasal Cavity.pdf">
+href="./nose-and-nasal-cavity.pdf"
+download>
 
 ⬇️ Download PDF
 
@@ -972,27 +1054,22 @@ download="Nose and Nasal Cavity.pdf">
 
 </div>
 
-</div>
 
-
-<!-- 2 -->
+<!-- LECTURE 2 -->
 
 <div class="lecture">
 
 <h3>
-2 — Pharynx
+Lecture 2 — Pharynx
 </h3>
 
 <p>
-Pharynx Lecture
+Respiratory System Lecture
 </p>
 
-<div class="lecture-buttons">
-
 <a
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/Pharynx%202.pdf"
-target="_blank"
-rel="noopener">
+href="./pharynx.pdf"
+target="_blank">
 
 📖 Open Lecture
 
@@ -1000,8 +1077,8 @@ rel="noopener">
 
 <a
 class="download"
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/Pharynx%202.pdf"
-download="Pharynx.pdf">
+href="./pharynx.pdf"
+download>
 
 ⬇️ Download PDF
 
@@ -1009,27 +1086,22 @@ download="Pharynx.pdf">
 
 </div>
 
-</div>
 
-
-<!-- 3 -->
+<!-- LECTURE 3 -->
 
 <div class="lecture">
 
 <h3>
-3 — Larynx
+Lecture 3 — Larynx
 </h3>
 
 <p>
-Larynx Lecture
+Respiratory System Lecture
 </p>
 
-<div class="lecture-buttons">
-
 <a
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/larynx.pdf"
-target="_blank"
-rel="noopener">
+href="./larynx.pdf"
+target="_blank">
 
 📖 Open Lecture
 
@@ -1037,8 +1109,8 @@ rel="noopener">
 
 <a
 class="download"
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/larynx.pdf"
-download="Larynx.pdf">
+href="./larynx.pdf"
+download>
 
 ⬇️ Download PDF
 
@@ -1046,27 +1118,22 @@ download="Larynx.pdf">
 
 </div>
 
-</div>
 
-
-<!-- 4 -->
+<!-- LECTURE 4 -->
 
 <div class="lecture">
 
 <h3>
-4 — Larynx 1
+Lecture 4 — Larynx
 </h3>
 
 <p>
-Larynx Lecture 1
+Respiratory System Lecture
 </p>
 
-<div class="lecture-buttons">
-
 <a
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/larynx%201.pdf"
-target="_blank"
-rel="noopener">
+href="./larynx-2.pdf"
+target="_blank">
 
 📖 Open Lecture
 
@@ -1074,8 +1141,8 @@ rel="noopener">
 
 <a
 class="download"
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/larynx%201.pdf"
-download="Larynx 1.pdf">
+href="./larynx-2.pdf"
+download>
 
 ⬇️ Download PDF
 
@@ -1083,27 +1150,22 @@ download="Larynx 1.pdf">
 
 </div>
 
-</div>
 
-
-<!-- 5 -->
+<!-- LECTURE 5 -->
 
 <div class="lecture">
 
 <h3>
-5 — Trachea and Bronchi
+Lecture 5 — Trachea
 </h3>
 
 <p>
-Trachea and bronchi
+Respiratory System Lecture
 </p>
 
-<div class="lecture-buttons">
-
 <a
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/trachea%20and%20bronchi.pdf"
-target="_blank"
-rel="noopener">
+href="./trachea-and-bronchi.pdf"
+target="_blank">
 
 📖 Open Lecture
 
@@ -1111,8 +1173,8 @@ rel="noopener">
 
 <a
 class="download"
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/trachea%20and%20bronchi.pdf"
-download="Trachea and Bronchi.pdf">
+href="./trachea-and-bronchi.pdf"
+download>
 
 ⬇️ Download PDF
 
@@ -1120,7 +1182,6 @@ download="Trachea and Bronchi.pdf">
 
 </div>
 
-</div>
 
 </section>
 
@@ -1129,8 +1190,11 @@ download="Trachea and Bronchi.pdf">
 
 <section id="biology" class="section">
 
-<button class="back" onclick="show('first')">
-← Semester 1
+<button class="back"
+onclick="show('first')">
+
+← Biology
+
 </button>
 
 <div class="section-title">
@@ -1156,12 +1220,9 @@ Lecture 2 — The Cell Structure and Function
 Biology Lecture
 </p>
 
-<div class="lecture-buttons">
-
 <a
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-target="_blank"
-rel="noopener">
+href="./LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
+target="_blank">
 
 📖 Open Lecture
 
@@ -1169,14 +1230,12 @@ rel="noopener">
 
 <a
 class="download"
-href="https://raw.githubusercontent.com/apdalmnemtag-maker/B7-gallery/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-download="Biology Lecture 2.pdf">
+href="./LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
+download>
 
-⬇️ Download PDF
+⬇️ Download
 
 </a>
-
-</div>
 
 </div>
 
@@ -1187,8 +1246,11 @@ download="Biology Lecture 2.pdf">
 
 <section id="second" class="section">
 
-<button class="back" onclick="show('academic')">
+<button class="back"
+onclick="show('academic')">
+
 ← Academic Years
+
 </button>
 
 <div class="section-title">
@@ -1206,11 +1268,11 @@ Semester 3 & 4
 <div class="coming">
 
 <h2>
-Coming Soon 🚀
+Coming Soon
 </h2>
 
 <p>
-Second year lectures will be added soon.
+Lectures will be added here.
 </p>
 
 </div>
@@ -1222,8 +1284,11 @@ Second year lectures will be added soon.
 
 <section id="third" class="section">
 
-<button class="back" onclick="show('academic')">
+<button class="back"
+onclick="show('academic')">
+
 ← Academic Years
+
 </button>
 
 <div class="section-title">
@@ -1241,11 +1306,11 @@ Semester 5 & 6
 <div class="coming">
 
 <h2>
-Coming Soon 🚀
+Coming Soon
 </h2>
 
 <p>
-Third year lectures will be added soon.
+Lectures will be added here.
 </p>
 
 </div>
@@ -1257,8 +1322,11 @@ Third year lectures will be added soon.
 
 <section id="fourth" class="section">
 
-<button class="back" onclick="show('academic')">
+<button class="back"
+onclick="show('academic')">
+
 ← Academic Years
+
 </button>
 
 <div class="section-title">
@@ -1276,11 +1344,11 @@ Semester 7 & 8
 <div class="coming">
 
 <h2>
-Coming Soon 🚀
+Coming Soon
 </h2>
 
 <p>
-Fourth year lectures will be added soon.
+Lectures will be added here.
 </p>
 
 </div>
@@ -1292,8 +1360,11 @@ Fourth year lectures will be added soon.
 
 <section id="fifth" class="section">
 
-<button class="back" onclick="show('academic')">
+<button class="back"
+onclick="show('academic')">
+
 ← Academic Years
+
 </button>
 
 <div class="section-title">
@@ -1311,12 +1382,66 @@ Semester 9 & 10
 <div class="coming">
 
 <h2>
-Coming Soon 🚀
+Coming Soon
 </h2>
 
 <p>
-Fifth year lectures will be added soon.
+Lectures will be added here.
 </p>
+
+</div>
+
+</section>
+
+
+<!-- AI -->
+
+<section id="ai" class="section">
+
+<div class="section-title">
+
+<button class="back"
+onclick="show('dashboard')">
+
+← Dashboard
+
+</button>
+
+<h2>
+🤖 Ask B7 AI
+</h2>
+
+<p>
+Your academic medical assistant
+</p>
+
+</div>
+
+
+<div class="ai-box">
+
+<textarea
+id="aiQuestion"
+placeholder="Ask B7 AI a medical question..."
+></textarea>
+
+<button
+id="askButton"
+onclick="askAI()">
+
+Ask B7 AI
+
+</button>
+
+<div
+id="aiLoading"
+style="display:none">
+
+⏳ Thinking...
+
+</div>
+
+<div id="aiAnswer"></div>
 
 </div>
 
@@ -1329,8 +1454,11 @@ Fifth year lectures will be added soon.
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
+<button class="back"
+onclick="show('dashboard')">
+
 ← Dashboard
+
 </button>
 
 <h2>
@@ -1354,60 +1482,17 @@ Medical books and references will be added here.
 </section>
 
 
-<!-- AI -->
-
-<section id="ai" class="section">
-
-<div class="section-title">
-
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
-
-<h2>
-🤖 Ask B7 AI
-</h2>
-
-<p>
-Your academic medical assistant
-</p>
-
-</div>
-
-<div class="ai-box">
-
-<textarea
-id="aiQuestion"
-placeholder="Ask B7 AI a medical question..."
-></textarea>
-
-<button
-id="askButton"
-onclick="askAI()">
-
-Ask B7 AI
-
-</button>
-
-<div id="aiLoading" style="display:none">
-⏳ Thinking...
-</div>
-
-<div id="aiAnswer"></div>
-
-</div>
-
-</section>
-
-
 <!-- MEMBERS -->
 
 <section id="founders" class="section">
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
+<button class="back"
+onclick="show('dashboard')">
+
 ← Dashboard
+
 </button>
 
 <h2>
@@ -1416,7 +1501,9 @@ Ask B7 AI
 
 </div>
 
+
 <div class="founders">
+
 
 <div class="founder">
 
@@ -1430,6 +1517,7 @@ Founder
 
 </div>
 
+
 <div class="founder">
 
 <h3>
@@ -1441,6 +1529,7 @@ Member
 </div>
 
 </div>
+
 
 <div class="founder">
 
@@ -1454,6 +1543,7 @@ Member
 
 </div>
 
+
 <div class="founder">
 
 <h3>
@@ -1466,6 +1556,7 @@ Co-Founder
 
 </div>
 
+
 </div>
 
 </section>
@@ -1477,8 +1568,11 @@ Co-Founder
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
+<button class="back"
+onclick="show('dashboard')">
+
 ← Dashboard
+
 </button>
 
 <h2>
@@ -1487,6 +1581,7 @@ Co-Founder
 
 </div>
 
+
 <div class="support">
 
 <p>
@@ -1494,22 +1589,30 @@ For problems, suggestions or questions, contact us.
 </p>
 
 <p>
+
 Email:
+
 <a href="mailto:almdainb7@gmail.com">
+
 almdainb7@gmail.com
+
 </a>
+
 </p>
 
 </div>
 
 </section>
 
+
 </main>
 
 
 <script>
 
+
 const sections=[
+
 "dashboard",
 "rules",
 "academic",
@@ -1518,12 +1621,13 @@ const sections=[
 "third",
 "fourth",
 "fifth",
-"biology",
 "respiratory",
+"biology",
 "ai",
 "library",
 "founders",
 "support"
+
 ];
 
 
@@ -1534,20 +1638,29 @@ sections.forEach(function(name){
 const element=document.getElementById(name);
 
 if(element){
+
 element.style.display="none";
+
 }
 
 });
 
+
 const selected=document.getElementById(id);
 
 if(selected){
+
 selected.style.display="block";
+
 }
 
+
 window.scrollTo({
+
 top:0,
+
 behavior:"smooth"
+
 });
 
 }
@@ -1574,6 +1687,7 @@ document.getElementById("aiLoading");
 const button=
 document.getElementById("askButton");
 
+
 if(!question){
 
 answer.textContent=
@@ -1583,11 +1697,16 @@ return;
 
 }
 
+
 loading.style.display="block";
+
 answer.textContent="";
+
 button.disabled=true;
 
+
 try{
+
 
 const response=await fetch("/api/chat",{
 
@@ -1598,12 +1717,16 @@ headers:{
 },
 
 body:JSON.stringify({
+
 message:question
+
 })
 
 });
 
+
 const data=await response.json();
+
 
 if(!response.ok){
 
@@ -1613,8 +1736,10 @@ data.error || "Something went wrong."
 
 }
 
+
 answer.textContent=
 data.reply || "No answer received.";
+
 
 }catch(error){
 
@@ -1623,9 +1748,11 @@ answer.textContent=
 
 console.error(error);
 
+
 }finally{
 
 loading.style.display="none";
+
 button.disabled=false;
 
 }
@@ -1639,7 +1766,9 @@ show("dashboard");
 
 };
 
+
 </script>
 
 </body>
+
 </html>
