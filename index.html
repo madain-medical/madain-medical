@@ -101,7 +101,8 @@ display:none
 .support,
 .coming,
 .ai-box,
-.rules-box{
+.rules-box,
+.mcq-card{
 
 background:white;
 border-radius:14px;
@@ -176,7 +177,7 @@ color:#102a43;
 margin-bottom:7px
 }
 
-/* BACK BUTTON */
+/* BACK */
 
 .back{
 border:0;
@@ -277,8 +278,6 @@ transition:.2s
 background:#243b53;
 transform:translateY(-1px)
 }
-
-/* DOWNLOAD BUTTON */
 
 .lecture .download-btn{
 background:#147d64
@@ -393,6 +392,61 @@ padding-right:25px;
 color:#486581
 }
 
+/* MCQs */
+
+.mcq-card{
+padding:22px;
+margin-bottom:18px;
+border-left:5px solid #102a43
+}
+
+.mcq-question{
+font-size:17px;
+font-weight:bold;
+color:#102a43;
+margin-bottom:16px;
+line-height:1.6
+}
+
+.mcq-options{
+list-style:none;
+padding:0;
+margin-bottom:15px
+}
+
+.mcq-options li{
+background:#f4f7fa;
+border:1px solid #d9e2ec;
+padding:11px 14px;
+border-radius:8px;
+margin-bottom:8px;
+line-height:1.5
+}
+
+.answer-btn{
+border:0;
+background:#147d64;
+color:white;
+padding:9px 14px;
+border-radius:7px;
+cursor:pointer;
+font-size:13px
+}
+
+.answer-btn:hover{
+background:#0f684f
+}
+
+.correct-answer{
+display:none;
+margin-top:12px;
+padding:12px;
+background:#e6f4ef;
+border-radius:8px;
+color:#147d64;
+font-weight:bold
+}
+
 /* MOBILE */
 
 @media(max-width:800px){
@@ -429,10 +483,7 @@ margin:6px 0
 
 <div class="logo">
 
-<img
-src="IMG_7662.JPG"
-alt="College Logo"
->
+<img src="IMG_7662.JPG" alt="College Logo">
 
 <h2>
 Madain Medical Association
@@ -444,31 +495,19 @@ Madain Medical Association
 Main
 </div>
 
-<button
-class="nav-btn"
-onclick="show('dashboard')"
->
+<button class="nav-btn" onclick="show('dashboard')">
 🏠 Dashboard
 </button>
 
-<button
-class="nav-btn"
-onclick="show('academic')"
->
+<button class="nav-btn" onclick="show('academic')">
 🎓 Academic Years
 </button>
 
-<button
-class="nav-btn"
-onclick="show('library')"
->
+<button class="nav-btn" onclick="show('library')">
 📚 Medical Library
 </button>
 
-<button
-class="nav-btn"
-onclick="show('ai')"
->
+<button class="nav-btn" onclick="show('ai')">
 🤖 Ask B7 AI
 </button>
 
@@ -476,17 +515,11 @@ onclick="show('ai')"
 Information
 </div>
 
-<button
-class="nav-btn"
-onclick="show('founders')"
->
+<button class="nav-btn" onclick="show('founders')">
 👥 Members
 </button>
 
-<button
-class="nav-btn"
-onclick="show('support')"
->
+<button class="nav-btn" onclick="show('support')">
 ✉️ Support
 </button>
 
@@ -494,7 +527,7 @@ onclick="show('support')"
 
 <main class="main">
 
-<!-- ================= DASHBOARD ================= -->
+<!-- DASHBOARD -->
 
 <section id="dashboard" class="section">
 
@@ -512,18 +545,11 @@ Academic Medical Library & Learning Platform
 
 <div class="dashboard">
 
-<div
-class="dashboard-card"
-onclick="show('academic')"
->
+<div class="dashboard-card" onclick="show('academic')">
 
-<div class="dashboard-icon">
-🎓
-</div>
+<div class="dashboard-icon">🎓</div>
 
-<h3>
-Academic Years
-</h3>
+<h3>Academic Years</h3>
 
 <p>
 Access all academic years and subjects.
@@ -531,18 +557,11 @@ Access all academic years and subjects.
 
 </div>
 
-<div
-class="dashboard-card"
-onclick="show('library')"
->
+<div class="dashboard-card" onclick="show('library')">
 
-<div class="dashboard-icon">
-📚
-</div>
+<div class="dashboard-icon">📚</div>
 
-<h3>
-Medical Library
-</h3>
+<h3>Medical Library</h3>
 
 <p>
 Medical books and resources.
@@ -550,18 +569,11 @@ Medical books and resources.
 
 </div>
 
-<div
-class="dashboard-card"
-onclick="show('ai')"
->
+<div class="dashboard-card" onclick="show('ai')">
 
-<div class="dashboard-icon">
-🤖
-</div>
+<div class="dashboard-icon">🤖</div>
 
-<h3>
-Ask B7 AI
-</h3>
+<h3>Ask B7 AI</h3>
 
 <p>
 Your academic medical assistant.
@@ -569,18 +581,11 @@ Your academic medical assistant.
 
 </div>
 
-<div
-class="dashboard-card"
-onclick="show('founders')"
->
+<div class="dashboard-card" onclick="show('founders')">
 
-<div class="dashboard-icon">
-👥
-</div>
+<div class="dashboard-icon">👥</div>
 
-<h3>
-Members
-</h3>
+<h3>Members</h3>
 
 <p>
 Meet the team behind the platform.
@@ -588,18 +593,11 @@ Meet the team behind the platform.
 
 </div>
 
-<div
-class="dashboard-card"
-onclick="show('support')"
->
+<div class="dashboard-card" onclick="show('support')">
 
-<div class="dashboard-icon">
-✉️
-</div>
+<div class="dashboard-icon">✉️</div>
 
-<h3>
-Contact & Support
-</h3>
+<h3>Contact & Support</h3>
 
 <p>
 Contact us.
@@ -607,18 +605,11 @@ Contact us.
 
 </div>
 
-<div
-class="dashboard-card"
-onclick="show('rules')"
->
+<div class="dashboard-card" onclick="show('rules')">
 
-<div class="dashboard-icon">
-📜
-</div>
+<div class="dashboard-icon">📜</div>
 
-<h3>
-Rules & Privacy
-</h3>
+<h3>Rules & Privacy</h3>
 
 <p>
 Important information and policies.
@@ -630,14 +621,11 @@ Important information and policies.
 
 </section>
 
-<!-- ================= RULES ================= -->
+<!-- RULES -->
 
 <section id="rules" class="section">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -648,70 +636,43 @@ onclick="show('dashboard')"
 </h2>
 
 <p>
-
 نشكركم على استخدام منصة
 <strong>Madain Medical Association</strong>.
-
-تم إنشاء هذه المنصة لخدمة الطلاب وتسهيل الوصول إلى
-المصادر والمواد التعليمية الطبية.
-
+تم إنشاء هذه المنصة لخدمة الطلاب وتسهيل الوصول إلى المصادر والمواد التعليمية الطبية.
 </p>
 
 <p>
-
-نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير
-هذه المنصة، ونسأل الله أن يجزيهم خير الجزاء وأن يجعل هذا
-العمل نافعاً للطلاب والعلم.
-
+نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير هذه المنصة، ونسأل الله أن يجزيهم خير الجزاء وأن يجعل هذا العمل نافعاً للطلاب والعلم.
 </p>
 
 <p>
-
-<strong>
-الخصوصية وحماية البيانات:
-</strong>
-
-نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها
-بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.
-
+<strong>الخصوصية وحماية البيانات:</strong>
+نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.
 </p>
 
 <p>
-
-المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط،
-ولا يُعتبر بديلاً عن استشارة الطبيب أو المصادر الطبية
-المعتمدة.
-
+المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط، ولا يُعتبر بديلاً عن استشارة الطبيب أو المصادر الطبية المعتمدة.
 </p>
 
 <p>
-
-يُمنع استخدام المنصة في أي نشاط غير قانوني أو محاولة
-الوصول غير المصرح به إلى بيانات أو أنظمة المنصة.
-
+يُمنع استخدام المنصة في أي نشاط غير قانوني أو محاولة الوصول غير المصرح به إلى بيانات أو أنظمة المنصة.
 </p>
 
 <p>
-
-باستخدامك لهذه المنصة، فإنك توافق على الالتزام بهذه
-القوانين والسياسات واحترام حقوق أصحاب المحتوى.
-
+باستخدامك لهذه المنصة، فإنك توافق على الالتزام بهذه القوانين والسياسات واحترام حقوق أصحاب المحتوى.
 </p>
 
 </div>
 
 </section>
 
-<!-- ================= ACADEMIC YEARS ================= -->
+<!-- ACADEMIC YEARS -->
 
 <section id="academic" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -727,78 +688,43 @@ Select your academic year.
 
 <div class="year-grid">
 
-<div
-class="year-card"
-onclick="show('first')"
->
+<div class="year-card" onclick="show('first')">
 
-<h3>
-First Year
-</h3>
+<h3>First Year</h3>
 
-<p>
-Semester 1 & 2
-</p>
+<p>Semester 1 & 2</p>
 
 </div>
 
-<div
-class="year-card"
-onclick="show('second')"
->
+<div class="year-card" onclick="show('second')">
 
-<h3>
-Second Year
-</h3>
+<h3>Second Year</h3>
 
-<p>
-Semester 3 & 4
-</p>
+<p>Semester 3 & 4</p>
 
 </div>
 
-<div
-class="year-card"
-onclick="show('third')"
->
+<div class="year-card" onclick="show('third')">
 
-<h3>
-Third Year
-</h3>
+<h3>Third Year</h3>
 
-<p>
-Semester 5 & 6
-</p>
+<p>Semester 5 & 6</p>
 
 </div>
 
-<div
-class="year-card"
-onclick="show('fourth')"
->
+<div class="year-card" onclick="show('fourth')">
 
-<h3>
-Fourth Year
-</h3>
+<h3>Fourth Year</h3>
 
-<p>
-Semester 7 & 8
-</p>
+<p>Semester 7 & 8</p>
 
 </div>
 
-<div
-class="year-card"
-onclick="show('fifth')"
->
+<div class="year-card" onclick="show('fifth')">
 
-<h3>
-Fifth Year
-</h3>
+<h3>Fifth Year</h3>
 
-<p>
-Semester 9 & 10
-</p>
+<p>Semester 9 & 10</p>
 
 </div>
 
@@ -806,14 +732,11 @@ Semester 9 & 10
 
 </section>
 
-<!-- ================= FIRST YEAR ================= -->
+<!-- FIRST YEAR -->
 
 <section id="first" class="section">
 
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
@@ -829,8 +752,6 @@ Semester 1 & 2
 
 </div>
 
-<!-- SEMESTER 1 -->
-
 <div class="semester">
 
 <h3>
@@ -841,33 +762,21 @@ Semester 1
 
 <div class="subject">
 
-<h4>
-Biology
-</h4>
+<h4>Biology</h4>
 
 <button onclick="show('biology')">
 📚 Lectures
 </button>
 
-<button onclick="soon()">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
+<button onclick="soon()">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 
 </div>
 
 <div class="subject">
 
-<h4>
-Physics
-</h4>
+<h4>Physics</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -878,9 +787,7 @@ Physics
 
 <div class="subject">
 
-<h4>
-Chemistry
-</h4>
+<h4>Chemistry</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -891,9 +798,7 @@ Chemistry
 
 <div class="subject">
 
-<h4>
-English
-</h4>
+<h4>English</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Omar Hiban
@@ -908,9 +813,7 @@ English
 
 <div class="subject">
 
-<h4>
-Introduction to Medicine
-</h4>
+<h4>Introduction to Medicine</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -921,9 +824,7 @@ Introduction to Medicine
 
 <div class="subject">
 
-<h4>
-Computer
-</h4>
+<h4>Computer</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -935,8 +836,6 @@ Computer
 </div>
 
 </div>
-
-<!-- SEMESTER 2 -->
 
 <div class="semester">
 
@@ -948,9 +847,7 @@ Semester 2
 
 <div class="subject">
 
-<h4>
-Blood & Immune System
-</h4>
+<h4>Blood & Immune System</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Wafaa
@@ -960,55 +857,30 @@ Blood & Immune System
 📚 Lectures
 </button>
 
-<button onclick="soon()">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
+<button onclick="soon()">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 
 </div>
 
-<!-- CARDIOLOGY -->
-
 <div class="subject">
 
-<h4>
-Cardiology
-</h4>
+<h4>Cardiology</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Osman Ahmed Osman
 </p>
 
-<button onclick="show('cardiology')">
-📚 Lectures
-</button>
-
-<button onclick="soon()">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
+<button onclick="soon()">📚 Lectures</button>
+<button onclick="soon()">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 
 </div>
 
 <div class="subject">
 
-<h4>
-Respiratory System
-</h4>
+<h4>Respiratory System</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Osman Ahmed Osman
@@ -1018,7 +890,7 @@ Respiratory System
 📚 Lectures
 </button>
 
-<button onclick="soon()">
+<button onclick="show('respiratoryMCQ')">
 📝 MCQs
 </button>
 
@@ -1034,9 +906,7 @@ Respiratory System
 
 <div class="subject">
 
-<h4>
-Biochemistry
-</h4>
+<h4>Biochemistry</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Mohamed Osama
@@ -1054,9 +924,7 @@ Biochemistry
 
 <div class="subject">
 
-<h4>
-Hemostasis
-</h4>
+<h4>Hemostasis</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Wafaa
@@ -1074,9 +942,7 @@ Hemostasis
 
 <div class="subject">
 
-<h4>
-Histology
-</h4>
+<h4>Histology</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Osman Ahmed Osman
@@ -1091,9 +957,7 @@ Histology
 
 <div class="subject">
 
-<h4>
-Embryology
-</h4>
+<h4>Embryology</h4>
 
 <p class="professor">
 👨‍🏫 Dr. Osman Ahmed Osman
@@ -1108,9 +972,7 @@ Embryology
 
 <div class="subject">
 
-<h4>
-English 2
-</h4>
+<h4>English 2</h4>
 
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
@@ -1125,669 +987,11 @@ English 2
 
 </section>
 
-<!-- ================= CARDIOLOGY ================= -->
-
-<section id="cardiology" class="section">
-
-<button
-class="back"
-onclick="show('first')"
->
-← Semester 2
-</button>
-
-<div class="section-title">
-
-<h2>
-❤️ Cardiology — Lectures
-</h2>
-
-<p>
-Semester 2 — Dr. Osman Ahmed Osman
-</p>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 1 — Thoracic Wall Part 1
-</h3>
-
-<p>
-Thoracic wall part 1
-</p>
-
-<a
-href="https://drive.google.com/file/d/1Cz-sR1Fds-2USoFL1TezFol7u-yw6whO/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1Cz-sR1Fds-2USoFL1TezFol7u-yw6whO"
-download
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 2 — Thoracic Wall Part 2
-</h3>
-
-<p>
-Thoracic wall 2
-</p>
-
-<a
-href="https://drive.google.com/file/d/1CtmibgZhLF-d1bF4HwJ1k1gEi11nR6lV/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1CtmibgZhLF-d1bF4HwJ1k1gEi11nR6lV"
-download
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 3 — Thoracic Wall Part 3
-</h3>
-
-<p>
-Thoracic wall part 3
-</p>
-
-<a
-href="https://drive.google.com/file/d/1D3jtqYJuoIpUIa9qxDLRnprG4De4JFdF/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1D3jtqYJuoIpUIa9qxDLRnprG4De4JFdF"
-download
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 4 — The Heart Part 1
-</h3>
-
-<p>
-The heart (First Part)
-</p>
-
-<a
-href="https://drive.google.com/file/d/1Csnxdmba1uEJGVWNAKTbG0gkUCatOoeC/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1Csnxdmba1uEJGVWNAKTbG0gkUCatOoeC"
-download
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 5 — The Heart Part 2
-</h3>
-
-<p>
-Heart 2
-</p>
-
-<a
-href="https://drive.google.com/file/d/1D0qinEhGlypElxuPlYZGkG3Qec1LJ-qf/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1D0qinEhGlypElxuPlYZGkG3Qec1LJ-qf"
-download
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= BLOOD & IMMUNE SYSTEM ================= -->
-
-<section id="blood" class="section">
-
-<button
-class="back"
-onclick="show('first')"
->
-← Semester 2
-</button>
-
-<div class="section-title">
-
-<h2>
-🩸 Blood & Immune System — Lectures
-</h2>
-
-<p>
-Semester 2 — Dr. Wafaa
-</p>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 1 — Introduction to Blood
-</h3>
-
-<p>
-Introduction to Hematology
-</p>
-
-<a
-href="https://docs.google.com/file/d/1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 2 — Red Blood Cells
-</h3>
-
-<p>
-Red Blood Cells
-</p>
-
-<a
-href="https://docs.google.com/file/d/1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 3 — Blood Indices
-</h3>
-
-<p>
-Blood Indices
-</p>
-
-<a
-href="https://docs.google.com/file/d/1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 4 — WBCs
-</h3>
-
-<p>
-White Blood Cells
-</p>
-
-<a
-href="https://docs.google.com/file/d/14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 5 — My Blood Groups
-</h3>
-
-<p>
-Blood Groups
-</p>
-
-<a
-href="https://docs.google.com/file/d/1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 6 — Hemostasis
-</h3>
-
-<p>
-Hemostasis
-</p>
-
-<a
-href="https://docs.google.com/file/d/1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 7 — Immunity 1
-</h3>
-
-<p>
-Immunity
-</p>
-
-<a
-href="https://docs.google.com/file/d/1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 8 — Immunity 2
-</h3>
-
-<p>
-Immunity
-</p>
-
-<a
-href="https://docs.google.com/file/d/1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://drive.google.com/uc?export=download&id=1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q"
->
-⬇️ Download PDF
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= HEMOSTASIS ================= -->
-
-<section id="hemostasis" class="section">
-
-<button
-class="back"
-onclick="show('first')"
->
-← Semester 2
-</button>
-
-<div class="section-title">
-
-<h2>
-🩸 Hemostasis — Lectures
-</h2>
-
-<p>
-Semester 2 — Dr. Wafaa
-</p>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 1 — Introduction to Physiology
-</h3>
-
-<p>
-Introduction to physiology
-</p>
-
-<a
-href="https://docs.google.com/file/d/1kS0vniJqGOE-RFu0nBqDt32ewutgUWeg/edit?usp=docslist_api&filetype=mspresentation"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Introduction%20to%20physiology%20-%20Copy%20.pptx"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 2 — Body Fluids
-</h3>
-
-<p>
-Body fluids
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1Ajo78Ni62XN_WXa4mqDPIkBjv9mDq4O-/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/body%20fluids%20-%20Copy.pptx"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 3 — Edema
-</h3>
-
-<p>
-Edema
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1AqXiA9TT-ssjK079NN-lpiNP0Z68x1bL/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Edema.pptx"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 4 — Homeostasis
-</h3>
-
-<p>
-Homeostasis
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1B1GjLJCESBCeQb3RiRpsrDjLJ_SngtxO/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Homeostasis.pptx"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 5 — Body Temperature
-</h3>
-
-<p>
-Body temperature
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1B40rtvKCuX3NMQWZP94qFRIXAEDDq6PK/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Body%20temperature%20-%2016.ppt"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 6 — ANS
-</h3>
-
-<p>
-Autonomic Nervous System
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1B4uPa2vkmM0uvsQ_j_fj6WdUwLcVfQb1/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/ANS%20all%20-%20Copy%20.pptx"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 7 — BMR
-</h3>
-
-<p>
-Basal Metabolic Rate
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1BOBeQCMgHs8eg2ohPifEM_iozAbM5vGq/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/BMR%20-%2014.ppt"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-<div class="lecture">
-
-<h3>
-Lecture 8 — Acid-Base Balance
-</h3>
-
-<p>
-Acid-base balance
-</p>
-
-<a
-href="https://docs.google.com/presentation/d/1BGwZWFWPTkUq9qBwhe1t_ZP3ICetQXvn/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Acid%20-%20base%20balance%20.pptx"
-download
->
-⬇️ Download
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= RESPIRATORY ================= -->
+<!-- RESPIRATORY LECTURES -->
 
 <section id="respiratory" class="section">
 
-<button
-class="back"
-onclick="show('first')"
->
+<button class="back" onclick="show('first')">
 ← Semester 2
 </button>
 
@@ -1813,19 +1017,14 @@ Lecture 1 — Nose and Nasal Cavity
 Respiratory System
 </p>
 
-<a
-href="https://drive.google.com/drive/folders/1-4HNHHdRXAh7E-u8hY1Pg-8nqz_rZwOx"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/drive/folders/1-4HNHHdRXAh7E-u8hY1Pg-8nqz_rZwOx"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Nose%20.nasel%20cavity%20and%20paranasel%20sinuses%202.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -1837,23 +1036,16 @@ download
 Lecture 2 — Pharynx
 </h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
-<a
-href="https://drive.google.com/file/d/1rb4E6ggw7eDa9FaZ0L0QDXfjK1dJeUP9/view"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1rb4E6ggw7eDa9FaZ0L0QDXfjK1dJeUP9/view"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Pharynx%202.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -1865,23 +1057,16 @@ download
 Lecture 3 — Larynx
 </h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
-<a
-href="https://drive.google.com/file/d/1GTklMSsgQLSWcZa6O9vYWmyHsL5l7cpB/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1GTklMSsgQLSWcZa6O9vYWmyHsL5l7cpB/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/larynx.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -1893,23 +1078,16 @@ download
 Lecture 4 — Larynx 1
 </h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
-<a
-href="https://drive.google.com/file/d/1u0MnTg1enVKjRb9h6R5P1RhzjTVRIu-K/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1u0MnTg1enVKjRb9h6R5P1RhzjTVRIu-K/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/larynx%201.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -1921,23 +1099,16 @@ download
 Lecture 5 — Trachea
 </h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
-<a
-href="https://drive.google.com/file/d/1c71fgs2jKCzKXUEaO_vbZgFc4_m-w2d_/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1c71fgs2jKCzKXUEaO_vbZgFc4_m-w2d_/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Trachea.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -1945,14 +1116,340 @@ download
 
 </section>
 
-<!-- ================= BIOCHEMISTRY ================= -->
+<!-- RESPIRATORY MCQs -->
+
+<section id="respiratoryMCQ" class="section">
+
+<button class="back" onclick="show('first')">
+← Semester 2
+</button>
+
+<div class="section-title">
+
+<h2>
+🫁 Respiratory System — MCQs
+</h2>
+
+<p>
+Semester 2 — Dr. Osman Ahmed Osman
+</p>
+
+</div>
+
+<!-- Q11 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+11. Surfactant:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Helps to equalize pressure within interconnected alveoli</li>
+
+<li>B) Reduces surface tension more effectively as alveolus becomes smaller</li>
+
+<li>C) Becomes smaller</li>
+
+<li>D) Increases lung compliance</li>
+
+<li>E) Increases the slope of the pressure-volume curve</li>
+
+<li>F) All of the above</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans11')">
+Show Answer
+</button>
+
+<div id="ans11" class="correct-answer">
+Answer: F) All of the above
+</div>
+
+</div>
+
+<!-- Q12 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+12. One month of an exposure to an inspired CO₂ of 5% would result in:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Increased ventilatory sensitivity to CO₂</li>
+
+<li>B) Reduced ventilatory sensitivity to hypoxia</li>
+
+<li>C) Increased plasma bicarbonate</li>
+
+<li>D) Alkalosis in arterial plasma</li>
+
+<li>E) Increased alveolar PO₂</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans12')">
+Show Answer
+</button>
+
+<div id="ans12" class="correct-answer">
+Answer: C) Increased plasma bicarbonate
+</div>
+
+</div>
+
+<!-- Q45 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+45. A decrease in the recoil force of the lung is expected to:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Increase vital capacity</li>
+
+<li>B) Decrease residual volume</li>
+
+<li>C) Decrease compliance of the lung</li>
+
+<li>D) Increase functional residual capacity</li>
+
+<li>E) Decrease total lung capacity</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans45')">
+Show Answer
+</button>
+
+<div id="ans45" class="correct-answer">
+Answer: D) Increase functional residual capacity
+</div>
+
+</div>
+
+<!-- Q46 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+46. Deficiency of surfactant may lead to:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Increased work of breathing</li>
+
+<li>B) Increased compliance of the lung</li>
+
+<li>C) Decreased recoil force of the lung</li>
+
+<li>D) Bronchial asthma</li>
+
+<li>E) An increase in functional residual capacity</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans46')">
+Show Answer
+</button>
+
+<div id="ans46" class="correct-answer">
+Answer: A) Increased work of breathing
+</div>
+
+</div>
+
+<!-- Q47 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+47. Continuous measurement of the concentration of nitrogen in the expired air can be used to measure:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Physiological dead space</li>
+
+<li>B) Alveolar ventilation</li>
+
+<li>C) Anatomic dead space</li>
+
+<li>D) Functional residual capacity</li>
+
+<li>E) Expiratory reserve volume</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans47')">
+Show Answer
+</button>
+
+<div id="ans47" class="correct-answer">
+Answer: D) Functional residual capacity
+</div>
+
+</div>
+
+<!-- Q48 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+48. Oxygen consumption of an average adult man per minute is about:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) 250 ml</li>
+
+<li>B) 350 ml</li>
+
+<li>C) 400 ml</li>
+
+<li>D) 500 ml</li>
+
+<li>E) 550 ml</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans48')">
+Show Answer
+</button>
+
+<div id="ans48" class="correct-answer">
+Answer: A) 250 ml
+</div>
+
+</div>
+
+<!-- Q49 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+49. Which of the following is expected to increase functional residual capacity?
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Surfactant deficiency</li>
+
+<li>B) Lung fibrosis</li>
+
+<li>C) Degeneration of lung elastic tissue</li>
+
+<li>D) Pulmonary edema</li>
+
+<li>E) Pulmonary congestion</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans49')">
+Show Answer
+</button>
+
+<div id="ans49" class="correct-answer">
+Answer: C) Degeneration of lung elastic tissue
+</div>
+
+</div>
+
+<!-- Q50 -->
+
+<div class="mcq-card">
+
+<div class="mcq-question">
+50. The most likely cause of hypoxic hypoxia together with hypercapnia is:
+</div>
+
+<ul class="mcq-options">
+
+<li>A) Ascent to a high altitude</li>
+
+<li>B) Mild pulmonary edema</li>
+
+<li>C) Veno-arterial shunt</li>
+
+<li>D) Hypoventilation</li>
+
+<li>E) Slight ventilation-perfusion mismatch</li>
+
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('ans50')">
+Show Answer
+</button>
+
+<div id="ans50" class="correct-answer">
+Answer: D) Hypoventilation
+</div>
+
+</div>
+
+</section>
+
+<!-- BIOLOGY -->
+
+<section id="biology" class="section">
+
+<button class="back" onclick="show('first')">
+← Biology
+</button>
+
+<div class="section-title">
+
+<h2>
+📚 Biology — Lectures
+</h2>
+
+<p>Available lectures</p>
+
+</div>
+
+<div class="lecture">
+
+<h3>
+Lecture 2 — The Cell Structure and Function
+</h3>
+
+<p>Biology Lecture</p>
+
+<a href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
+target="_blank" rel="noopener noreferrer">
+📖 Open Lecture
+</a>
+
+<a class="download-btn"
+href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
+download>
+⬇️ Download
+</a>
+
+</div>
+
+</section>
+
+<!-- BIOCHEMISTRY -->
 
 <section id="biochemistry" class="section">
 
-<button
-class="back"
-onclick="show('first')"
->
+<button class="back" onclick="show('first')">
 ← Semester 2
 </button>
 
@@ -1978,19 +1475,14 @@ Lecture 1 — Introduction to Biochemistry
 Introduction to Biochemistry, Water and pH
 </p>
 
-<a
-href="https://drive.google.com/file/d/1BqIBrQrOSiVo8GMX0UfBRNmpZfnDWiz5/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1BqIBrQrOSiVo8GMX0UfBRNmpZfnDWiz5/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Introduction%20to%20Biochemistry%20%2C%20water%20and%20pH.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2002,23 +1494,16 @@ download
 Lecture 2 — Carbohydrates Chemistry
 </h3>
 
-<p>
-Carbohydrates Chemistry
-</p>
+<p>Carbohydrates Chemistry</p>
 
-<a
-href="https://drive.google.com/file/d/1C12-gNNQrexoLmOJLRdnzGKnK-_g8D9q/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1C12-gNNQrexoLmOJLRdnzGKnK-_g8D9q/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Carbohydrates%20chemistry.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2030,23 +1515,16 @@ download
 Lecture 3 — Lipids Chemistry
 </h3>
 
-<p>
-Lipids Chemistry
-</p>
+<p>Lipids Chemistry</p>
 
-<a
-href="https://drive.google.com/file/d/1C1uyYo4D2qrUpEbuojDHrBkG9DHvcXOX/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1C1uyYo4D2qrUpEbuojDHrBkG9DHvcXOX/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LIPIDS%20CHEMISTRY%20m.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2058,23 +1536,16 @@ download
 Lecture 4 — Amino Acids, Peptides, and Proteins
 </h3>
 
-<p>
-Amino Acids, Peptides, and Proteins
-</p>
+<p>Amino Acids, Peptides, and Proteins</p>
 
-<a
-href="https://drive.google.com/file/d/1C7w2MeZovDm21XMDDYFZhcPSnsWoHlla/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1C7w2MeZovDm21XMDDYFZhcPSnsWoHlla/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Amino%20Acids%2CPebtides%2C%20and%20Proteins-1%20%281%29.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2086,23 +1557,16 @@ download
 Lecture 5 — Enzymes
 </h3>
 
-<p>
-Enzymes
-</p>
+<p>Enzymes</p>
 
-<a
-href="https://drive.google.com/file/d/1CFlQGTjUzYQCqzAZtOwCJuGv4sRYuZGL/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1CFlQGTjUzYQCqzAZtOwCJuGv4sRYuZGL/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Enzymes.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2114,23 +1578,16 @@ download
 Lecture 6 — Nucleic Acids
 </h3>
 
-<p>
-Nucleic Acids
-</p>
+<p>Nucleic Acids</p>
 
-<a
-href="https://drive.google.com/file/d/1CHkrXaSQTS6z8UTXGZtC7vlQz5XWqsBx/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1CHkrXaSQTS6z8UTXGZtC7vlQz5XWqsBx/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Nucleic%20-%20Acids%20.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2142,23 +1599,16 @@ download
 Lecture 7 — Vitamins
 </h3>
 
-<p>
-Vitamins
-</p>
+<p>Vitamins</p>
 
-<a
-href="https://drive.google.com/file/d/1CN4JFqfeDGQX3dqtboA_H57nyN3cfXIf/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://drive.google.com/file/d/1CN4JFqfeDGQX3dqtboA_H57nyN3cfXIf/view?usp=drivesdk"
+target="_blank" rel="noopener noreferrer">
 📖 Open Lecture
 </a>
 
-<a
-class="download-btn"
+<a class="download-btn"
 href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Vitamins.pdf"
-download
->
+download>
 ⬇️ Download PDF
 </a>
 
@@ -2166,34 +1616,25 @@ download
 
 </section>
 
-<!-- ================= SECOND YEAR ================= -->
+<!-- SECOND YEAR -->
 
 <section id="second" class="section">
 
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
 <div class="section-title">
 
-<h2>
-Second Year
-</h2>
+<h2>Second Year</h2>
 
-<p>
-Semester 3 & 4
-</p>
+<p>Semester 3 & 4</p>
 
 </div>
 
 <div class="semester">
 
-<h3>
-Semester 3
-</h3>
+<h3>Semester 3</h3>
 
 <div class="subject-grid">
 
@@ -2243,9 +1684,7 @@ Semester 3
 
 <div class="semester">
 
-<h3>
-Semester 4
-</h3>
+<h3>Semester 4</h3>
 
 <div class="subject-grid">
 
@@ -2327,512 +1766,161 @@ Semester 4
 
 </section>
 
-<!-- ================= THIRD YEAR ================= -->
+<!-- THIRD YEAR -->
 
 <section id="third" class="section">
 
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
 <div class="section-title">
 
-<h2>
-Third Year
-</h2>
+<h2>Third Year</h2>
+
+<p>Semester 5 & 6</p>
+
+</div>
+
+<div class="coming">
+
+<h2>Coming Soon 🚀</h2>
 
 <p>
-Semester 5 & 6
+Third Year content will be added soon.
 </p>
-
-</div>
-
-<div class="semester">
-
-<h3>
-Semester 5
-</h3>
-
-<div class="subject-grid">
-
-<div class="subject">
-<h4>Pathology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Pharmacology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Medicine 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Microbiology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Surgery 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Communicable and Non-communicable Diseases</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Environmental</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-</div>
-
-</div>
-
-<div class="semester">
-
-<h3>
-Semester 6
-</h3>
-
-<div class="subject-grid">
-
-<div class="subject">
-<h4>Pharmacology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Medicine 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Surgery 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Pathology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Environmental Health</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- ================= FOURTH YEAR ================= -->
+<!-- FOURTH YEAR -->
 
 <section id="fourth" class="section">
 
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
 <div class="section-title">
 
-<h2>
-Fourth Year
-</h2>
+<h2>Fourth Year</h2>
+
+<p>Semester 7 & 8</p>
+
+</div>
+
+<div class="coming">
+
+<h2>Coming Soon 🚀</h2>
 
 <p>
-Semester 7 & 8
+Fourth Year content will be added soon.
 </p>
-
-</div>
-
-<div class="semester">
-
-<h3>
-Semester 7
-</h3>
-
-<div class="subject-grid">
-
-<div class="subject">
-<h4>Surgery</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Medicine</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Obstetrics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Pediatrics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Research Methodology</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Forensic</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Medical Ethics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-</div>
-
-</div>
-
-<div class="semester">
-
-<h3>
-Semester 8
-</h3>
-
-<div class="subject-grid">
-
-<div class="subject">
-<h4>Medicine</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Surgery</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Obstetrics & Gynaecology</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Pediatrics</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Toxicology</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Research</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- ================= FIFTH YEAR ================= -->
+<!-- FIFTH YEAR -->
 
 <section id="fifth" class="section">
 
-<button
-class="back"
-onclick="show('academic')"
->
+<button class="back" onclick="show('academic')">
 ← Academic Years
 </button>
 
 <div class="section-title">
 
-<h2>
-Fifth Year
-</h2>
+<h2>Fifth Year</h2>
+
+<p>Semester 9 & 10</p>
+
+</div>
+
+<div class="coming">
+
+<h2>Coming Soon 🚀</h2>
 
 <p>
-Semester 9 & 10
+Fifth Year content will be added soon.
 </p>
-
-</div>
-
-<div class="semester">
-
-<h3>
-Semester 9
-</h3>
-
-<div class="subject-grid">
-
-<div class="subject">
-<h4>Medicine 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Surgery 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Pediatrics 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Obstetrics & Gynaecology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Psychiatry 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Ophthalmology 1</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-</div>
-
-</div>
-
-<div class="semester">
-
-<h3>
-Semester 10
-</h3>
-
-<div class="subject-grid">
-
-<div class="subject">
-<h4>Medicine 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Surgery 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Pediatrics 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Obstetrics & Gynaecology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Psychiatry 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-<div class="subject">
-<h4>Ophthalmology 2</h4>
-<button onclick="soon()">📚 Lectures</button>
-<button onclick="soon()">📝 MCQs</button>
-<button onclick="soon()">📖 References</button>
-<button onclick="soon()">📺 Explanation Channels</button>
-</div>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- ================= BIOLOGY ================= -->
+<!-- BLOOD -->
 
-<section id="biology" class="section">
+<section id="blood" class="section">
 
-<button
-class="back"
-onclick="show('first')"
->
-← Biology
+<button class="back" onclick="show('first')">
+← Semester 2
 </button>
 
 <div class="section-title">
 
 <h2>
-📚 Biology — Lectures
+🩸 Blood & Immune System — Lectures
 </h2>
 
 <p>
-Available lectures
+Semester 2 — Dr. Wafaa
 </p>
 
 </div>
 
-<div class="lecture">
+<div class="coming">
 
-<h3>
-Lecture 2 — The Cell Structure and Function
-</h3>
+<h2>Blood Lectures</h2>
 
 <p>
-Biology Lecture
+Your existing Blood lectures can remain here.
 </p>
-
-<a
-href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-target="_blank"
-rel="noopener noreferrer"
->
-📖 Open Lecture
-</a>
-
-<a
-class="download-btn"
-href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-download
->
-⬇️ Download
-</a>
 
 </div>
 
 </section>
 
-<!-- ================= AI ================= -->
+<!-- HEMOSTASIS -->
+
+<section id="hemostasis" class="section">
+
+<button class="back" onclick="show('first')">
+← Semester 2
+</button>
+
+<div class="section-title">
+
+<h2>
+🩸 Hemostasis — Lectures
+</h2>
+
+<p>
+Semester 2 — Dr. Wafaa
+</p>
+
+</div>
+
+<div class="coming">
+
+<h2>Hemostasis Lectures</h2>
+
+<p>
+Your existing Hemostasis lectures can remain here.
+</p>
+
+</div>
+
+</section>
+
+<!-- AI -->
 
 <section id="ai" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -2853,38 +1941,27 @@ id="aiQuestion"
 placeholder="Ask B7 AI a medical question..."
 ></textarea>
 
-<button
-id="askButton"
-onclick="askAI()"
->
+<button id="askButton" onclick="askAI()">
 Ask B7 AI
 </button>
 
-<div
-id="aiLoading"
-style="display:none"
->
+<div id="aiLoading" style="display:none">
 ⏳ Thinking...
 </div>
 
-<div
-id="aiAnswer"
-></div>
+<div id="aiAnswer"></div>
 
 </div>
 
 </section>
 
-<!-- ================= LIBRARY ================= -->
+<!-- LIBRARY -->
 
 <section id="library" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -2896,9 +1973,7 @@ onclick="show('dashboard')"
 
 <div class="coming">
 
-<h2>
-Coming Soon
-</h2>
+<h2>Coming Soon</h2>
 
 <p>
 Medical books and references will be added here.
@@ -2908,16 +1983,13 @@ Medical books and references will be added here.
 
 </section>
 
-<!-- ================= MEMBERS ================= -->
+<!-- MEMBERS -->
 
 <section id="founders" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -2981,16 +2053,13 @@ Co-Founder
 
 </section>
 
-<!-- ================= SUPPORT ================= -->
+<!-- SUPPORT -->
 
 <section id="support" class="section">
 
 <div class="section-title">
 
-<button
-class="back"
-onclick="show('dashboard')"
->
+<button class="back" onclick="show('dashboard')">
 ← Dashboard
 </button>
 
@@ -3036,9 +2105,9 @@ const sections=[
 "fifth",
 "biology",
 "blood",
-"cardiology",
 "hemostasis",
 "respiratory",
+"respiratoryMCQ",
 "biochemistry",
 "ai",
 "library",
@@ -3054,9 +2123,7 @@ sections.forEach(function(name){
 const element=document.getElementById(name);
 
 if(element){
-
 element.style.display="none";
-
 }
 
 });
@@ -3064,17 +2131,12 @@ element.style.display="none";
 const selected=document.getElementById(id);
 
 if(selected){
-
 selected.style.display="block";
-
 }
 
 window.scrollTo({
-
 top:0,
-
 behavior:"smooth"
-
 });
 
 }
@@ -3082,6 +2144,22 @@ behavior:"smooth"
 function soon(){
 
 alert("Coming Soon 🚀");
+
+}
+
+function toggleAnswer(id){
+
+const answer=document.getElementById(id);
+
+if(answer.style.display==="block"){
+
+answer.style.display="none";
+
+}else{
+
+answer.style.display="block";
+
+}
 
 }
 
@@ -3121,15 +2199,11 @@ const response=await fetch("/api/chat",{
 method:"POST",
 
 headers:{
-
 "Content-Type":"application/json"
-
 },
 
 body:JSON.stringify({
-
 message:question
-
 })
 
 });
