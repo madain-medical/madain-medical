@@ -22,8 +22,6 @@ background:#f4f7fa;
 color:#1f2937
 }
 
-/* SIDEBAR */
-
 .sidebar{
 position:fixed;
 left:0;
@@ -77,8 +75,6 @@ cursor:pointer
 background:#243b53
 }
 
-/* MAIN */
-
 .main{
 margin-left:240px;
 padding:30px
@@ -87,8 +83,6 @@ padding:30px
 .section{
 display:none
 }
-
-/* GENERAL BOXES */
 
 .header,
 .section-title,
@@ -103,11 +97,9 @@ display:none
 .ai-box,
 .rules-box,
 .mcq-card{
-
 background:white;
 border-radius:14px;
 box-shadow:0 3px 15px rgba(0,0,0,.06)
-
 }
 
 .header{
@@ -122,9 +114,7 @@ margin-bottom:22px
 .lecture h3,
 .founder h3,
 .coming h2{
-
 color:#102a43
-
 }
 
 .header p,
@@ -133,12 +123,8 @@ color:#102a43
 .lecture p,
 .role,
 .coming p{
-
 color:#627d98
-
 }
-
-/* PROFESSOR */
 
 .professor{
 color:#627d98;
@@ -146,8 +132,6 @@ font-size:13px;
 margin-bottom:10px;
 font-weight:500
 }
-
-/* DASHBOARD */
 
 .dashboard{
 display:grid;
@@ -177,8 +161,6 @@ color:#102a43;
 margin-bottom:7px
 }
 
-/* BACK */
-
 .back{
 border:0;
 background:#102a43;
@@ -193,15 +175,11 @@ margin-bottom:16px
 background:#243b53
 }
 
-/* YEARS */
-
 .year-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
 gap:16px
 }
-
-/* SEMESTER */
 
 .semester{
 padding:20px;
@@ -212,8 +190,6 @@ margin-bottom:18px
 color:#486581;
 margin-bottom:14px
 }
-
-/* SUBJECTS */
 
 .subject-grid{
 display:grid;
@@ -246,8 +222,6 @@ font-size:12px
 background:#243b53
 }
 
-/* LECTURES */
-
 .lecture{
 padding:20px;
 margin-bottom:14px;
@@ -270,31 +244,17 @@ text-decoration:none;
 padding:10px 14px;
 border-radius:7px;
 margin-right:5px;
-margin-top:5px;
-transition:.2s
-}
-
-.lecture a:hover{
-background:#243b53;
-transform:translateY(-1px)
+margin-top:5px
 }
 
 .lecture .download-btn{
 background:#147d64
 }
 
-.lecture .download-btn:hover{
-background:#0f684f
-}
-
-/* COMING */
-
 .coming{
 text-align:center;
 padding:55px 20px
 }
-
-/* FOUNDERS */
 
 .founders{
 display:grid;
@@ -310,8 +270,6 @@ padding:22px
 margin-bottom:7px
 }
 
-/* SUPPORT */
-
 .support{
 padding:22px;
 line-height:1.8
@@ -321,8 +279,6 @@ line-height:1.8
 color:#102a43;
 font-weight:bold
 }
-
-/* AI */
 
 .ai-box{
 padding:25px;
@@ -350,10 +306,6 @@ font-size:15px;
 cursor:pointer
 }
 
-#askButton:hover{
-background:#243b53
-}
-
 #aiLoading{
 margin-top:18px;
 color:#627d98
@@ -367,8 +319,6 @@ border-radius:10px;
 line-height:1.7;
 white-space:pre-wrap
 }
-
-/* RULES */
 
 .rules-box{
 padding:28px;
@@ -391,8 +341,6 @@ color:#486581
 padding-right:25px;
 color:#486581
 }
-
-/* MCQs */
 
 .mcq-card{
 padding:22px;
@@ -433,10 +381,6 @@ cursor:pointer;
 font-size:13px
 }
 
-.answer-btn:hover{
-background:#0f684f
-}
-
 .correct-answer{
 display:none;
 margin-top:12px;
@@ -446,8 +390,6 @@ border-radius:8px;
 color:#147d64;
 font-weight:bold
 }
-
-/* MOBILE */
 
 @media(max-width:800px){
 
@@ -477,163 +419,91 @@ margin:6px 0
 
 <body>
 
-<!-- SIDEBAR -->
-
 <aside class="sidebar">
 
 <div class="logo">
 
 <img src="IMG_7662.JPG" alt="College Logo">
 
-<h2>
-Madain Medical Association
-</h2>
+<h2>Madain Medical Association</h2>
 
 </div>
 
-<div class="nav-title">
-Main
-</div>
+<div class="nav-title">Main</div>
 
-<button class="nav-btn" onclick="show('dashboard')">
-🏠 Dashboard
-</button>
+<button class="nav-btn" onclick="show('dashboard')">🏠 Dashboard</button>
+<button class="nav-btn" onclick="show('academic')">🎓 Academic Years</button>
+<button class="nav-btn" onclick="show('library')">📚 Medical Library</button>
+<button class="nav-btn" onclick="show('ai')">🤖 Ask B7 AI</button>
 
-<button class="nav-btn" onclick="show('academic')">
-🎓 Academic Years
-</button>
+<div class="nav-title">Information</div>
 
-<button class="nav-btn" onclick="show('library')">
-📚 Medical Library
-</button>
-
-<button class="nav-btn" onclick="show('ai')">
-🤖 Ask B7 AI
-</button>
-
-<div class="nav-title">
-Information
-</div>
-
-<button class="nav-btn" onclick="show('founders')">
-👥 Members
-</button>
-
-<button class="nav-btn" onclick="show('support')">
-✉️ Support
-</button>
+<button class="nav-btn" onclick="show('founders')">👥 Members</button>
+<button class="nav-btn" onclick="show('support')">✉️ Support</button>
 
 </aside>
 
 <main class="main">
 
-<!-- DASHBOARD -->
-
 <section id="dashboard" class="section">
 
 <div class="header">
 
-<h1>
-Welcome to Madain Medical Association
-</h1>
+<h1>Welcome to Madain Medical Association</h1>
 
-<p>
-Academic Medical Library & Learning Platform
-</p>
+<p>Academic Medical Library & Learning Platform</p>
 
 </div>
 
 <div class="dashboard">
 
 <div class="dashboard-card" onclick="show('academic')">
-
 <div class="dashboard-icon">🎓</div>
-
 <h3>Academic Years</h3>
-
-<p>
-Access all academic years and subjects.
-</p>
-
+<p>Access all academic years and subjects.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('library')">
-
 <div class="dashboard-icon">📚</div>
-
 <h3>Medical Library</h3>
-
-<p>
-Medical books and resources.
-</p>
-
+<p>Medical books and resources.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('ai')">
-
 <div class="dashboard-icon">🤖</div>
-
 <h3>Ask B7 AI</h3>
-
-<p>
-Your academic medical assistant.
-</p>
-
+<p>Your academic medical assistant.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('founders')">
-
 <div class="dashboard-icon">👥</div>
-
 <h3>Members</h3>
-
-<p>
-Meet the team behind the platform.
-</p>
-
+<p>Meet the team behind the platform.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('support')">
-
 <div class="dashboard-icon">✉️</div>
-
 <h3>Contact & Support</h3>
-
-<p>
-Contact us.
-</p>
-
+<p>Contact us.</p>
 </div>
 
 <div class="dashboard-card" onclick="show('rules')">
-
 <div class="dashboard-icon">📜</div>
-
 <h3>Rules & Privacy</h3>
-
-<p>
-Important information and policies.
-</p>
-
+<p>Important information and policies.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- RULES -->
-
 <section id="rules" class="section">
 
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
 
 <div class="rules-box">
 
-<h2>
-القوانين والخصوصية
-</h2>
+<h2>القوانين والخصوصية</h2>
 
 <p>
 نشكركم على استخدام منصة
@@ -642,195 +512,134 @@ Important information and policies.
 </p>
 
 <p>
-نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير هذه المنصة، ونسأل الله أن يجزيهم خير الجزاء وأن يجعل هذا العمل نافعاً للطلاب والعلم.
+نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير هذه المنصة.
 </p>
 
 <p>
 <strong>الخصوصية وحماية البيانات:</strong>
-نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.
+نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها بشكل غير قانوني.
 </p>
 
 <p>
-المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط، ولا يُعتبر بديلاً عن استشارة الطبيب أو المصادر الطبية المعتمدة.
+المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط.
 </p>
 
 <p>
-يُمنع استخدام المنصة في أي نشاط غير قانوني أو محاولة الوصول غير المصرح به إلى بيانات أو أنظمة المنصة.
-</p>
-
-<p>
-باستخدامك لهذه المنصة، فإنك توافق على الالتزام بهذه القوانين والسياسات واحترام حقوق أصحاب المحتوى.
+يُمنع استخدام المنصة في أي نشاط غير قانوني.
 </p>
 
 </div>
 
 </section>
 
-<!-- ACADEMIC YEARS -->
-
 <section id="academic" class="section">
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
 
-<h2>
-🎓 Academic Years
-</h2>
+<h2>🎓 Academic Years</h2>
 
-<p>
-Select your academic year.
-</p>
+<p>Select your academic year.</p>
 
 </div>
 
 <div class="year-grid">
 
 <div class="year-card" onclick="show('first')">
-
 <h3>First Year</h3>
+<p>Semester 1 & 2</p>
+</div>
+
+<div class="year-card" onclick="show('second')">
+<h3>Second Year</h3>
+<p>Semester 3 & 4</p>
+</div>
+
+<div class="year-card" onclick="show('third')">
+<h3>Third Year</h3>
+<p>Semester 5 & 6</p>
+</div>
+
+<div class="year-card" onclick="show('fourth')">
+<h3>Fourth Year</h3>
+<p>Semester 7 & 8</p>
+</div>
+
+<div class="year-card" onclick="show('fifth')">
+<h3>Fifth Year</h3>
+<p>Semester 9 & 10</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="first" class="section">
+
+<button class="back" onclick="show('academic')">← Academic Years</button>
+
+<div class="section-title">
+
+<h2>First Year</h2>
 
 <p>Semester 1 & 2</p>
 
 </div>
 
-<div class="year-card" onclick="show('second')">
-
-<h3>Second Year</h3>
-
-<p>Semester 3 & 4</p>
-
-</div>
-
-<div class="year-card" onclick="show('third')">
-
-<h3>Third Year</h3>
-
-<p>Semester 5 & 6</p>
-
-</div>
-
-<div class="year-card" onclick="show('fourth')">
-
-<h3>Fourth Year</h3>
-
-<p>Semester 7 & 8</p>
-
-</div>
-
-<div class="year-card" onclick="show('fifth')">
-
-<h3>Fifth Year</h3>
-
-<p>Semester 9 & 10</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FIRST YEAR -->
-
-<section id="first" class="section">
-
-<button class="back" onclick="show('academic')">
-← Academic Years
-</button>
-
-<div class="section-title">
-
-<h2>
-First Year
-</h2>
-
-<p>
-Semester 1 & 2
-</p>
-
-</div>
-
 <div class="semester">
 
-<h3>
-Semester 1
-</h3>
+<h3>Semester 1</h3>
 
 <div class="subject-grid">
 
 <div class="subject">
-
 <h4>Biology</h4>
-
-<button onclick="show('biology')">
-📚 Lectures
-</button>
-
+<button onclick="show('biology')">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Physics</h4>
-
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Chemistry</h4>
-
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>English</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Omar Hiban
-</p>
-
+<p class="professor">👨‍🏫 Dr. Omar Hiban</p>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Introduction to Medicine</h4>
-
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Computer</h4>
-
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 </div>
@@ -839,146 +648,79 @@ Semester 1
 
 <div class="semester">
 
-<h3>
-Semester 2
-</h3>
+<h3>Semester 2</h3>
 
 <div class="subject-grid">
 
 <div class="subject">
-
 <h4>Blood & Immune System</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Wafaa
-</p>
-
-<button onclick="show('blood')">
-📚 Lectures
-</button>
-
+<p class="professor">👨‍🏫 Dr. Wafaa</p>
+<button onclick="show('blood')">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Cardiology</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Osman Ahmed Osman
-</p>
-
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Respiratory System</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Osman Ahmed Osman
-</p>
-
-<button onclick="show('respiratory')">
-📚 Lectures
-</button>
-
-<button onclick="show('respiratoryMCQ')">
-📝 MCQs
-</button>
-
-<button onclick="soon()">
-📖 References
-</button>
-
-<button onclick="soon()">
-📺 Explanation Channels
-</button>
-
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
+<button onclick="show('respiratory')">📚 Lectures</button>
+<button onclick="show('respiratoryMCQ')">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="soon()">📺 Explanation Channels</button>
 </div>
 
 <div class="subject">
-
 <h4>Biochemistry</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Mohamed Osama
-</p>
-
-<button onclick="show('biochemistry')">
-📚 Lectures
-</button>
-
+<p class="professor">👨‍🏫 Dr. Mohamed Osama</p>
+<button onclick="show('biochemistry')">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Hemostasis</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Wafaa
-</p>
-
-<button onclick="show('hemostasis')">
-📚 Lectures
-</button>
-
+<p class="professor">👨‍🏫 Dr. Wafaa</p>
+<button onclick="show('hemostasis')">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Histology</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Osman Ahmed Osman
-</p>
-
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>Embryology</h4>
-
-<p class="professor">
-👨‍🏫 Dr. Osman Ahmed Osman
-</p>
-
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 <div class="subject">
-
 <h4>English 2</h4>
-
 <button onclick="soon()">📚 Lectures</button>
 <button onclick="soon()">📝 MCQs</button>
 <button onclick="soon()">📖 References</button>
 <button onclick="soon()">📺 Explanation Channels</button>
-
 </div>
 
 </div>
@@ -986,36 +728,24 @@ Semester 2
 </div>
 
 </section>
-
-<!-- RESPIRATORY LECTURES -->
 
 <section id="respiratory" class="section">
 
-<button class="back" onclick="show('first')">
-← Semester 2
-</button>
+<button class="back" onclick="show('first')">← Semester 2</button>
 
 <div class="section-title">
 
-<h2>
-🫁 Respiratory System — Lectures
-</h2>
+<h2>🫁 Respiratory System — Lectures</h2>
 
-<p>
-Semester 2 — Dr. Osman Ahmed Osman
-</p>
+<p>Semester 2 — Dr. Osman Ahmed Osman</p>
 
 </div>
 
 <div class="lecture">
 
-<h3>
-Lecture 1 — Nose and Nasal Cavity
-</h3>
+<h3>Lecture 1 — Nose and Nasal Cavity</h3>
 
-<p>
-Respiratory System
-</p>
+<p>Respiratory System</p>
 
 <a href="https://drive.google.com/drive/folders/1-4HNHHdRXAh7E-u8hY1Pg-8nqz_rZwOx"
 target="_blank" rel="noopener noreferrer">
@@ -1032,9 +762,7 @@ download>
 
 <div class="lecture">
 
-<h3>
-Lecture 2 — Pharynx
-</h3>
+<h3>Lecture 2 — Pharynx</h3>
 
 <p>Respiratory System</p>
 
@@ -1053,9 +781,7 @@ download>
 
 <div class="lecture">
 
-<h3>
-Lecture 3 — Larynx
-</h3>
+<h3>Lecture 3 — Larynx</h3>
 
 <p>Respiratory System</p>
 
@@ -1074,9 +800,7 @@ download>
 
 <div class="lecture">
 
-<h3>
-Lecture 4 — Larynx 1
-</h3>
+<h3>Lecture 4 — Larynx 1</h3>
 
 <p>Respiratory System</p>
 
@@ -1095,9 +819,7 @@ download>
 
 <div class="lecture">
 
-<h3>
-Lecture 5 — Trachea
-</h3>
+<h3>Lecture 5 — Trachea</h3>
 
 <p>Respiratory System</p>
 
@@ -1116,1343 +838,31 @@ download>
 
 </section>
 
-<!-- ========================================================= -->
-<!-- RESPIRATORY MCQs - 50 QUESTIONS -->
-<!-- ========================================================= -->
+<!-- RESPIRATORY MCQs -->
 
 <section id="respiratoryMCQ" class="section">
 
-<button class="back" onclick="show('first')">
-← Semester 2
-</button>
+<button class="back" onclick="show('first')">← Semester 2</button>
 
 <div class="section-title">
 
-<h2>
-🫁 Respiratory System — MCQs
-</h2>
+<h2>🫁 Respiratory System — 50 MCQs</h2>
 
-<p>
-Semester 2 — Dr. Osman Ahmed Osman
-</p>
+<p>Semester 2 — Respiratory Physiology</p>
 
 </div>
 
-<!-- QUESTION 1 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-1. The physiological dead space:
-</div>
-
-<ul class="mcq-options">
-<li>A) Is exactly equal to the anatomic dead space in normal people</li>
-<li>B) Increases during exercise</li>
-<li>C) Is measured by single breath nitrogen analysis</li>
-<li>D) Is higher in elderly than young adults</li>
-<li>E) Is the same as the physiological shunt</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans1')">
-Show Answer
-</button>
-
-<div id="ans1" class="correct-answer">
-Answer: D) Is higher in elderly than young adults
-</div>
-
-</div>
-
-<!-- QUESTION 2 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-2. A high alveolo-arterial PO₂ difference most likely results from:
-</div>
-
-<ul class="mcq-options">
-<li>A) Low fractional concentration of O₂ in the inspired air</li>
-<li>B) Hypoventilation</li>
-<li>C) Arteriovenous shunt</li>
-<li>D) Pulmonary edema</li>
-<li>E) Polycythemia</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans2')">
-Show Answer
-</button>
-
-<div id="ans2" class="correct-answer">
-Answer: D) Pulmonary edema
-</div>
-
-</div>
-
-<!-- QUESTION 3 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-3. At 33 feet under water the ambient pressure is:
-</div>
-
-<ul class="mcq-options">
-<li>A) Two atmospheres</li>
-<li>B) One and a half atmosphere</li>
-<li>C) 33 pounds per square inch</li>
-<li>D) Same as the pressure in a tunnel 33 feet below sea level</li>
-<li>E) Half the pressure 33 feet above sea level</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans3')">
-Show Answer
-</button>
-
-<div id="ans3" class="correct-answer">
-Answer: A) Two atmospheres
-</div>
-
-</div>
-
-<!-- QUESTION 4 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-4. Which of the following combinations are typical findings in compensated respiratory alkalosis?
-</div>
-
-<ul class="mcq-options">
-<li>A) Low PaCO₂, low bicarbonate level and normal pH</li>
-<li>B) Low PaCO₂, normal bicarbonate level and high pH</li>
-<li>C) Low PaCO₂, low bicarbonate level and high pH</li>
-<li>D) Low PaCO₂, normal bicarbonate level and normal pH</li>
-<li>E) Low PaCO₂, high bicarbonate level and high pH</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans4')">
-Show Answer
-</button>
-
-<div id="ans4" class="correct-answer">
-Answer: A) Low PaCO₂, low bicarbonate level and normal pH
-</div>
-
-</div>
-
-<!-- QUESTION 5 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-5. The partial pressure of oxygen in the alveoli is expected to be least affected by:
-</div>
-
-<ul class="mcq-options">
-<li>A) Fractional concentration of O₂ in inspired air</li>
-<li>B) Respiratory quotient</li>
-<li>C) PCO₂ in alveoli</li>
-<li>D) Hemoglobin concentration</li>
-<li>E) Barometric pressure</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans5')">
-Show Answer
-</button>
-
-<div id="ans5" class="correct-answer">
-Answer: D) Hemoglobin concentration
-</div>
-
-</div>
-
-<!-- QUESTION 6 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-6. A veno-arterial shunt is likely to:
-</div>
-
-<ul class="mcq-options">
-<li>A) Decrease the cardiac output</li>
-<li>B) Increase the pulse pressure</li>
-<li>C) Increase venous return</li>
-<li>D) Decrease PaO₂</li>
-<li>E) Increase the peripheral vascular resistance</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans6')">
-Show Answer
-</button>
-
-<div id="ans6" class="correct-answer">
-Answer: D) Decrease PaO₂
-</div>
-
-</div>
-
-<!-- QUESTION 7 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-7. The arterio-venous difference of O₂ is highest across:
-</div>
-
-<ul class="mcq-options">
-<li>A) Liver</li>
-<li>B) Kidney</li>
-<li>C) Cardiac muscle</li>
-<li>D) Skin</li>
-<li>E) Brain</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans7')">
-Show Answer
-</button>
-
-<div id="ans7" class="correct-answer">
-Answer: C) Cardiac muscle
-</div>
-
-</div>
-
-<!-- QUESTION 8 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-8. In a patient, hypoventilation is most likely if:
-</div>
-
-<ul class="mcq-options">
-<li>A) PaO₂ is low</li>
-<li>B) pH of arterial blood is low</li>
-<li>C) PaCO₂ is high</li>
-<li>D) O₂ in arterial blood is low</li>
-<li>E) PCO₂ of expired air is high</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans8')">
-Show Answer
-</button>
-
-<div id="ans8" class="correct-answer">
-Answer: C) PaCO₂ is high
-</div>
-
-</div>
-
-<!-- QUESTION 9 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-9. A decrease in the recoil force of the lung is likely to:
-</div>
-
-<ul class="mcq-options">
-<li>A) Decrease total lung capacity</li>
-<li>B) Increase vital capacity</li>
-<li>C) Increase functional residual capacity</li>
-<li>D) Decrease the residual volume</li>
-<li>E) Decrease compliance of the lung</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans9')">
-Show Answer
-</button>
-
-<div id="ans9" class="correct-answer">
-Answer: C) Increase functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 10 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-10. Central chemoreceptors differ from chemoreceptors in that they:
-</div>
-
-<ul class="mcq-options">
-<li>A) Respond to changes in PaCO₂ indirectly through changes in CSF pH</li>
-<li>B) Respond primarily to arterial O₂</li>
-<li>C) Are located in the carotid bodies</li>
-<li>D) Are insensitive to changes in hydrogen ion concentration</li>
-<li>E) Are stimulated mainly by low arterial PO₂</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans10')">
-Show Answer
-</button>
-
-<div id="ans10" class="correct-answer">
-Answer: A) Respond to changes in PaCO₂ indirectly through changes in CSF pH
-</div>
-
-</div>
-
-<!-- QUESTION 11 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-11. At the end of maximal expiration the volume of air remaining in the lungs is:
-</div>
-
-<ul class="mcq-options">
-<li>A) FRC</li>
-<li>B) RV</li>
-<li>C) IRV + RV</li>
-<li>D) TLC</li>
-<li>E) VC</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans11')">
-Show Answer
-</button>
-
-<div id="ans11" class="correct-answer">
-Answer: B) RV
-</div>
-
-</div>
-
-<!-- QUESTION 12 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-12. At the end of expiration at sea level the PO₂ in the anatomic dead space is approximately:
-</div>
-
-<ul class="mcq-options">
-<li>A) 150 mmHg</li>
-<li>B) 100 mmHg</li>
-<li>C) 160 mmHg</li>
-<li>D) 40 mmHg</li>
-<li>E) 130 mmHg</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans12')">
-Show Answer
-</button>
-
-<div id="ans12" class="correct-answer">
-Answer: A) 150 mmHg
-</div>
-
-</div>
-
-<!-- QUESTION 13 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-13. Which is true regarding lung and chest wall mechanics?
-</div>
-
-<ul class="mcq-options">
-<li>A) At maximum expiration the lungs have no tendency to collapse but the chest has a great tendency to expand</li>
-<li>B) At end of normal inspiration the recoil tendency of the lung is greater than that of the chest</li>
-<li>C) During inspiration the recoil tendencies of both the lungs and chest increase</li>
-<li>D) At the end of normal expiration the recoil tendency of the chest is slightly greater than that of the lung</li>
-<li>E) The combined compliance is greater than the individual compliances of the lung and chest</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans13')">
-Show Answer
-</button>
-
-<div id="ans13" class="correct-answer">
-Answer: B) At end of normal inspiration the recoil tendency of the lung is greater than that of the chest
-</div>
-
-</div>
-
-<!-- QUESTION 14 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-14. Which is true concerning the diffusing capacity of the lungs?
-</div>
-
-<ul class="mcq-options">
-<li>A) It increases whenever the partial pressure gradient increases</li>
-<li>B) It increases as the alveolar-capillary surface area rises</li>
-<li>C) It increases as the thickness of the respiratory membrane rises</li>
-<li>D) It is usually measured using carbon dioxide</li>
-<li>E) It is usually measured using oxygen</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans14')">
-Show Answer
-</button>
-
-<div id="ans14" class="correct-answer">
-Answer: B) It increases as the alveolar-capillary surface area rises
-</div>
-
-</div>
-
-<!-- QUESTION 15 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-15. A person whose anatomic dead space is 100 mL breathes 12 times per minute with a tidal volume of 400 mL. His pulmonary ventilation is:
-</div>
-
-<ul class="mcq-options">
-<li>A) 1.2 liters/min</li>
-<li>B) 2.4 liters/min</li>
-<li>C) 3.6 liters/min</li>
-<li>D) 4.8 liters/min</li>
-<li>E) 6.0 liters/min</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans15')">
-Show Answer
-</button>
-
-<div id="ans15" class="correct-answer">
-Answer: D) 4.8 liters/min
-</div>
-
-</div>
-
-<!-- QUESTION 16 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-16. While repaying the O₂ debt:
-</div>
-
-<ul class="mcq-options">
-<li>A) The [H⁺] is increasing</li>
-<li>B) PCO₂ is decreasing</li>
-<li>C) Muscle blood flow is increasing</li>
-<li>D) Respiratory rate is increasing</li>
-<li>E) Minute volume is decreasing</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans16')">
-Show Answer
-</button>
-
-<div id="ans16" class="correct-answer">
-Answer: C) Muscle blood flow is increasing
-</div>
-
-</div>
-
-<!-- QUESTION 17 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-17. An average adult male has a vital capacity of:
-</div>
-
-<ul class="mcq-options">
-<li>A) 3 liters</li>
-<li>B) 4 liters</li>
-<li>C) 5 liters</li>
-<li>D) 6 liters</li>
-<li>E) 7 liters</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans17')">
-Show Answer
-</button>
-
-<div id="ans17" class="correct-answer">
-Answer: B) 4 liters
-</div>
-
-</div>
-
-<!-- QUESTION 18 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-18. The residual volume can be calculated by subtracting the expiratory reserve volume from:
-</div>
-
-<ul class="mcq-options">
-<li>A) Vital capacity</li>
-<li>B) Inspiratory capacity</li>
-<li>C) Functional residual capacity</li>
-<li>D) Total lung capacity</li>
-<li>E) Tidal volume</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans18')">
-Show Answer
-</button>
-
-<div id="ans18" class="correct-answer">
-Answer: C) Functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 19 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-19. The volume of air that describes the lung’s ability to eliminate carbon dioxide is:
-</div>
-
-<ul class="mcq-options">
-<li>A) Tidal volume</li>
-<li>B) Pulmonary ventilation</li>
-<li>C) Vital capacity</li>
-<li>D) Alveolar ventilation</li>
-<li>E) Functional residual capacity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans19')">
-Show Answer
-</button>
-
-<div id="ans19" class="correct-answer">
-Answer: D) Alveolar ventilation
-</div>
-
-</div>
-
-<!-- QUESTION 20 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-20. Exchange of which of the following gases across the respiratory membrane is normally diffusion limited?
-</div>
-
-<ul class="mcq-options">
-<li>A) Oxygen</li>
-<li>B) Carbon dioxide</li>
-<li>C) Carbon monoxide</li>
-<li>D) Nitrous oxide</li>
-<li>E) Nitrogen</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans20')">
-Show Answer
-</button>
-
-<div id="ans20" class="correct-answer">
-Answer: C) Carbon monoxide
-</div>
-
-</div>
-
-<!-- QUESTION 21 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-21. Minute ventilation is:
-</div>
-
-<ul class="mcq-options">
-<li>A) The volume of air moved in or out of the alveoli per minute</li>
-<li>B) The volume of air moved in or out of the lung per breath</li>
-<li>C) Alveolar ventilation plus dead space ventilation</li>
-<li>D) Invariably increases if the respiratory rate increases</li>
-<li>E) Is measured using Bohr’s equation</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans21')">
-Show Answer
-</button>
-
-<div id="ans21" class="correct-answer">
-Answer: C) Alveolar ventilation plus dead space ventilation
-</div>
-
-</div>
-
-<!-- QUESTION 22 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-22. The ventilatory response to hypoxia:
-</div>
-
-<ul class="mcq-options">
-<li>A) Is independent of arterial PCO₂</li>
-<li>B) Is mediated by the central chemoreceptors</li>
-<li>C) Decreases gradually with time</li>
-<li>D) Is largely mediated by the aortic bodies in humans</li>
-<li>E) None of the above</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans22')">
-Show Answer
-</button>
-
-<div id="ans22" class="correct-answer">
-Answer: C) Decreases gradually with time
-</div>
-
-</div>
-
-<!-- QUESTION 23 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-23. With respect to oxygen and carbon dioxide transport in the blood:
-</div>
-
-<ul class="mcq-options">
-<li>A) For the same partial pressure a unit of blood carries the same amount of O₂ and CO₂</li>
-<li>B) High PCO₂ favors O₂ binding to hemoglobin</li>
-<li>C) Metabolic acidosis reduces PCO₂</li>
-<li>D) Oxygenation of hemoglobin increases the affinity of hemoglobin to CO₂</li>
-<li>E) Per unit volume of arterial blood there is more O₂ than CO₂</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans23')">
-Show Answer
-</button>
-
-<div id="ans23" class="correct-answer">
-Answer: E) Per unit volume of arterial blood there is more O₂ than CO₂
-</div>
-
-</div>
-
-<!-- QUESTION 24 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-24. PCO₂ in arterial blood:
-</div>
-
-<ul class="mcq-options">
-<li>A) Invariably increases with hypoxia</li>
-<li>B) Stimulates ventilation mainly through peripheral chemoreceptors</li>
-<li>C) Is the major controller of ventilation</li>
-<li>D) Increases early in exercise</li>
-<li>E) Increases on ascent to high altitude</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans24')">
-Show Answer
-</button>
-
-<div id="ans24" class="correct-answer">
-Answer: C) Is the major controller of ventilation
-</div>
-
-</div>
-
-<!-- QUESTION 25 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-25. In a normal subject, blood at the end of the pulmonary capillary:
-</div>
-
-<ul class="mcq-options">
-<li>A) Has a PO₂ similar to blood in the left ventricle</li>
-<li>B) Has a PO₂ similar to that in the left atrium</li>
-<li>C) Has a PO₂ higher than blood from the aorta</li>
-<li>D) Has a percent saturation of 95</li>
-<li>E) Contains 20 mL of CO₂ per 100 mL</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans25')">
-Show Answer
-</button>
-
-<div id="ans25" class="correct-answer">
-Answer: A) Has a PO₂ similar to blood in the left ventricle
-</div>
-
-</div>
-
-<!-- QUESTION 26 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-26. For a normal Hb-O₂ dissociation curve, the most correct relationship is:
-</div>
-
-<ul class="mcq-options">
-<li>A) PO₂ is 40 mmHg, percent saturation 50%</li>
-<li>B) PO₂ is 95 mmHg, percent saturation 97%</li>
-<li>C) PO₂ is 30 mmHg, percent saturation 50%</li>
-<li>D) PO₂ is 60 mmHg, percent saturation 60%</li>
-<li>E) PO₂ is 50 mmHg, percent saturation 50%</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans26')">
-Show Answer
-</button>
-
-<div id="ans26" class="correct-answer">
-Answer: A) PO₂ is 40 mmHg, percent saturation 50%
-</div>
-
-</div>
-
-<!-- QUESTION 27 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-27. Deficiency of surfactant may lead to:
-</div>
-
-<ul class="mcq-options">
-<li>A) Increased work of breathing</li>
-<li>B) Increased compliance of the lung</li>
-<li>C) Decreased recoil force of the lung</li>
-<li>D) Bronchial asthma</li>
-<li>E) An increase in functional residual capacity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans27')">
-Show Answer
-</button>
-
-<div id="ans27" class="correct-answer">
-Answer: A) Increased work of breathing
-</div>
-
-</div>
-
-<!-- QUESTION 28 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-28. Continuous measurement of the concentration of nitrogen in the expired air can be used to measure:
-</div>
-
-<ul class="mcq-options">
-<li>A) Physiological dead space</li>
-<li>B) Alveolar ventilation</li>
-<li>C) Anatomic dead space</li>
-<li>D) Functional residual capacity</li>
-<li>E) Expiratory reserve volume</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans28')">
-Show Answer
-</button>
-
-<div id="ans28" class="correct-answer">
-Answer: D) Functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 29 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-29. Oxygen consumption of an average adult man per minute is about:
-</div>
-
-<ul class="mcq-options">
-<li>A) 250 ml</li>
-<li>B) 350 ml</li>
-<li>C) 400 ml</li>
-<li>D) 500 ml</li>
-<li>E) 550 ml</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans29')">
-Show Answer
-</button>
-
-<div id="ans29" class="correct-answer">
-Answer: A) 250 ml
-</div>
-
-</div>
-
-<!-- QUESTION 30 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-30. Which of the following is expected to increase functional residual capacity?
-</div>
-
-<ul class="mcq-options">
-<li>A) Surfactant deficiency</li>
-<li>B) Lung fibrosis</li>
-<li>C) Degeneration of lung elastic tissue</li>
-<li>D) Pulmonary edema</li>
-<li>E) Pulmonary congestion</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans30')">
-Show Answer
-</button>
-
-<div id="ans30" class="correct-answer">
-Answer: C) Degeneration of lung elastic tissue
-</div>
-
-</div>
-
-<!-- QUESTION 31 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-31. The most likely cause of hypoxic hypoxia together with hypercapnia is:
-</div>
-
-<ul class="mcq-options">
-<li>A) Ascent to a high altitude</li>
-<li>B) Mild pulmonary edema</li>
-<li>C) Veno-arterial shunt</li>
-<li>D) Hypoventilation</li>
-<li>E) Slight ventilation-perfusion mismatch</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans31')">
-Show Answer
-</button>
-
-<div id="ans31" class="correct-answer">
-Answer: D) Hypoventilation
-</div>
-
-</div>
-
-<!-- QUESTION 32 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-32. A decrease in the recoil force of the lung is expected to:
-</div>
-
-<ul class="mcq-options">
-<li>A) Increase vital capacity</li>
-<li>B) Decrease residual volume</li>
-<li>C) Decrease compliance of the lung</li>
-<li>D) Increase functional residual capacity</li>
-<li>E) Decrease total lung capacity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans32')">
-Show Answer
-</button>
-
-<div id="ans32" class="correct-answer">
-Answer: D) Increase functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 33 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-33. Which of the following changes would shift the oxyhemoglobin dissociation curve to the right?
-</div>
-
-<ul class="mcq-options">
-<li>A) Decreased temperature</li>
-<li>B) Decreased PCO₂</li>
-<li>C) Increased pH</li>
-<li>D) Increased 2,3-BPG</li>
-<li>E) Decreased H⁺ concentration</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans33')">
-Show Answer
-</button>
-
-<div id="ans33" class="correct-answer">
-Answer: D) Increased 2,3-BPG
-</div>
-
-</div>
-
-<!-- QUESTION 34 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-34. The main stimulus for ventilation under normal resting conditions is:
-</div>
-
-<ul class="mcq-options">
-<li>A) Decreased arterial PO₂</li>
-<li>B) Increased arterial PCO₂</li>
-<li>C) Decreased arterial PCO₂</li>
-<li>D) Increased arterial PO₂</li>
-<li>E) Decreased hemoglobin concentration</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans34')">
-Show Answer
-</button>
-
-<div id="ans34" class="correct-answer">
-Answer: B) Increased arterial PCO₂
-</div>
-
-</div>
-
-<!-- QUESTION 35 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-35. The normal resting tidal volume in an average adult is approximately:
-</div>
-
-<ul class="mcq-options">
-<li>A) 100 mL</li>
-<li>B) 250 mL</li>
-<li>C) 500 mL</li>
-<li>D) 1000 mL</li>
-<li>E) 1500 mL</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans35')">
-Show Answer
-</button>
-
-<div id="ans35" class="correct-answer">
-Answer: C) 500 mL
-</div>
-
-</div>
-
-<!-- QUESTION 36 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-36. The normal anatomic dead space in an adult is approximately:
-</div>
-
-<ul class="mcq-options">
-<li>A) 50 mL</li>
-<li>B) 100 mL</li>
-<li>C) 150 mL</li>
-<li>D) 300 mL</li>
-<li>E) 500 mL</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans36')">
-Show Answer
-</button>
-
-<div id="ans36" class="correct-answer">
-Answer: C) 150 mL
-</div>
-
-</div>
-
-<!-- QUESTION 37 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-37. Which of the following conditions is most likely to decrease lung compliance?
-</div>
-
-<ul class="mcq-options">
-<li>A) Emphysema</li>
-<li>B) Pulmonary fibrosis</li>
-<li>C) Aging</li>
-<li>D) Loss of elastic tissue</li>
-<li>E) Increased surfactant activity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans37')">
-Show Answer
-</button>
-
-<div id="ans37" class="correct-answer">
-Answer: B) Pulmonary fibrosis
-</div>
-
-</div>
-
-<!-- QUESTION 38 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-38. Which of the following is a major function of pulmonary surfactant?
-</div>
-
-<ul class="mcq-options">
-<li>A) Increase alveolar surface tension</li>
-<li>B) Prevent alveolar collapse</li>
-<li>C) Decrease lung compliance</li>
-<li>D) Increase the work of breathing</li>
-<li>E) Increase pulmonary vascular resistance</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans38')">
-Show Answer
-</button>
-
-<div id="ans38" class="correct-answer">
-Answer: B) Prevent alveolar collapse
-</div>
-
-</div>
-
-<!-- QUESTION 39 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-39. Which of the following best describes the ventilation-perfusion ratio in the normal lung?
-</div>
-
-<ul class="mcq-options">
-<li>A) It is exactly zero in all alveoli</li>
-<li>B) It is approximately 0.8 overall</li>
-<li>C) It is approximately 5 overall</li>
-<li>D) It is independent of gravity</li>
-<li>E) It is identical at the apex and base</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans39')">
-Show Answer
-</button>
-
-<div id="ans39" class="correct-answer">
-Answer: B) It is approximately 0.8 overall
-</div>
-
-</div>
-
-<!-- QUESTION 40 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-40. Which is true concerning the diffusing capacity of the lungs?
-</div>
-
-<ul class="mcq-options">
-<li>A) It increases whenever the partial pressure gradient increases</li>
-<li>B) It increases as the alveolar-capillary surface area rises</li>
-<li>C) It increases as the thickness of the respiratory membrane rises</li>
-<li>D) It is usually measured using carbon dioxide</li>
-<li>E) It is usually measured using oxygen</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans40')">
-Show Answer
-</button>
-
-<div id="ans40" class="correct-answer">
-Answer: B) It increases as the alveolar-capillary surface area rises
-</div>
-
-</div>
-
-<!-- QUESTION 41 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-41. A person whose anatomic dead space is 100 mL breathes 12 times per minute with a tidal volume of 400 mL. His pulmonary ventilation is:
-</div>
-
-<ul class="mcq-options">
-<li>A) 1.2 liters/min</li>
-<li>B) 2.4 liters/min</li>
-<li>C) 3.6 liters/min</li>
-<li>D) 4.8 liters/min</li>
-<li>E) 6.0 liters/min</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans41')">
-Show Answer
-</button>
-
-<div id="ans41" class="correct-answer">
-Answer: D) 4.8 liters/min
-</div>
-
-</div>
-
-<!-- QUESTION 42 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-42. While repaying the O₂ debt:
-</div>
-
-<ul class="mcq-options">
-<li>A) The [H⁺] is increasing</li>
-<li>B) PCO₂ is decreasing</li>
-<li>C) Muscle blood flow is increasing</li>
-<li>D) Respiratory rate is increasing</li>
-<li>E) Minute volume is decreasing</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans42')">
-Show Answer
-</button>
-
-<div id="ans42" class="correct-answer">
-Answer: C) Muscle blood flow is increasing
-</div>
-
-</div>
-
-<!-- QUESTION 43 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-43. An average adult male has a vital capacity of:
-</div>
-
-<ul class="mcq-options">
-<li>A) 3 liters</li>
-<li>B) 4 liters</li>
-<li>C) 5 liters</li>
-<li>D) 6 liters</li>
-<li>E) 7 liters</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans43')">
-Show Answer
-</button>
-
-<div id="ans43" class="correct-answer">
-Answer: B) 4 liters
-</div>
-
-</div>
-
-<!-- QUESTION 44 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-44. The residual volume can be calculated by subtracting the expiratory reserve volume from:
-</div>
-
-<ul class="mcq-options">
-<li>A) Vital capacity</li>
-<li>B) Inspiratory capacity</li>
-<li>C) Functional residual capacity</li>
-<li>D) Total lung capacity</li>
-<li>E) Tidal volume</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans44')">
-Show Answer
-</button>
-
-<div id="ans44" class="correct-answer">
-Answer: C) Functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 45 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-45. The volume of air that describes the lung’s ability to eliminate carbon dioxide is:
-</div>
-
-<ul class="mcq-options">
-<li>A) Tidal volume</li>
-<li>B) Pulmonary ventilation</li>
-<li>C) Vital capacity</li>
-<li>D) Alveolar ventilation</li>
-<li>E) Functional residual capacity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans45')">
-Show Answer
-</button>
-
-<div id="ans45" class="correct-answer">
-Answer: D) Alveolar ventilation
-</div>
-
-</div>
-
-<!-- QUESTION 46 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-46. A decrease in the recoil force of the lung is expected to:
-</div>
-
-<ul class="mcq-options">
-<li>A) Increase vital capacity</li>
-<li>B) Decrease residual volume</li>
-<li>C) Decrease compliance of the lung</li>
-<li>D) Increase functional residual capacity</li>
-<li>E) Decrease total lung capacity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans46')">
-Show Answer
-</button>
-
-<div id="ans46" class="correct-answer">
-Answer: D) Increase functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 47 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-47. Deficiency of surfactant may lead to:
-</div>
-
-<ul class="mcq-options">
-<li>A) Increased work of breathing</li>
-<li>B) Increased compliance of the lung</li>
-<li>C) Decreased recoil force of the lung</li>
-<li>D) Bronchial asthma</li>
-<li>E) An increase in functional residual capacity</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans47')">
-Show Answer
-</button>
-
-<div id="ans47" class="correct-answer">
-Answer: A) Increased work of breathing
-</div>
-
-</div>
-
-<!-- QUESTION 48 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-48. Continuous measurement of the concentration of nitrogen in the expired air can be used to measure:
-</div>
-
-<ul class="mcq-options">
-<li>A) Physiological dead space</li>
-<li>B) Alveolar ventilation</li>
-<li>C) Anatomic dead space</li>
-<li>D) Functional residual capacity</li>
-<li>E) Expiratory reserve volume</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans48')">
-Show Answer
-</button>
-
-<div id="ans48" class="correct-answer">
-Answer: D) Functional residual capacity
-</div>
-
-</div>
-
-<!-- QUESTION 49 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-49. Oxygen consumption of an average adult man per minute is about:
-</div>
-
-<ul class="mcq-options">
-<li>A) 250 ml</li>
-<li>B) 350 ml</li>
-<li>C) 400 ml</li>
-<li>D) 500 ml</li>
-<li>E) 550 ml</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans49')">
-Show Answer
-</button>
-
-<div id="ans49" class="correct-answer">
-Answer: A) 250 ml
-</div>
-
-</div>
-
-<!-- QUESTION 50 -->
-
-<div class="mcq-card">
-
-<div class="mcq-question">
-50. The most likely cause of hypoxic hypoxia together with hypercapnia is:
-</div>
-
-<ul class="mcq-options">
-<li>A) Ascent to a high altitude</li>
-<li>B) Mild pulmonary edema</li>
-<li>C) Veno-arterial shunt</li>
-<li>D) Hypoventilation</li>
-<li>E) Slight ventilation-perfusion mismatch</li>
-</ul>
-
-<button class="answer-btn" onclick="toggleAnswer('ans50')">
-Show Answer
-</button>
-
-<div id="ans50" class="correct-answer">
-Answer: D) Hypoventilation
-</div>
-
-</div>
+<div id="mcqContainer"></div>
 
 </section>
 
-<!-- BIOLOGY -->
-
 <section id="biology" class="section">
 
-<button class="back" onclick="show('first')">
-← Biology
-</button>
+<button class="back" onclick="show('first')">← Biology</button>
 
 <div class="section-title">
 
-<h2>
-📚 Biology — Lectures
-</h2>
+<h2>📚 Biology — Lectures</h2>
 
 <p>Available lectures</p>
 
@@ -2460,14 +870,12 @@ Answer: D) Hypoventilation
 
 <div class="lecture">
 
-<h3>
-Lecture 2 — The Cell Structure and Function
-</h3>
+<h3>Lecture 2 — The Cell Structure and Function</h3>
 
 <p>Biology Lecture</p>
 
 <a href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2481,38 +889,25 @@ download>
 
 </section>
 
-<!-- BIOCHEMISTRY -->
-
 <section id="biochemistry" class="section">
 
-<button class="back" onclick="show('first')">
-← Semester 2
-</button>
+<button class="back" onclick="show('first')">← Semester 2</button>
 
 <div class="section-title">
 
-<h2>
-🧬 Biochemistry — Lectures
-</h2>
+<h2>🧬 Biochemistry — Lectures</h2>
 
-<p>
-Semester 2 — Dr. Mohamed Osama
-</p>
+<p>Semester 2 — Dr. Mohamed Osama</p>
 
 </div>
 
 <div class="lecture">
 
-<h3>
-Lecture 1 — Introduction to Biochemistry
-</h3>
-
-<p>
-Introduction to Biochemistry, Water and pH
-</p>
+<h3>Lecture 1 — Introduction to Biochemistry</h3>
+<p>Introduction to Biochemistry, Water and pH</p>
 
 <a href="https://drive.google.com/file/d/1BqIBrQrOSiVo8GMX0UfBRNmpZfnDWiz5/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2525,15 +920,11 @@ download>
 </div>
 
 <div class="lecture">
-
-<h3>
-Lecture 2 — Carbohydrates Chemistry
-</h3>
-
+<h3>Lecture 2 — Carbohydrates Chemistry</h3>
 <p>Carbohydrates Chemistry</p>
 
 <a href="https://drive.google.com/file/d/1C12-gNNQrexoLmOJLRdnzGKnK-_g8D9q/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2542,19 +933,14 @@ href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Carbo
 download>
 ⬇️ Download PDF
 </a>
-
 </div>
 
 <div class="lecture">
-
-<h3>
-Lecture 3 — Lipids Chemistry
-</h3>
-
+<h3>Lecture 3 — Lipids Chemistry</h3>
 <p>Lipids Chemistry</p>
 
 <a href="https://drive.google.com/file/d/1C1uyYo4D2qrUpEbuojDHrBkG9DHvcXOX/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2563,19 +949,14 @@ href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LIPID
 download>
 ⬇️ Download PDF
 </a>
-
 </div>
 
 <div class="lecture">
-
-<h3>
-Lecture 4 — Amino Acids, Peptides, and Proteins
-</h3>
-
+<h3>Lecture 4 — Amino Acids, Peptides, and Proteins</h3>
 <p>Amino Acids, Peptides, and Proteins</p>
 
 <a href="https://drive.google.com/file/d/1C7w2MeZovDm21XMDDYFZhcPSnsWoHlla/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2584,19 +965,14 @@ href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Amino
 download>
 ⬇️ Download PDF
 </a>
-
 </div>
 
 <div class="lecture">
-
-<h3>
-Lecture 5 — Enzymes
-</h3>
-
+<h3>Lecture 5 — Enzymes</h3>
 <p>Enzymes</p>
 
 <a href="https://drive.google.com/file/d/1CFlQGTjUzYQCqzAZtOwCJuGv4sRYuZGL/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2605,19 +981,14 @@ href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Enzym
 download>
 ⬇️ Download PDF
 </a>
-
 </div>
 
 <div class="lecture">
-
-<h3>
-Lecture 6 — Nucleic Acids
-</h3>
-
+<h3>Lecture 6 — Nucleic Acids</h3>
 <p>Nucleic Acids</p>
 
 <a href="https://drive.google.com/file/d/1CHkrXaSQTS6z8UTXGZtC7vlQz5XWqsBx/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2626,19 +997,14 @@ href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Nucle
 download>
 ⬇️ Download PDF
 </a>
-
 </div>
 
 <div class="lecture">
-
-<h3>
-Lecture 7 — Vitamins
-</h3>
-
+<h3>Lecture 7 — Vitamins</h3>
 <p>Vitamins</p>
 
 <a href="https://drive.google.com/file/d/1CN4JFqfeDGQX3dqtboA_H57nyN3cfXIf/view?usp=drivesdk"
-target="_blank" rel="noopener noreferrer">
+target="_blank">
 📖 Open Lecture
 </a>
 
@@ -2647,23 +1013,17 @@ href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Vitam
 download>
 ⬇️ Download PDF
 </a>
-
 </div>
 
 </section>
 
-<!-- SECOND YEAR -->
-
 <section id="second" class="section">
 
-<button class="back" onclick="show('academic')">
-← Academic Years
-</button>
+<button class="back" onclick="show('academic')">← Academic Years</button>
 
 <div class="section-title">
 
 <h2>Second Year</h2>
-
 <p>Semester 3 & 4</p>
 
 </div>
@@ -2715,7 +1075,6 @@ download>
 </div>
 
 </div>
-
 </div>
 
 <div class="semester">
@@ -2797,176 +1156,87 @@ download>
 </div>
 
 </div>
-
 </div>
 
 </section>
-
-<!-- THIRD YEAR -->
 
 <section id="third" class="section">
-
-<button class="back" onclick="show('academic')">
-← Academic Years
-</button>
-
+<button class="back" onclick="show('academic')">← Academic Years</button>
 <div class="section-title">
-
 <h2>Third Year</h2>
-
 <p>Semester 5 & 6</p>
-
 </div>
-
 <div class="coming">
-
 <h2>Coming Soon 🚀</h2>
-
-<p>
-Third Year content will be added soon.
-</p>
-
+<p>Third Year content will be added soon.</p>
 </div>
-
 </section>
-
-<!-- FOURTH YEAR -->
 
 <section id="fourth" class="section">
-
-<button class="back" onclick="show('academic')">
-← Academic Years
-</button>
-
+<button class="back" onclick="show('academic')">← Academic Years</button>
 <div class="section-title">
-
 <h2>Fourth Year</h2>
-
 <p>Semester 7 & 8</p>
-
 </div>
-
 <div class="coming">
-
 <h2>Coming Soon 🚀</h2>
-
-<p>
-Fourth Year content will be added soon.
-</p>
-
+<p>Fourth Year content will be added soon.</p>
 </div>
-
 </section>
-
-<!-- FIFTH YEAR -->
 
 <section id="fifth" class="section">
-
-<button class="back" onclick="show('academic')">
-← Academic Years
-</button>
-
+<button class="back" onclick="show('academic')">← Academic Years</button>
 <div class="section-title">
-
 <h2>Fifth Year</h2>
-
 <p>Semester 9 & 10</p>
-
 </div>
-
 <div class="coming">
-
 <h2>Coming Soon 🚀</h2>
-
-<p>
-Fifth Year content will be added soon.
-</p>
-
+<p>Fifth Year content will be added soon.</p>
 </div>
-
 </section>
-
-<!-- BLOOD -->
 
 <section id="blood" class="section">
 
-<button class="back" onclick="show('first')">
-← Semester 2
-</button>
+<button class="back" onclick="show('first')">← Semester 2</button>
 
 <div class="section-title">
-
-<h2>
-🩸 Blood & Immune System — Lectures
-</h2>
-
-<p>
-Semester 2 — Dr. Wafaa
-</p>
-
+<h2>🩸 Blood & Immune System — Lectures</h2>
+<p>Semester 2 — Dr. Wafaa</p>
 </div>
 
 <div class="coming">
-
 <h2>Blood Lectures</h2>
-
-<p>
-Your existing Blood lectures can remain here.
-</p>
-
+<p>Your existing Blood lectures can remain here.</p>
 </div>
 
 </section>
-
-<!-- HEMOSTASIS -->
 
 <section id="hemostasis" class="section">
 
-<button class="back" onclick="show('first')">
-← Semester 2
-</button>
+<button class="back" onclick="show('first')">← Semester 2</button>
 
 <div class="section-title">
-
-<h2>
-🩸 Hemostasis — Lectures
-</h2>
-
-<p>
-Semester 2 — Dr. Wafaa
-</p>
-
+<h2>🩸 Hemostasis — Lectures</h2>
+<p>Semester 2 — Dr. Wafaa</p>
 </div>
 
 <div class="coming">
-
 <h2>Hemostasis Lectures</h2>
-
-<p>
-Your existing Hemostasis lectures can remain here.
-</p>
-
+<p>Your existing Hemostasis lectures can remain here.</p>
 </div>
 
 </section>
-
-<!-- AI -->
 
 <section id="ai" class="section">
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
 
-<h2>
-🤖 Ask B7 AI
-</h2>
+<h2>🤖 Ask B7 AI</h2>
 
-<p>
-Your academic medical assistant
-</p>
+<p>Your academic medical assistant</p>
 
 </div>
 
@@ -2977,13 +1247,9 @@ id="aiQuestion"
 placeholder="Ask B7 AI a medical question..."
 ></textarea>
 
-<button id="askButton" onclick="askAI()">
-Ask B7 AI
-</button>
+<button id="askButton" onclick="askAI()">Ask B7 AI</button>
 
-<div id="aiLoading" style="display:none">
-⏳ Thinking...
-</div>
+<div id="aiLoading" style="display:none">⏳ Thinking...</div>
 
 <div id="aiAnswer"></div>
 
@@ -2991,19 +1257,13 @@ Ask B7 AI
 
 </section>
 
-<!-- LIBRARY -->
-
 <section id="library" class="section">
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
 
-<h2>
-📚 Madain Medical Association Library
-</h2>
+<h2>📚 Madain Medical Association Library</h2>
 
 </div>
 
@@ -3011,114 +1271,67 @@ Ask B7 AI
 
 <h2>Coming Soon</h2>
 
-<p>
-Medical books and references will be added here.
-</p>
+<p>Medical books and references will be added here.</p>
 
 </div>
 
 </section>
 
-<!-- MEMBERS -->
-
 <section id="founders" class="section">
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
 
-<h2>
-👥 Members
-</h2>
+<h2>👥 Members</h2>
 
 </div>
 
 <div class="founders">
 
 <div class="founder">
-
-<h3>
-Abdelmonem Taj Eldin Hassan
-</h3>
-
-<div class="role">
-Founder
-</div>
-
+<h3>Abdelmonem Taj Eldin Hassan</h3>
+<div class="role">Founder</div>
 </div>
 
 <div class="founder">
-
-<h3>
-Ehab Hamdy
-</h3>
-
-<div class="role">
-Member
-</div>
-
+<h3>Ehab Hamdy</h3>
+<div class="role">Member</div>
 </div>
 
 <div class="founder">
-
-<h3>
-Abrar Hijazi
-</h3>
-
-<div class="role">
-Member
-</div>
-
+<h3>Abrar Hijazi</h3>
+<div class="role">Member</div>
 </div>
 
 <div class="founder">
-
-<h3>
-Mohannad Siddig Mohamed Ahmed
-</h3>
-
-<div class="role">
-Co-Founder
-</div>
-
+<h3>Mohannad Siddig Mohamed Ahmed</h3>
+<div class="role">Co-Founder</div>
 </div>
 
 </div>
 
 </section>
 
-<!-- SUPPORT -->
-
 <section id="support" class="section">
 
 <div class="section-title">
 
-<button class="back" onclick="show('dashboard')">
-← Dashboard
-</button>
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
 
-<h2>
-✉️ Contact & Support
-</h2>
+<h2>✉️ Contact & Support</h2>
 
 </div>
 
 <div class="support">
 
-<p>
-For problems, suggestions or questions, contact us.
-</p>
+<p>For problems, suggestions or questions, contact us.</p>
 
 <p>
-
 Email:
-
 <a href="mailto:almdainb7@gmail.com">
 almdainb7@gmail.com
 </a>
-
 </p>
 
 </div>
@@ -3130,7 +1343,6 @@ almdainb7@gmail.com
 <script>
 
 const sections=[
-
 "dashboard",
 "rules",
 "academic",
@@ -3149,7 +1361,6 @@ const sections=[
 "library",
 "founders",
 "support"
-
 ];
 
 function show(id){
@@ -3178,9 +1389,7 @@ behavior:"smooth"
 }
 
 function soon(){
-
 alert("Coming Soon 🚀");
-
 }
 
 function toggleAnswer(id){
@@ -3188,35 +1397,641 @@ function toggleAnswer(id){
 const answer=document.getElementById(id);
 
 if(answer.style.display==="block"){
-
 answer.style.display="none";
-
 }else{
-
 answer.style.display="block";
-
 }
 
 }
+
+const respiratoryQuestions=[
+
+{
+q:"The physiological dead space:",
+o:[
+"Is exactly equal to the anatomic dead space in normal people",
+"Increases during exercise",
+"Is measured by single breath nitrogen analysis",
+"Is higher in elderly than young adults",
+"Is the same as the physiological shunt"
+],
+a:"D"
+},
+
+{
+q:"A high alveolo-arterial PO₂ difference most likely results from:",
+o:[
+"Low fractional concentration of O₂ in the inspired air",
+"Hypoventilation",
+"Arteriovenous shunt",
+"Pulmonary edema",
+"Polycythemia"
+],
+a:"D"
+},
+
+{
+q:"At 33 feet under water the ambient pressure is:",
+o:[
+"Two atmospheres",
+"One and a half atmosphere",
+"33 pounds per square inch",
+"Same as the pressure in a tunnel 33 feet below sea level",
+"Half the pressure 33 feet above sea level"
+],
+a:"A"
+},
+
+{
+q:"Which combination is typical of compensated respiratory alkalosis?",
+o:[
+"Low PaCO₂, low bicarbonate level and normal pH",
+"Low PaCO₂, normal bicarbonate level and high pH",
+"Low PaCO₂, low bicarbonate level and high pH",
+"Low PaCO₂, normal bicarbonate level and normal pH",
+"Low PaCO₂, high bicarbonate level and high pH"
+],
+a:"C"
+},
+
+{
+q:"The partial pressure of oxygen in the alveoli is expected to be least affected by:",
+o:[
+"Fractional concentration of O₂ in inspired air",
+"Respiratory quotient",
+"PCO₂ in alveoli",
+"Hemoglobin concentration",
+"Barometric pressure"
+],
+a:"D"
+},
+
+{
+q:"A veno-arterial shunt is likely to:",
+o:[
+"Decrease the cardiac output",
+"Increase the pulse pressure",
+"Increase venous return",
+"Decrease PaO₂",
+"Increase the peripheral vascular resistance"
+],
+a:"D"
+},
+
+{
+q:"The arterio-venous difference of O₂ is highest across:",
+o:[
+"Liver",
+"Kidney",
+"Cardiac muscle",
+"Skin",
+"Brain"
+],
+a:"C"
+},
+
+{
+q:"In a patient, hypoventilation is most likely if:",
+o:[
+"PaO₂ is low",
+"pH of arterial blood is low",
+"PaCO₂ is high",
+"O₂ in arterial blood is low",
+"PCO₂ of expired air is high"
+],
+a:"C"
+},
+
+{
+q:"A decrease in the recoil force of the lung is likely to:",
+o:[
+"Decrease total lung capacity",
+"Increase vital capacity",
+"Increase functional residual capacity",
+"Decrease the residual volume",
+"Decrease compliance of the lung"
+],
+a:"C"
+},
+
+{
+q:"Central chemoreceptors differ from peripheral chemoreceptors in that they:",
+o:[
+"Respond to changes in PaCO₂ through changes in CSF H⁺",
+"Are located in the carotid bodies",
+"Respond primarily to low PaO₂",
+"Are insensitive to CO₂",
+"Are located in the aortic bodies"
+],
+a:"A"
+},
+
+{
+q:"At the end of maximal expiration the volume of air in the lungs is:",
+o:[
+"FRC",
+"RV",
+"IRV + RV",
+"TLC",
+"VC"
+],
+a:"B"
+},
+
+{
+q:"At the end of expiration at sea level the PO₂ in the anatomic dead space is approximately:",
+o:[
+"150 mmHg",
+"100 mmHg",
+"160 mmHg",
+"40 mmHg",
+"130 mmHg"
+],
+a:"A"
+},
+
+{
+q:"Which is true regarding lung and chest wall mechanics?",
+o:[
+"At maximum expiration the lungs have no tendency to collapse but the chest has a great tendency to expand",
+"At end of normal inspiration the recoil tendency of the lung is greater than that of the chest",
+"During inspiration the recoil tendencies of both the lungs and chest increase",
+"At the end of normal expiration the recoil tendency of the chest is slightly greater than that of the lung",
+"The combined compliance is greater than the individual compliances"
+],
+a:"D"
+},
+
+{
+q:"Which is true concerning the diffusing capacity of the lungs?",
+o:[
+"It increases whenever the partial pressure gradient increases",
+"It increases as the alveolar-capillary surface area rises",
+"It increases as the thickness of the respiratory membrane rises",
+"It is usually measured using carbon dioxide",
+"It is usually measured using oxygen"
+],
+a:"B"
+},
+
+{
+q:"A person whose anatomic dead space is 100 mL breathes 12 times per minute with a tidal volume of 400 mL. His pulmonary ventilation is:",
+o:[
+"1.2 liters/min",
+"2.4 liters/min",
+"3.6 liters/min",
+"4.8 liters/min",
+"6.0 liters/min"
+],
+a:"D"
+},
+
+{
+q:"While repaying the O₂ debt:",
+o:[
+"The [H⁺] is increasing",
+"PCO₂ is decreasing",
+"Muscle blood flow is increasing",
+"Respiratory rate is increasing",
+"Minute volume is decreasing"
+],
+a:"C"
+},
+
+{
+q:"An average adult male has a vital capacity of:",
+o:[
+"3 liters",
+"4 liters",
+"5 liters",
+"6 liters",
+"7 liters"
+],
+a:"B"
+},
+
+{
+q:"The residual volume can be calculated by subtracting the expiratory reserve volume from:",
+o:[
+"Vital capacity",
+"Inspiratory capacity",
+"Functional residual capacity",
+"Total lung capacity",
+"Alveolar ventilation"
+],
+a:"C"
+},
+
+{
+q:"The volume of air that describes the lung's ability to eliminate carbon dioxide is:",
+o:[
+"Tidal volume",
+"Pulmonary ventilation",
+"Vital capacity",
+"Alveolar ventilation",
+"Functional residual capacity"
+],
+a:"D"
+},
+
+{
+q:"Minute ventilation is:",
+o:[
+"The volume of air moved in or out of the alveoli per minute",
+"The volume of air moved in or out of the lung per breath",
+"Alveolar ventilation plus dead space ventilation",
+"Invariably increases if respiratory rate increases",
+"Measured using Bohr's equation"
+],
+a:"C"
+},
+
+{
+q:"With respect to oxygen and carbon dioxide transport in the blood:",
+o:[
+"For the same partial pressure a unit of blood carries the same amount of O₂ and CO₂",
+"High PCO₂ favors O₂ binding to hemoglobin",
+"Metabolic acidosis reduces PCO₂",
+"Oxygenation of hemoglobin increases the affinity of hemoglobin to CO₂",
+"Per unit volume of arterial blood there is more O₂ than CO₂"
+],
+a:"E"
+},
+
+{
+q:"PCO₂ in arterial blood:",
+o:[
+"Invariably increases with hypoxia",
+"Stimulates ventilation mainly through peripheral chemoreceptors",
+"Is the major controller of ventilation",
+"Increases early in exercise",
+"Increases on ascent to high altitude"
+],
+a:"C"
+},
+
+{
+q:"The ventilatory response to hypoxia:",
+o:[
+"Is independent of arterial PCO₂",
+"Is mediated by central chemoreceptors",
+"Decreases gradually with time",
+"Is largely mediated by the aortic bodies in humans",
+"None of the above"
+],
+a:"C"
+},
+
+{
+q:"Which gas is normally diffusion limited across the respiratory membrane?",
+o:[
+"Oxygen",
+"Carbon dioxide",
+"Carbon monoxide",
+"Nitrous oxide",
+"Nitrogen"
+],
+a:"C"
+},
+
+{
+q:"The main determinant of alveolar ventilation is:",
+o:[
+"Tidal volume minus dead space multiplied by respiratory rate",
+"Total lung capacity",
+"Residual volume",
+"Vital capacity",
+"Inspiratory reserve volume"
+],
+a:"A"
+},
+
+{
+q:"A decrease in surfactant concentration causes:",
+o:[
+"Decreased surface tension",
+"Increased lung compliance",
+"Reduced tendency for alveolar collapse",
+"Increased work of breathing",
+"Decreased elastic recoil"
+],
+a:"D"
+},
+
+{
+q:"An increase in the airway resistance is most likely to:",
+o:[
+"Increase expiratory flow",
+"Decrease the work of breathing",
+"Reduce airflow for a given pressure gradient",
+"Increase lung compliance",
+"Decrease airway pressure"
+],
+a:"C"
+},
+
+{
+q:"Reduced surface tension of fluid in the alveoli results in:",
+o:[
+"Alveolar instability",
+"Greater tendency for collapse",
+"Reduced work of breathing",
+"Decreased compliance",
+"Asthma"
+],
+a:"C"
+},
+
+{
+q:"For a normal Hb-O₂ dissociation curve, the most correct relationship is:",
+o:[
+"PO₂ is 40 mmHg, percent saturation 50%",
+"PO₂ is 95 mmHg, percent saturation 97%",
+"PO₂ is 30 mmHg, percent saturation 50%",
+"PO₂ is 60 mmHg, percent saturation 60%",
+"PO₂ is 50 mmHg, percent saturation 50%"
+],
+a:"A"
+},
+
+{
+q:"In a normal subject, blood at the end of the pulmonary capillary:",
+o:[
+"Has a PO₂ similar to blood in the left ventricle",
+"Has a PO₂ similar to that in the left atrium",
+"Has a PO₂ higher than blood from the aorta",
+"Has a percent saturation of 95%",
+"Contains 20 mL of CO₂ per 100 mL"
+],
+a:"B"
+},
+
+{
+q:"Which condition shifts the Hb-O₂ dissociation curve to the right?",
+o:[
+"Decreased temperature",
+"Decreased 2,3-BPG",
+"Alkalosis",
+"Increased temperature",
+"Fetal hemoglobin"
+],
+a:"D"
+},
+
+{
+q:"Which condition shifts the Hb-O₂ dissociation curve to the left?",
+o:[
+"Fever",
+"Acidosis",
+"Increased 2,3-BPG",
+"Fetal hemoglobin",
+"Increased PCO₂"
+],
+a:"D"
+},
+
+{
+q:"The oxygen content of arterial blood depends primarily on:",
+o:[
+"Dissolved oxygen only",
+"Hemoglobin concentration and hemoglobin saturation",
+"PaCO₂",
+"Plasma bicarbonate",
+"Respiratory rate"
+],
+a:"B"
+},
+
+{
+q:"Most carbon dioxide is transported in blood as:",
+o:[
+"Dissolved CO₂",
+"Carbaminohemoglobin",
+"Bicarbonate",
+"Carbonic acid",
+"Carbon monoxide"
+],
+a:"C"
+},
+
+{
+q:"The chloride shift is important for:",
+o:[
+"Oxygen loading in the lungs",
+"Carbon dioxide transport as bicarbonate",
+"Surfactant production",
+"Control of respiratory rate",
+"Pulmonary blood flow"
+],
+a:"B"
+},
+
+{
+q:"Which of the following increases during exercise?",
+o:[
+"Physiological dead space fraction always increases markedly",
+"Oxygen extraction by active muscle",
+"PaCO₂ markedly increases in moderate exercise",
+"Alveolar PO₂ falls to zero",
+"Ventilation decreases"
+],
+a:"B"
+},
+
+{
+q:"The normal anatomical dead space in an adult is approximately:",
+o:[
+"50 mL",
+"100 mL",
+"150 mL",
+"300 mL",
+"500 mL"
+],
+a:"C"
+},
+
+{
+q:"Functional residual capacity is equal to:",
+o:[
+"IRV + TV",
+"TV + ERV",
+"ERV + RV",
+"IRV + ERV",
+"VC + RV"
+],
+a:"C"
+},
+
+{
+q:"Vital capacity is equal to:",
+o:[
+"IRV + TV + ERV",
+"TV + RV",
+"ERV + RV",
+"IRV + RV",
+"TLC - ERV"
+],
+a:"A"
+},
+
+{
+q:"Total lung capacity is equal to:",
+o:[
+"VC - RV",
+"VC + RV",
+"FRC - RV",
+"TV + ERV",
+"IC - RV"
+],
+a:"B"
+},
+
+{
+q:"Which lung volume cannot be measured directly by simple spirometry?",
+o:[
+"Tidal volume",
+"Inspiratory reserve volume",
+"Expiratory reserve volume",
+"Residual volume",
+"Vital capacity"
+],
+a:"D"
+},
+
+{
+q:"A decrease in the recoil force of the lung is expected to:",
+o:[
+"Increase vital capacity",
+"Decrease residual volume",
+"Decrease compliance",
+"Increase functional residual capacity",
+"Decrease total lung capacity"
+],
+a:"D"
+},
+
+{
+q:"Deficiency of surfactant may lead to:",
+o:[
+"Increased work of breathing",
+"Increased compliance",
+"Decreased recoil force",
+"Bronchial asthma",
+"Increase in FRC"
+],
+a:"A"
+},
+
+{
+q:"Continuous measurement of nitrogen concentration in expired air can be used to measure:",
+o:[
+"Physiological dead space",
+"Alveolar ventilation",
+"Anatomic dead space",
+"Functional residual capacity",
+"Expiratory reserve volume"
+],
+a:"D"
+},
+
+{
+q:"Oxygen consumption of an average adult man per minute is about:",
+o:[
+"250 mL",
+"350 mL",
+"400 mL",
+"500 mL",
+"550 mL"
+],
+a:"A"
+},
+
+{
+q:"Which of the following is expected to increase functional residual capacity?",
+o:[
+"Surfactant deficiency",
+"Lung fibrosis",
+"Degeneration of lung elastic tissue",
+"Pulmonary edema",
+"Pulmonary congestion"
+],
+a:"C"
+},
+
+{
+q:"The most likely cause of hypoxic hypoxia together with hypercapnia is:",
+o:[
+"Ascent to a high altitude",
+"Mild pulmonary edema",
+"Veno-arterial shunt",
+"Hypoventilation",
+"Slight ventilation-perfusion mismatch"
+],
+a:"D"
+}
+
+];
+
+const letters=["A","B","C","D","E"];
+
+const container=document.getElementById("mcqContainer");
+
+respiratoryQuestions.forEach((item,index)=>{
+
+const number=index+1;
+
+const card=document.createElement("div");
+
+card.className="mcq-card";
+
+let options="";
+
+item.o.forEach((option,i)=>{
+
+options+=`
+<li><strong>${letters[i]})</strong> ${option}</li>
+`;
+
+});
+
+card.innerHTML=`
+
+<div class="mcq-question">
+${number}. ${item.q}
+</div>
+
+<ul class="mcq-options">
+${options}
+</ul>
+
+<button class="answer-btn"
+onclick="toggleAnswer('respAns${number}')">
+Show Answer
+</button>
+
+<div id="respAns${number}" class="correct-answer">
+Answer: ${item.a}) ${item.o[letters.indexOf(item.a)]}
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
 
 async function askAI(){
 
-const question=
-document.getElementById("aiQuestion").value.trim();
+const question=document.getElementById("aiQuestion").value.trim();
 
-const answer=
-document.getElementById("aiAnswer");
+const answer=document.getElementById("aiAnswer");
 
-const loading=
-document.getElementById("aiLoading");
+const loading=document.getElementById("aiLoading");
 
-const button=
-document.getElementById("askButton");
+const button=document.getElementById("askButton");
 
 if(!question){
 
-answer.textContent=
-"Please write your question first.";
+answer.textContent="Please write your question first.";
 
 return;
 
@@ -3248,19 +2063,15 @@ const data=await response.json();
 
 if(!response.ok){
 
-throw new Error(
-data.error || "Something went wrong."
-);
+throw new Error(data.error || "Something went wrong.");
 
 }
 
-answer.textContent=
-data.reply || "No answer received.";
+answer.textContent=data.reply || "No answer received.";
 
 }catch(error){
 
-answer.textContent=
-"Sorry, something went wrong. Please try again.";
+answer.textContent="Sorry, something went wrong. Please try again.";
 
 console.error(error);
 
