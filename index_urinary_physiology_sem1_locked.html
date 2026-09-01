@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SHR1BFVX2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SHR1BFVX2');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Madain Medical Association</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#0b4a3d;--green2:#147d64;--green3:#1aa179;--ink:#16332c;--muted:#6b817a;--bg:#eef5f1;--card:#ffffff;--line:#dce8e2}
+body{font-family:Arial,sans-serif;background:var(--bg);color:#1f2937}
+.sidebar{position:fixed;left:0;top:0;width:250px;height:100vh;background:linear-gradient(180deg,#06372e,#0b4a3d);color:white;padding:22px 16px;overflow-y:auto;z-index:20}
+.logo{text-align:center;margin-bottom:24px}
+.logo img{width:84px;height:84px;object-fit:contain;background:white;padding:6px;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.16)}
+.logo h2{margin-top:10px;font-size:18px;line-height:1.3}
+.logo small{display:block;color:#b7d5ca;margin-top:4px;font-size:11px}
+.nav-title{color:#9ec9bb;font-size:11px;margin:22px 8px 8px;text-transform:uppercase;letter-spacing:.08em}
+.nav-btn{width:100%;border:0;background:transparent;color:white;padding:12px;margin:3px 0;border-radius:10px;text-align:left;font-size:15px;cursor:pointer;transition:.2s}
+.nav-btn:hover{background:rgba(255,255,255,.12);transform:translateX(2px)}
+.main{margin-left:250px;padding:28px}
+.section{display:none}
+.header,.section-title,.dashboard-card,.year-card,.semester,.subject,.lecture,.founder,.support,.coming,.ai-box,.rules-box,.mcq-card,.mcq-toolbar{background:var(--card);border-radius:16px;box-shadow:0 6px 22px rgba(11,74,61,.07)}
+.header{padding:28px;margin-bottom:22px}
+.header h1,.section-title h2,.year-card h3,.subject h4,.lecture h3,.founder h3,.coming h2,.mcq-card h3{color:var(--ink)}
+.header p,.year-card p,.section-title p,.lecture p,.role,.coming p{color:var(--muted)}
+.professor{color:var(--muted);font-size:13px;margin-bottom:10px;font-weight:500}
+
+/* NEW HOME HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#083c31 0%,#0b4a3d 55%,#0f654f 100%);border-radius:24px;min-height:410px;margin-bottom:22px;box-shadow:0 18px 45px rgba(6,55,46,.18)}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 18% 22%,rgba(80,220,166,.18),transparent 28%),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:auto,42px 42px,42px 42px;pointer-events:none}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:42px;min-height:410px}
+.hero-copy{color:white;z-index:2}
+.hero-badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:999px;color:#cceadf;font-size:12px;margin-bottom:18px}
+.hero-ar{font-size:42px;line-height:1.18;margin-bottom:8px;font-weight:800;direction:rtl;text-align:left}
+.hero-en{font-size:23px;color:#c7e5da;margin-bottom:16px;font-weight:700}
+.hero-copy p{font-size:16px;line-height:1.8;color:#d9eee7;max-width:610px;margin-bottom:24px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px}
+.hero-btn{border:0;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer;font-size:14px;transition:.2s}
+.hero-btn.primary{background:#28b884;color:#042d24}
+.hero-btn.secondary{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:white}
+.hero-btn:hover{transform:translateY(-2px)}
+.hero-photo{position:relative;min-height:315px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.2);box-shadow:0 18px 45px rgba(0,0,0,.28)}
+.hero-photo img{width:100%;height:100%;min-height:315px;object-fit:cover;display:block}
+.hero-photo:after{content:"Al Madain College of Medical Sciences & Technology";position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;color:white;font-size:12px;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+
+.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.dashboard-card,.year-card{padding:21px;cursor:pointer;transition:.2s;border:1px solid rgba(11,74,61,.05)}
+.dashboard-card:hover,.year-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(11,74,61,.12)}
+.dashboard-icon{font-size:30px;margin-bottom:10px;width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#e6f4ef}
+.dashboard-card h3{color:var(--ink);margin-bottom:7px}
+.dashboard-card p{color:var(--muted);line-height:1.5}
+.back{border:0;background:var(--green);color:white;padding:9px 14px;border-radius:8px;cursor:pointer;margin-bottom:16px}
+.back:hover{background:#07372d}
+.year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.semester{padding:20px;margin-bottom:18px}
+.semester h3{color:#3e665b;margin-bottom:14px}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px}
+.subject{padding:16px;border:1px solid var(--line);box-shadow:none}
+.subject h4{margin-bottom:6px}
+.subject button{border:0;background:var(--green);color:white;padding:8px 9px;margin:2px;border-radius:7px;cursor:pointer;font-size:12px}
+.subject button:hover{background:#07372d}
+.lecture{padding:20px;margin-bottom:14px;border-left:5px solid var(--green2)}
+.lecture h3{margin-bottom:7px}
+.lecture p{margin-bottom:13px}
+.lecture a{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:10px 14px;border-radius:8px;margin-right:5px;margin-top:5px;transition:.2s}
+.lecture a:hover{background:#07372d;transform:translateY(-1px)}
+.lecture .download-btn{background:var(--green2)}
+.lecture .download-btn:hover{background:#0f684f}
+.coming{text-align:center;padding:55px 20px}
+.founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.founder{padding:22px}.founder h3{margin-bottom:7px}
+.support{padding:22px;line-height:1.8}.support a{color:var(--green);font-weight:bold}
+.ai-box{padding:25px;max-width:800px}
+#aiQuestion{width:100%;height:140px;padding:15px;border:1px solid var(--line);border-radius:10px;font-size:16px;resize:vertical;margin-bottom:12px}
+#askButton{background:var(--green);color:white;border:0;padding:12px 20px;border-radius:8px;font-size:15px;cursor:pointer}
+#askButton:hover{background:#07372d}
+#aiLoading{margin-top:18px;color:var(--muted)}
+#aiAnswer{margin-top:18px;padding:18px;background:#f4f7fa;border-radius:10px;line-height:1.7;white-space:pre-wrap}
+.rules-box{padding:28px;line-height:2;text-align:right;direction:rtl}.rules-box h2{color:var(--ink);margin-bottom:18px}.rules-box p{margin-bottom:15px;color:#486581}
+.mcq-toolbar{padding:16px;margin-bottom:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mcq-toolbar input,.mcq-toolbar select{padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:white}.mcq-toolbar input{flex:1;min-width:220px}.mcq-count{color:var(--muted);font-size:13px}
+.mcq-card{padding:20px;margin-bottom:14px;border-left:5px solid var(--green2)}.mcq-meta{font-size:12px;color:#829ab1;margin-bottom:8px}.mcq-question{font-size:16px;line-height:1.65;font-weight:700;color:var(--ink);margin-bottom:12px}.mcq-options{list-style:none;margin-bottom:12px}.mcq-options li{padding:9px 11px;margin:6px 0;border:1px solid var(--line);border-radius:8px;background:#f8fafc;line-height:1.45}.answer-btn{border:0;background:var(--green2);color:white;padding:9px 13px;border-radius:7px;cursor:pointer;font-size:13px}.answer-btn:hover{background:#0f684f}.mcq-answer{display:none;margin-top:12px;padding:12px 14px;border-radius:8px;background:#e6f4ef;color:#0f684f;line-height:1.55}.mcq-answer .note{display:block;color:var(--muted);font-size:12px;margin-top:6px;font-weight:normal}.empty-mcq{background:white;border-radius:14px;padding:30px;text-align:center;color:var(--muted)}
+@media(max-width:980px){.hero-inner{grid-template-columns:1fr}.hero-photo{min-height:250px}.hero-ar{text-align:left;font-size:36px}}
+@media(max-width:800px){.sidebar{position:relative;width:100%;height:auto}.main{margin-left:0;padding:16px}.hero-inner{padding:26px 20px}.hero{border-radius:18px;min-height:auto}.hero-ar{font-size:32px}.hero-en{font-size:20px}.lecture a{display:block;width:100%;text-align:center;margin:6px 0}.mcq-toolbar{display:block}.mcq-toolbar input,.mcq-toolbar select{width:100%;margin:5px 0}}
+
+
+/* ===== DARK GREEN PREMIUM THEME ===== */
+:root{
+  --green:#0f6b4f;
+  --green2:#21c77a;
+  --green3:#5bea9a;
+  --ink:#f4fff9;
+  --muted:#a8bdb5;
+  --bg:#081512;
+  --card:#10211d;
+  --line:#29453d;
+}
+html{background:#081512}
+body{background:radial-gradient(circle at 70% 0%,#102b25 0,#081512 38%,#06110f 100%);color:#eef8f4;min-height:100vh}
+.sidebar{background:linear-gradient(180deg,#0c1d19 0%,#0b1916 100%);border-right:1px solid #29453d;box-shadow:12px 0 32px rgba(0,0,0,.18)}
+.logo img{width:72px;height:72px;border-radius:16px;padding:5px;box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.logo h2{color:#fff;font-size:18px}.logo small{color:#a8bdb5}
+.nav-title{color:#4bd78c}
+.nav-btn{color:#eaf7f2}.nav-btn:hover{background:#17332b}.nav-btn:focus{outline:1px solid #32d586}
+.main{background:transparent;min-height:100vh}
+.header,.section-title,.dashboard-card,.year-card,.semester,.subject,.lecture,.founder,.support,.coming,.ai-box,.rules-box,.mcq-card,.mcq-toolbar{background:rgba(15,31,27,.94);border:1px solid #29453d;box-shadow:0 12px 32px rgba(0,0,0,.18)}
+.header h1,.section-title h2,.year-card h3,.subject h4,.lecture h3,.founder h3,.coming h2,.mcq-card h3{color:#f5fff9}
+.header p,.year-card p,.section-title p,.lecture p,.role,.coming p,.professor{color:#a8bdb5}
+.hero{background:linear-gradient(120deg,#0b1e1a 0%,#0c2d25 48%,#0d3d30 100%);border:1px solid #2b604e;box-shadow:0 22px 60px rgba(0,0,0,.38);min-height:460px}
+.hero:before{background-image:radial-gradient(circle at 20% 20%,rgba(31,218,123,.15),transparent 28%),linear-gradient(90deg,rgba(64,255,162,.025) 1px,transparent 1px),linear-gradient(rgba(64,255,162,.025) 1px,transparent 1px);background-size:auto,46px 46px,46px 46px}
+.hero-inner{min-height:460px;padding:44px 46px;gap:34px}
+.hero-badge{background:rgba(33,199,122,.09);border-color:rgba(91,234,154,.28);color:#bdf9d5}
+.hero-ar{font-size:48px;color:white;text-shadow:0 4px 18px rgba(0,0,0,.25)}
+.hero-en{font-size:26px;color:#42dc8f}
+.hero-copy p{color:#d5e5df;font-size:17px}
+.hero-btn.primary{background:linear-gradient(135deg,#25c77c,#4cdd98);color:#05251b;box-shadow:0 10px 26px rgba(36,199,124,.22)}
+.hero-btn.secondary{background:#0d1c19;border-color:#527168;color:#f2fff9}
+.hero-photo{min-height:350px;border-color:#376d5b;border-radius:24px;background:#0a1714}
+.hero-photo img{min-height:350px;object-fit:cover;object-position:center}
+.hero-photo:after{display:none}
+.dashboard-card,.year-card{background:linear-gradient(145deg,#10231e,#0d1d19);border-color:#2a453d}
+.dashboard-card:hover,.year-card:hover{box-shadow:0 16px 36px rgba(0,0,0,.28);border-color:#3f8069}
+.dashboard-icon{background:#183d31;color:#53e59a}
+.dashboard-card h3,.dashboard-card p{color:#eef8f4}.dashboard-card p{color:#a8bdb5}
+.back,.subject button,.lecture a,#askButton{background:#155c46}.back:hover,.subject button:hover,.lecture a:hover,#askButton:hover{background:#1d7c5d}
+.semester h3{color:#78e2ad}
+.subject{background:#0d1d19;border-color:#29453d}
+.lecture{background:#0d1d19;border-left-color:#31ce82}
+.lecture .download-btn,.answer-btn{background:#1e8a64}.lecture .download-btn:hover,.answer-btn:hover{background:#29a878}
+.support a{color:#52df99}
+#aiQuestion,.mcq-toolbar input,.mcq-toolbar select{background:#081512;color:#edf9f4;border-color:#34564c}
+#aiQuestion::placeholder,.mcq-toolbar input::placeholder{color:#78938a}
+#aiAnswer{background:#0a1714;color:#dcebe5;border:1px solid #29453d}
+.rules-box p{color:#b5c8c1}
+.mcq-options li{background:#0b1916;border-color:#2c463e;color:#e9f5f0}
+.mcq-question{color:#f3fff8}.mcq-meta,.mcq-count{color:#8ea79e}.mcq-answer{background:#0f3025;color:#75ecad;border:1px solid #255b47}.mcq-answer .note{color:#a8bdb5}
+.empty-mcq{background:#0d1d19;color:#a8bdb5;border:1px solid #29453d}
+@media(max-width:980px){.hero-ar{font-size:40px}.hero-photo{min-height:300px}.hero-photo img{min-height:300px}}
+@media(max-width:800px){.sidebar{border-right:0;border-bottom:1px solid #29453d}.main{padding:14px}.hero-inner{padding:26px 20px}.hero-ar{font-size:34px}.hero-en{font-size:21px}.hero-copy p{font-size:15px}.hero-photo,.hero-photo img{min-height:230px}}
+
+
+.track-selector{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 22px}
+.track-card{background:#0d1d19;border:1px solid #29453d;border-radius:16px;padding:22px;cursor:pointer;transition:.2s;text-align:center}
+.track-card:hover{transform:translateY(-3px);border-color:#3f8069;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.track-card h3{color:#f5fff9;margin-bottom:7px}.track-card p{color:#a8bdb5}.track-card .track-icon{font-size:34px;margin-bottom:10px}
+</style>
+</head>
+
+<body>
+
+<aside class="sidebar">
+<div class="logo">
+<img src="IMG_7662.JPG" alt="College Logo">
+<h2>Madain Medical Association</h2><small>رابطة طب المداين</small>
+</div>
+
+<div class="nav-title">Main</div>
+<button class="nav-btn" onclick="show('dashboard')">🏠 Dashboard</button>
+<button class="nav-btn" onclick="show('academic')">🎓 Academic Years</button>
+<button class="nav-btn" onclick="show('library')">📚 Medical Library</button>
+<button class="nav-btn" onclick="show('ai')">🤖 Ask B7 AI</button>
+
+<div class="nav-title">Information</div>
+<button class="nav-btn" onclick="show('founders')">👥 Members</button>
+<button class="nav-btn" onclick="show('support')">✉️ Support</button>
+</aside>
+
+<main class="main">
+
+<section id="dashboard" class="section">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge">⚕️ Student Medical Learning Platform</div>
+      <div class="hero-ar">رابطة طب المداين</div>
+      <div class="hero-en">Madain Medical Association</div>
+      <p>منصة أكاديمية طبية تجمع المحاضرات، الأسئلة، والمصادر التعليمية في مكان واحد لتسهيل المذاكرة والوصول إلى المحتوى.</p>
+      <div class="hero-actions">
+        <button class="hero-btn primary" onclick="show('academic')">استكشف المحتوى</button>
+        <button class="hero-btn secondary" onclick="show('first')">اختبارات MCQs</button>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="hero-campus-dark.png" alt="Madain Medical Association"></div>
+  </div>
+</div>
+
+<div class="dashboard">
+<div class="dashboard-card" onclick="show('academic')"><div class="dashboard-icon">🎓</div><h3>Academic Years</h3><p>Access all academic years and subjects.</p></div>
+<div class="dashboard-card" onclick="show('library')"><div class="dashboard-icon">📚</div><h3>Medical Library</h3><p>Medical books and resources.</p></div>
+<div class="dashboard-card" onclick="show('ai')"><div class="dashboard-icon">🤖</div><h3>Ask B7 AI</h3><p>Your academic medical assistant.</p></div>
+<div class="dashboard-card" onclick="show('founders')"><div class="dashboard-icon">👥</div><h3>Members</h3><p>Meet the team behind the platform.</p></div>
+<div class="dashboard-card" onclick="show('support')"><div class="dashboard-icon">✉️</div><h3>Contact & Support</h3><p>Contact us.</p></div>
+<div class="dashboard-card" onclick="show('rules')"><div class="dashboard-icon">📜</div><h3>Rules & Privacy</h3><p>Important information and policies.</p></div>
+</div>
+</section>
+
+<section id="rules" class="section">
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
+<div class="rules-box">
+<h2>القوانين والخصوصية</h2>
+<p>نشكركم على استخدام منصة <strong>Madain Medical Association</strong>. تم إنشاء هذه المنصة لخدمة الطلاب وتسهيل الوصول إلى المصادر والمواد التعليمية الطبية.</p>
+<p>نتقدم بخالص الشكر والتقدير لكل من ساهم في إنشاء وتطوير هذه المنصة، ونسأل الله أن يجزيهم خير الجزاء وأن يجعل هذا العمل نافعاً للطلاب والعلم.</p>
+<p><strong>الخصوصية وحماية البيانات:</strong> نحن نحرص على حماية بيانات المستخدمين وعدم استخدامها بشكل غير قانوني أو مشاركتها مع أي جهة دون سبب مشروع.</p>
+<p>المحتوى الموجود في المنصة مخصص للأغراض التعليمية فقط، ولا يُعتبر بديلاً عن استشارة الطبيب أو المصادر الطبية المعتمدة.</p>
+<p>يُمنع استخدام المنصة في أي نشاط غير قانوني أو محاولة الوصول غير المصرح به إلى بيانات أو أنظمة المنصة.</p>
+<p>باستخدامك لهذه المنصة، فإنك توافق على الالتزام بهذه القوانين والسياسات واحترام حقوق أصحاب المحتوى.</p>
+</div>
+</section>
+
+<section id="academic" class="section">
+<div class="section-title">
+<button class="back" onclick="show('dashboard')">← Dashboard</button>
+<h2>🎓 Academic Years</h2>
+<p>Select your academic year.</p>
+</div>
+<div class="year-grid">
+<div class="year-card" onclick="show('first')"><h3>First Year</h3><p>Semester 1 & 2</p></div>
+<div class="year-card" onclick="show('second')"><h3>Second Year</h3><p>Semester 3 & 4</p></div>
+<div class="year-card" onclick="show('third')"><h3>Third Year</h3><p>Semester 5 & 6</p></div>
+<div class="year-card" onclick="show('fourth')"><h3>Fourth Year</h3><p>Semester 7 & 8</p></div>
+<div class="year-card" onclick="show('fifth')"><h3>Fifth Year</h3><p>Semester 9 & 10</p></div>
+</div>
+</section>
+
+<section id="first" class="section">
+<button class="back" onclick="show('academic')">← Academic Years</button>
+<div class="section-title"><h2>First Year</h2><p>Semester 1 & 2</p></div>
+
+<div class="semester">
+<h3>Semester 1</h3>
+<div class="coming" dir="rtl" style="text-align:center; line-height:2;">
+<h2>🔒 Semester 1</h2>
+<p>السلام عليكم ورحمة الله، لم نقم بتنزيل المحتوى نسبةً لأنه لا توجد دفعة حالياً في Semester 1، ومع العلم أنه يمكن أن يتغير الأساتذة، فلذلك سوف ننتظر الدفعة الجديدة، وبعد ذلك سوف يتم تنزيل محتوى Semester 1.</p>
+</div>
+</div>
+
+<div class="semester">
+<h3>Semester 2</h3>
+<div class="subject-grid">
+
+<div class="subject">
+<h4>Blood & Immune System</h4>
+<p class="professor">👨‍🏫 Dr. Wafaa</p>
+<button onclick="show('blood')">📚 Lectures</button>
+<button onclick="openMCQs('blood')">📝 MCQs</button>
+<button onclick="window.open('https://drive.google.com/file/d/1y8jvBNYTAxuOnQYMTCCIdr9NMpsLrlzm/view?usp=drivesdk','_blank')">📖 References</button>
+<button onclick="window.open('https://youtube.com/playlist?list=PLAlbG9dixa2h35jWeB43mPeBwl0V36IuT&si=LKU39WtjpiKSKGBI','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>Cardiology</h4>
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
+<button onclick="show('cardiology')">📚 Lectures</button>
+<button onclick="openMCQs('cardiology')">📝 MCQs</button>
+<button onclick="window.open('https://drive.google.com/file/d/1FzsvYXjPkwS190oalF8x_UaPb-G76NNn/view?usp=drivesdk','_blank')">📖 References</button>
+<button onclick="window.open('https://youtube.com/@osmaneurosurgery?si=qR-_ff82XvtZncWU','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>Respiratory System</h4>
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
+<button onclick="show('respiratory')">📚 Lectures</button>
+<button onclick="openMCQs('respiratory')">📝 MCQs</button>
+<button onclick="window.open('https://drive.google.com/file/d/1FzsvYXjPkwS190oalF8x_UaPb-G76NNn/view?usp=drivesdk','_blank')">📖 References</button>
+<button onclick="window.open('https://youtube.com/@osmaneurosurgery?si=qR-_ff82XvtZncWU','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>Biochemistry</h4>
+<p class="professor">👨‍🏫 Dr. Mohamed Osama</p>
+<button onclick="show('biochemistry')">📚 Lectures</button>
+<button onclick="openMCQs('biochemistry')">📝 MCQs</button>
+<button onclick="window.open('https://drive.google.com/drive/folders/1-buQAVGu35UM85hzIP95F3lgDQANV5lX','_blank')">📖 References</button>
+<button onclick="window.open('https://youtube.com/@drwalaasarhan?si=6XTMaoxtZKHzJCIc','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>Hemostasis</h4>
+<p class="professor">👨‍🏫 Dr. Wafaa</p>
+<button onclick="show('hemostasis')">📚 Lectures</button>
+<button onclick="openMCQs('hemostasis')">📝 MCQs</button>
+<button onclick="window.open('https://drive.google.com/file/d/1y8jvBNYTAxuOnQYMTCCIdr9NMpsLrlzm/view?usp=drivesdk','_blank')">📖 References</button>
+<button onclick="window.open('https://youtube.com/playlist?list=PLAlbG9dixa2h35jWeB43mPeBwl0V36IuT&si=LKU39WtjpiKSKGBI','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>Histology</h4>
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
+<button onclick="show('histology')">📚 Lectures</button>
+<button onclick="openMCQs('histology')">📝 MCQs</button>
+<button onclick="soon()">📖 References</button>
+<button onclick="window.open('https://youtube.com/@osmaneurosurgery?si=qR-_ff82XvtZncWU','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>Embryology</h4>
+<p class="professor">👨‍🏫 Dr. Osman Ahmed Osman</p>
+<button onclick="show('embryology')">📚 Lectures</button>
+<button onclick="openMCQs('embryology')">📝 MCQs</button>
+<button onclick="window.open('https://drive.google.com/file/d/1mFk64XyySg0iUBRnOCA1E5PyiiJFGMXB/view?usp=drivesdk','_blank')">📖 References</button>
+<button onclick="window.open('https://youtube.com/@osmaneurosurgery?si=qR-_ff82XvtZncWU','_blank')">📺 Explanation Channels</button>
+</div>
+
+<div class="subject">
+<h4>English 2</h4>
+<button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CARDIOLOGY -->
+<section id="cardiology" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title"><h2>❤️ Cardiology</h2><p>Choose a section</p></div>
+<div class="track-selector">
+<div class="track-card" onclick="show('cardiology-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Current anatomy sheets & lectures</p></div>
+<div class="track-card" onclick="show('cardiology-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div>
+</div>
+</section>
+<section id="cardiology-anatomy" class="section">
+<button class="back" onclick="show('cardiology')">← Cardiology</button>
+<div class="section-title"><h2>🫀 Cardiology — Anatomy</h2><p>Semester 2 — Dr. Osman Ahmed Osman</p></div>
+<div class="lecture"><h3>Lecture 1 — Thoracic Wall Part 1</h3><p>Thoracic wall part 1</p><a href="https://drive.google.com/file/d/1Cz-sR1Fds-2USoFL1TezFol7u-yw6whO/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1Cz-sR1Fds-2USoFL1TezFol7u-yw6whO" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 2 — Thoracic Wall Part 2</h3><p>Thoracic wall 2</p><a href="https://drive.google.com/file/d/1CtmibgZhLF-d1bF4HwJ1k1gEi11nR6lV/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1CtmibgZhLF-d1bF4HwJ1k1gEi11nR6lV" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Thoracic Wall Part 3</h3><p>Thoracic wall part 3</p><a href="https://drive.google.com/file/d/1D3jtqYJuoIpUIa9qxDLRnprG4De4JFdF/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1D3jtqYJuoIpUIa9qxDLRnprG4De4JFdF" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 4 — The Heart Part 1</h3><p>The heart (First Part)</p><a href="https://drive.google.com/file/d/1Csnxdmba1uEJGVWNAKTbG0gkUCatOoeC/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1Csnxdmba1uEJGVWNAKTbG0gkUCatOoeC" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 5 — The Heart Part 2</h3><p>Heart 2</p><a href="https://drive.google.com/file/d/1D0qinEhGlypElxuPlYZGkG3Qec1LJ-qf/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1D0qinEhGlypElxuPlYZGkG3Qec1LJ-qf" download>⬇️ Download PDF</a></div>
+</section>
+<section id="cardiology-physiology" class="section">
+<button class="back" onclick="show('cardiology')">← Cardiology</button>
+<div class="section-title"><h2>⚡ Cardiology — Physiology</h2><p>Semester 2</p></div>
+<div class="lecture"><h3>Lecture 1 — Cardiovascular Physiology 1</h3><p>Cardiovascular Physiology</p><a href="https://docs.google.com/file/d/1kT_SrjmmRxASWIhADozgOHRULt2HO-LM/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/1_Cardiovascular%20Physiology%201.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — Nervous System Lec.1 — Membrane Potentials</h3><p>Cardiovascular Physiology</p><a href="https://docs.google.com/file/d/1aaQV78td745oK-akfWjh_JfH8LY9jLdO/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/2-Nervous%20system%20Lec.1%20Membrane%20potentials.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — ECG</h3><p>Cardiovascular Physiology</p><a href="https://docs.google.com/file/d/1LQxjAS4hIyoAK9csTwtfS-0zDZoEegof/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/3-%20ECG_no_voice.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Properties of the Cardiac Muscle</h3><p>Cardiovascular Physiology</p><a href="https://docs.google.com/file/d/1PZGSKMTbtU_pYrgRPrpH_f_St9UlxjgR/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/4-%20Properties%20of%20the%20cardiac%20muscle..pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Cardiac Output</h3><p>Cardiovascular Physiology</p><a href="https://docs.google.com/file/d/1WKLkO7uOdQYbJ5CfxMFLkg1pMrZwxk4B/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/5-%20Cardiac%20output.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — Control of Arterial Blood Pressure (ABP)</h3><p>Cardiovascular Physiology</p><a href="https://docs.google.com/file/d/1DmGO5akUQt1occNb2pmKIiUPDzmukc3x/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/6-%20Control%20of%20Arterial%20Blood%20Pressure%20%28ABP%29.pptx" download>⬇️ Download</a></div>
+</section>
+
+<!-- BLOOD -->
+<section id="blood" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title"><h2>🩸 Blood & Immune System — Lectures</h2><p>Semester 2 — Dr. Wafaa</p></div>
+<div class="lecture"><h3>Lecture 1 — Introduction to Blood</h3><p>Introduction to Hematology</p><a href="https://docs.google.com/file/d/1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1FSN6_taFK1HyJHiVbOXr2ecBTe7KWgA9">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 2 — Red Blood Cells</h3><p>Red Blood Cells</p><a href="https://docs.google.com/file/d/1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1mVHd95-_KQiwDDvNGEYgUcDnU5EFYPgf">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Blood Indices</h3><p>Blood Indices</p><a href="https://docs.google.com/file/d/1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1SX3yGeoJL9LeI_yO7kfCs6hU3H7V5n-D">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 4 — WBCs</h3><p>White Blood Cells</p><a href="https://docs.google.com/file/d/14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=14tYj-Ijl9Faj9de1wJQC_tcU0GzjPZFO">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 5 — My Blood Groups</h3><p>Blood Groups</p><a href="https://docs.google.com/file/d/1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1v2QzOwMGyrPxMJs_2DBVKeVoapzKKdJQ">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 6 — Hemostasis</h3><p>Hemostasis</p><a href="https://docs.google.com/file/d/1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1l9VQqJPYp4_GneUV3ytTzPqvqVLiN0sV">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 7 — Immunity 1</h3><p>Immunity</p><a href="https://docs.google.com/file/d/1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1Dlg7dMM-vsDwNHIUSCNT3XFcnhWCa6bO">⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 8 — Immunity 2</h3><p>Immunity</p><a href="https://docs.google.com/file/d/1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://drive.google.com/uc?export=download&id=1f_QyM3E0FHeRbBSOpoI7umKjq8GZr91Q">⬇️ Download PDF</a></div>
+</section>
+
+<!-- HEMOSTASIS -->
+<section id="hemostasis" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title"><h2>🩸 Hemostasis — Lectures</h2><p>Semester 2 — Dr. Wafaa</p></div>
+<div class="lecture"><h3>Lecture 1 — Introduction to Physiology</h3><p>Introduction to physiology</p><a href="https://docs.google.com/file/d/1kS0vniJqGOE-RFu0nBqDt32ewutgUWeg/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Introduction%20to%20physiology%20-%20Copy%20.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — Body Fluids</h3><p>Body fluids</p><a href="https://docs.google.com/presentation/d/1Ajo78Ni62XN_WXa4mqDPIkBjv9mDq4O-/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/body%20fluids%20-%20Copy.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — Edema</h3><p>Edema</p><a href="https://docs.google.com/presentation/d/1AqXiA9TT-ssjK079NN-lpiNP0Z68x1bL/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Edema.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Homeostasis</h3><p>Homeostasis</p><a href="https://docs.google.com/presentation/d/1B1GjLJCESBCeQb3RiRpsrDjLJ_SngtxO/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Homeostasis.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Body Temperature</h3><p>Body temperature</p><a href="https://docs.google.com/presentation/d/1B40rtvKCuX3NMQWZP94qFRIXAEDDq6PK/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Body%20temperature%20-%2016.ppt" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — ANS</h3><p>Autonomic Nervous System</p><a href="https://docs.google.com/presentation/d/1B4uPa2vkmM0uvsQ_j_fj6WdUwLcVfQb1/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/ANS%20all%20-%20Copy%20.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 7 — BMR</h3><p>Basal Metabolic Rate</p><a href="https://docs.google.com/presentation/d/1BOBeQCMgHs8eg2ohPifEM_iozAbM5vGq/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/BMR%20-%2014.ppt" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 8 — Acid-Base Balance</h3><p>Acid-base balance</p><a href="https://docs.google.com/presentation/d/1BGwZWFWPTkUq9qBwhe1t_ZP3ICetQXvn/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Acid%20-%20base%20balance%20.pptx" download>⬇️ Download</a></div>
+</section>
+
+<!-- RESPIRATORY -->
+<section id="respiratory" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title"><h2>🫁 Respiratory System</h2><p>Choose a section</p></div>
+<div class="track-selector">
+<div class="track-card" onclick="show('respiratory-anatomy')"><div class="track-icon">🫁</div><h3>Anatomy</h3><p>Current anatomy sheets & lectures</p></div>
+<div class="track-card" onclick="show('respiratory-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div>
+</div>
+</section>
+<section id="respiratory-anatomy" class="section">
+<button class="back" onclick="show('respiratory')">← Respiratory System</button>
+<div class="section-title"><h2>🫁 Respiratory System — Anatomy</h2><p>Semester 2 — Dr. Osman Ahmed Osman</p></div>
+<div class="lecture"><h3>Lecture 1 — Nose and Nasal Cavity</h3><p>Respiratory System</p><a href="https://drive.google.com/drive/folders/1-4HNHHdRXAh7E-u8hY1Pg-8nqz_rZwOx" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Nose%20.nasel%20cavity%20and%20paranasel%20sinuses%202.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 2 — Pharynx</h3><p>Respiratory System</p><a href="https://drive.google.com/file/d/1rb4E6ggw7eDa9FaZ0L0QDXfjK1dJeUP9/view" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Pharynx%202.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Larynx</h3><p>Respiratory System</p><a href="https://drive.google.com/file/d/1GTklMSsgQLSWcZa6O9vYWmyHsL5l7cpB/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/larynx.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 4 — Larynx 1</h3><p>Respiratory System</p><a href="https://drive.google.com/file/d/1u0MnTg1enVKjRb9h6R5P1RhzjTVRIu-K/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/larynx%201.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 5 — Trachea</h3><p>Respiratory System</p><a href="https://drive.google.com/file/d/1c71fgs2jKCzKXUEaO_vbZgFc4_m-w2d_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Trachea.pdf" download>⬇️ Download PDF</a></div>
+</section>
+<section id="respiratory-physiology" class="section">
+<button class="back" onclick="show('respiratory')">← Respiratory System</button>
+<div class="section-title"><h2>⚡ Respiratory System — Physiology</h2><p>Semester 2</p></div>
+<div class="lecture"><h3>Lecture 1 — Introduction to Respiratory System</h3><p>Respiratory Physiology</p><a href="https://docs.google.com/file/d/1XrnnbCWs4OlU47sZHB9R2YvbQ2lSmctf/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/Introduction%20to%20Respiratory%20system..pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — Ventilation</h3><p>Respiratory Physiology</p><a href="https://docs.google.com/file/d/1MDqg5eyVJswz0TpqQLzZtO3hLbj2giXq/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/Ventilation.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — Lung Volumes and Capacities</h3><p>Respiratory Physiology</p><a href="https://docs.google.com/file/d/1JwYDPD2PeFM40nsUwQbTmecgnULwSNcK/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/13.lung%20volumes%20and%20capacities.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Gas Exchange</h3><p>Respiratory Physiology</p><a href="https://docs.google.com/file/d/1wXrWq38eIZSD-C74hQGtjzRLHJTWnIks/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/Gas%20exchange.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Gas Transport</h3><p>Respiratory Physiology</p><a href="https://docs.google.com/file/d/1GL9U5vGsG-C_vUe_zoxp9e3JjnNxj-eR/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/Gas%20transport.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — Control of Ventilation</h3><p>Respiratory Physiology</p><a href="https://docs.google.com/file/d/1bus2TryHVKtUO94mPN2ge_jJbUtkqi0x/edit?usp=docslist_api&filetype=mspresentation" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/Control%20of%20ventilation.pptx" download>⬇️ Download</a></div>
+</section>
+
+<!-- HISTOLOGY -->
+<section id="histology" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title"><h2>🔬 Histology — Lectures</h2><p>Semester 2 — Dr. Osman Ahmed Osman</p></div>
+<div class="lecture"><h3>Lecture 1 — Introduction of Histology</h3><p>Introduction of Histology</p><a href="https://docs.google.com/presentation/d/1Dh1u_rCyBwnHebN-XvcyTWTirJdqEqIS/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Introduction%20of%20histology.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — Epithelial Tissue Part 1</h3><p>Epithelial Tissue Part 1</p><a href="https://drive.google.com/file/d/1DitBb5edGNaQbKGmLyTgJZzylo6IMQTe/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Epithelial%20tissue%20Histology%20first%20part.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Epithelial Tissue Part 2</h3><p>Epithelial Tissue Part 2</p><a href="https://docs.google.com/presentation/d/1DmXa8zC-9rqgKBZuhm70znrbECqCpGqj/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Epithelial%20tissue%20%28Second%20part%29.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Nerve Tissue Part 1</h3><p>Nerve Tissue Part 1</p><a href="https://docs.google.com/presentation/d/1DxQ34nmCtYq6NBd_KAWiPefVo7Er94Oq/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/nervous%20tissue%20%28First%20part%29.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Nerve Tissue Part 2</h3><p>Nerve Tissue Part 2</p><a href="https://docs.google.com/presentation/d/1EEitXOKtWDiml-gc0LfXEpQY_-5f8aua/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Nervous%20tissue%20%28Second%20part%29.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — Connective Tissue</h3><p>Connective Tissue</p><a href="https://drive.google.com/file/d/1Eti3ZiYDLBblPQQXujtkkqHsgJzQMaQR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Connctive%20tissue%20%28first%20part%29_20260725_111519_0000%20pdf" download>⬇️ Download PDF</a></div>
+</section>
+
+<!-- BIOCHEMISTRY -->
+<section id="biochemistry" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title"><h2>🧬 Biochemistry — Lectures</h2><p>Semester 2 — Dr. Mohamed Osama</p></div>
+<div class="lecture"><h3>Lecture 1 — Introduction to Biochemistry</h3><p>Introduction to Biochemistry, Water and pH</p><a href="https://drive.google.com/file/d/1BqIBrQrOSiVo8GMX0UfBRNmpZfnDWiz5/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Introduction%20to%20Biochemistry%20%2C%20water%20and%20pH.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 2 — Carbohydrates Chemistry</h3><p>Carbohydrates Chemistry</p><a href="https://drive.google.com/file/d/1C12-gNNQrexoLmOJLRdnzGKnK-_g8D9q/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Carbohydrates%20chemistry.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Lipids Chemistry</h3><p>Lipids Chemistry</p><a href="https://drive.google.com/file/d/1C1uyYo4D2qrUpEbuojDHrBkG9DHvcXOX/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LIPIDS%20CHEMISTRY%20m.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 4 — Amino Acids, Peptides, and Proteins</h3><p>Amino Acids, Peptides, and Proteins</p><a href="https://drive.google.com/file/d/1C7w2MeZovDm21XMDDYFZhcPSnsWoHlla/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Amino%20Acids%2CPebtides%2C%20and%20Proteins-1%20%281%29.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 5 — Enzymes</h3><p>Enzymes</p><a href="https://drive.google.com/file/d/1CFlQGTjUzYQCqzAZtOwCJuGv4sRYuZGL/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Enzymes.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 6 — Nucleic Acids</h3><p>Nucleic Acids</p><a href="https://drive.google.com/file/d/1CHkrXaSQTS6z8UTXGZtC7vlQz5XWqsBx/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Nucleic%20-%20Acids%20.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 7 — Vitamins</h3><p>Vitamins</p><a href="https://drive.google.com/file/d/1CN4JFqfeDGQX3dqtboA_H57nyN3cfXIf/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/Vitamins.pdf" download>⬇️ Download PDF</a></div>
+</section>
+
+
+<!-- EMBRYOLOGY -->
+<section id="embryology" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title">
+<h2>🧫 Embryology — Sheets</h2>
+<p>Semester 2 — Dr. Osman Ahmed Osman</p>
+</div>
+
+<div class="lecture">
+<h3>Sheet 1 — Descriptive Anatomy Terms</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1FJy5WvATARP92YJe5Pu0ZkGBnd4qqygl/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1FJy5WvATARP92YJe5Pu0ZkGBnd4qqygl/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 2 — Spermatogenesis Part 1</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1F_P41Cj250KNvs64C4GOX-behc3oKeZw/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1F_P41Cj250KNvs64C4GOX-behc3oKeZw/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 3 — Spermatogenesis Part 2</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1FRY1IjyefYNJO3hVfNduNgK7GgPS6Qgq/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1FRY1IjyefYNJO3hVfNduNgK7GgPS6Qgq/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 4 — Fertilization Part 1</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1Fm0FKmg7OlLVOog7E1q3v01xTM0G9zj0/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1Fm0FKmg7OlLVOog7E1q3v01xTM0G9zj0/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 5 — Fertilization Part 2</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1FdDzb88IhvtP66naKA7N5OjQjz-R5TUF/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1FdDzb88IhvtP66naKA7N5OjQjz-R5TUF/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 6 — Female Genital Organs</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1Fy8JOCq1FlkJ-NM-HlZmYu6LcllTfcWM/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1Fy8JOCq1FlkJ-NM-HlZmYu6LcllTfcWM/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 7 — Second Week of Development</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1G3fOxGi7NHzRXhgyf3yyNAIQiFeQn04e/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1G3fOxGi7NHzRXhgyf3yyNAIQiFeQn04e/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 8 — Third Week of Development</h3>
+<p>Embryology</p>
+<a href="https://docs.google.com/presentation/d/1FieQEPZSaDRB2AUvO23gb5tUSivka-Bb/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://docs.google.com/presentation/d/1FieQEPZSaDRB2AUvO23gb5tUSivka-Bb/edit?usp=drivesdk&ouid=114367201481075875484&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 9 — Third to Eighth Week Part 1</h3>
+<p>Embryology</p>
+<a href="https://drive.google.com/file/d/1Fcp6eyf2oK3hG-8K4gervrpvVRiNWHqE/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://drive.google.com/file/d/1Fcp6eyf2oK3hG-8K4gervrpvVRiNWHqE/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 10 — Third to Eighth Week Part 2</h3>
+<p>Embryology</p>
+<a href="https://drive.google.com/file/d/1FIS6jhY2cpGlyN14-eSbPYNltxmJAkm4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://drive.google.com/file/d/1FIS6jhY2cpGlyN14-eSbPYNltxmJAkm4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+<div class="lecture">
+<h3>Sheet 11 — Fetal Period</h3>
+<p>Embryology</p>
+<a href="https://drive.google.com/file/d/1Fa7e4KujN5OvbbCVZQOGt1tbl120ReWS/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Sheet</a>
+<a class="download-btn" href="https://drive.google.com/file/d/1Fa7e4KujN5OvbbCVZQOGt1tbl120ReWS/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇️ Download</a>
+</div>
+
+</section>
+
+<!-- GENERIC MCQ VIEWER -->
+<section id="mcqViewer" class="section">
+<button class="back" onclick="show('first')">← Semester 2</button>
+<div class="section-title">
+<h2 id="mcqTitle">📝 MCQs</h2>
+<p id="mcqSubtitle">Questions & Answers</p>
+</div>
+<div class="mcq-toolbar">
+<input id="mcqSearch" type="search" placeholder="Search questions..." oninput="renderMCQs()">
+<select id="mcqPartFilter" onchange="renderMCQs()"><option value="">All sections</option></select>
+<span class="mcq-count" id="mcqCount"></span>
+</div>
+<div id="mcqContainer"></div>
+</section>
+
+<!-- SECOND YEAR -->
+<section id="second" class="section">
+<button class="back" onclick="show('academic')">← Academic Years</button>
+<div class="section-title"><h2>Second Year</h2><p>Semester 3 & 4</p></div>
+<div class="semester"><h3>Semester 3</h3><div class="subject-grid">
+<div class="subject"><h4>Gastrointestinal System (GIT)</h4><button onclick="show('git')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Musculoskeletal System</h4><button onclick="show('musculoskeletal')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Nutrition & Metabolism</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Reproductive System</h4><button onclick="show('reproductive')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Urinary System</h4><button onclick="show('urinary')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+<div class="semester"><h3>Semester 4</h3><div class="subject-grid">
+<div class="subject"><h4>CNS</h4><button onclick="show('cns')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Genetics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Health Management</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Special Senses</h4><button onclick="show('special-senses')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Practical Physiology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Head & Neck</h4><button onclick="show('head-neck')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Behavioral Science</h4><button onclick="show('behavioral-science')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Endocrine System</h4><button onclick="show('endocrine')">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Psychology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+</section>
+
+<section id="git" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Gastrointestinal System (GIT)</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('git-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('git-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="git-anatomy" class="section">
+<button class="back" onclick="show('git')">← Gastrointestinal System (GIT)</button>
+<div class="section-title"><h2>🫃 Gastrointestinal System (GIT) — Anatomy</h2><p>Semester 3</p></div>
+<div class="lecture"><h3>Lecture 1 — Oral Cavity — Tongue</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1QWvDjJVKnE6yyZ-wJuZw96r2PeasKzPY/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/1.oral%20cavity%20-%20tongue%20%281%29snaped%20by%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 2 — Oral Cavity — Palate</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/11bwPSSDV3dDmh_1bRH1NEB7aP3OK9kxq/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/2.oral%20cavity%20-%20palate%20%282%29%20snaped%20by%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Pharynx</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1IZ2bEby-VmtnbzUJgxUwbwK_HDQyOaz2/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/3-pharynx%2C_by_safa_kamal_%D9%A2%D9%A0%D9%A2%D9%A5%D9%A1%D9%A0%D9%A1%D9%A4%D9%A0%D9%A2%D9%A4%D9%A1_%D9%A5%D9%A9%D9%A3%D9%A7_%D9%A2%D9%A0%D9%A2%D9%A5%D9%A1%D9%A0%D9%A1%D9%A4%D9%A0%D9%A2%D9%A4%D9%A3_%D9%A3%D9%A8%D9%A2%D9%A8%D9%A5.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 4 — Anterior Abdominal Wall — First Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1omLQ3j8vLbUFIgkg8xXSSD7erqI_yW24/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/4_anterior_abdominal_wall_firstpart%2Csnaped_by_dr_safa_kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 5 — Anterior Abdominal Wall — Second Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1HmlV0tU9Y2tB4hg2qVG4TQPOjFDmMZQz/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/5.the%20abdominal%20wall%2Csecondpart%2C%20snapby%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 6 — Inguinal Canal — First Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1LZD9J5ONzg8N5ciLo2KgyYeuVYGUxWLv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/6.inguinal%20canal%2C%20firstpart%2C%20snaped%20by%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 7 — Inguinal Canal — Second Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1-kmyWOHQGbaYj5PRt41Uu1pCHmY5FFTP/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/7.inguinal%20canal%2C%20secondpart%2C%20snapby%20dr.%20safa%20kamal.%20pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 8 — Esophagus</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1oQ5CMMLvQXUP3Vjh5KcG13LvTTwhLbzB/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/esophagus%20and%20stomach%2C%20firstpart%20snaped%20by%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 9 — Stomach</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1ytOHN5NGBktr2omiwxDdWmki2xUh-hWx/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/esophagus%20and%20stomach%2C%20secondpart%2C%20snapedby%20dr%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 10 — Peritoneum</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1mR1Wud6l_Fm3ImHSkiYGOL6M1Ay-CJy2/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/10%20peritoneum%20and%20peritoneal%20cavity%2C%20snaped%20by%20dr%20safa%20kamal.paf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 11 — Small Intestine — First Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1pF4ggBY2vHraAty_xBracKiK2YrqLbO1/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/11.small%20intestine%2C%20firstpart%2C%20snaped%20by%20dr.safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 12 — Small Intestine — Second Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/14kUUo9QCEw8iPdcHx54STNNvfpWcNiGQ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/12.%20small%20intestine%2C%20secondpart%2C%20snapedby%20dr%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 13 — Small Intestine — Third Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1UB6yswF6ffVtwIGiAqGwlvZXe06IUZ5_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/small%20intestine%2C%20thirdpart%2C%20snaped%20by%20dr%20safa%20kamal.pof" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 14 — Large Intestine — First Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/140rnnsKxh4bHeSoT2m90Sg0H1f-TXaBE/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/large%20intestine%2C%20firstpart%20snaped%20by%20dr%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 15 — Large Intestine — Second Part</h3><p>GIT Anatomy</p><a href="https://drive.google.com/file/d/1zPgp068tJ4fz-iUGds71be1xGbAIHCsu/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/15.large%20intestine%2C%20secondpart%20snaped%20by%20dr%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+</section>
+<section id="git-physiology" class="section">
+<button class="back" onclick="show('git')">← Gastrointestinal System (GIT)</button>
+<div class="section-title"><h2>⚡ Gastrointestinal System (GIT) — Physiology</h2><p>Semester 3</p></div>
+<div class="lecture"><h3>Lecture 1 — Digestive System</h3><p>GIT Physiology</p><a href="https://drive.google.com/file/d/1s8VGJ9m6qEfMcjIjb2cz2PF83S-T4Cs5/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/1.Digestive%20system%20physiology%20course%20voice.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — Mastication</h3><p>GIT Physiology</p><a href="https://drive.google.com/file/d/1zEdlviWlqQRuJkjvgJjODfiDqkfabE6S/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/2.Mastication.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — Saliva</h3><p>GIT Physiology</p><a href="https://drive.google.com/file/d/1g0X5ycK0DuWhxJ-HzYbbj0BbImcpvb6W/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/3.Saliva%20voice.paf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Deglutition</h3><p>GIT Physiology</p><a href="https://drive.google.com/file/d/1DQ7LnPdCET6ffjzeE1z_y-9iiGte4XIz/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/4.Deglutition%20voice.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Gastric Physiology</h3><p>GIT Physiology</p><a href="https://drive.google.com/file/d/19N1aWzzL_WcIsK5ZC9pB9EqgQV_NQulU/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/5.Gastic%20physiology%20voice.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — Gastric Emptying</h3><p>GIT Physiology</p><a href="https://drive.google.com/file/d/1Qz7fJ4uNemVo-t0n8ilGid6sOn6vr6n8/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/6.Gastric%20emptying%20voice.pdf" download>⬇️ Download</a></div>
+</section>
+<section id="musculoskeletal" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Musculoskeletal System</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('musculoskeletal-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('musculoskeletal-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="musculoskeletal-anatomy" class="section">
+<button class="back" onclick="show('musculoskeletal')">← Musculoskeletal System</button>
+<div class="section-title"><h2>🦴 Musculoskeletal System — Anatomy</h2><p>Semester 3</p></div>
+<div class="lecture"><h3>Lecture 1 — Bones of the Upper Limb — First Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1Zc2Cr88j_gGd9oDGujHXz8yTKqQ-KsFm/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/1.Bones%20of%20the%20upper%20limb.%20first%20part%2C%20snaped%20by%20safa.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 2 — Bones of the Upper Limb — Second Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1EN3fWOZ8wSZJmkFmq47mj0Hr9mvfVG3D/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/2.bones%20of%20the%20upper%20limb%2C%20secondpart%2C%20snapby%20dr%20safa%20kamal.paf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 3 — Pectoral and Shoulder Regions</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1zJZhb-WsskWzQqeJSs4IDoEZEqrRdceD/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/3.pectoral%20and%20shoulder%20regions%2C%20snapby%20dr.%20safakamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 4 — Axilla</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1GBUTLKSrb38Akmiwm19FtkYKT3fBEluU/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/4.axilla%2C%20snaped%20by%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 5 — Brachial Plexus</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1slQ5n9aFLlKepf8W8EXeKK2WurzQNyV_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/5.Brachial%20plexus%2C%20snapedby%20dr.%20safakamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 6 — The Arm</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1NudS7-MzddftjKH-CfeSM6K2S5TkIDkz/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/6.the%20arm%2C%20snaped%20by%20dr%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 7 — Forearm — First Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1v5s1YqbU-EU8vW155eT2kvR-KJfh_Avv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/7.forearm%2C%20firstpart%2C%20snaped%20by%20dr.%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 8 — Forearm — Second Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1ltZxmcDkcE7_Geg0e0h9KWS9LgWMokwg/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/8.%20forearm%2C%20secondpart%2C%20snapedby%20dr.%20safa%20kamal%20pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 9 — Forearm — Third Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1XRXClGPc9q7IXCHPz_WUw54XUdbBoM7t/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/10.forearm%2C%20thirdpart%2C%20snaped%20by%20dr.safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 10 — The Hand — First Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/18YweQtHla7EFvPvrri-oXby-ocbxc03I/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/9.the%20hand%2C%20first%20part%2C%20snaped%20by%20dr%20safa%20kamal.pdf" download>⬇️ Download PDF</a></div>
+<div class="lecture"><h3>Lecture 11 — The Hand — Second Part</h3><p>Musculoskeletal Anatomy</p><a href="https://drive.google.com/file/d/1qYJqnJQsQEB-6w406cam5R8NwCioWso2/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/11.the%20hand%2C%20secondpart%2C%20snapedby%20dr%20safa%20kamal%20pdf" download>⬇️ Download PDF</a></div>
+</section>
+<section id="musculoskeletal-physiology" class="section">
+<button class="back" onclick="show('musculoskeletal')">← Musculoskeletal System</button>
+<div class="section-title"><h2>⚡ Musculoskeletal System — Physiology</h2><p>Semester 3</p></div>
+<div class="lecture"><h3>Lecture 1 — The Membrane Potential</h3><p>Musculoskeletal Physiology</p><a href="https://drive.google.com/file/d/1vH05Ssh7T3YUONVzS5qdZBOB4r90v4Dq/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/1.The%20Membrane%20potential%20MP.paf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — My Action Potential</h3><p>Musculoskeletal Physiology</p><a href="https://drive.google.com/file/d/1RSts08-Oury3CmI44IitswZBtnCMgiHO/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/2.my%20action%20potential.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — Synapse and Neuromuscular Junction</h3><p>Musculoskeletal Physiology</p><a href="https://drive.google.com/file/d/1zGJmSdLuttEHpC_QF-HV2txXRu4h8fA8/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/3.SYNAPSE%20and%20neuromuscular%20j%20pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Muscle Contraction</h3><p>Musculoskeletal Physiology</p><a href="https://drive.google.com/file/d/1riPn-e20TvPBO5tQ0H_Q_ZzB7ljIZXfa/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/4.Muscle%20contraction.pdf" download>⬇️ Download</a></div>
+</section>
+<section id="reproductive" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Reproductive System</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('reproductive-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('reproductive-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="reproductive-anatomy" class="section"><button class="back" onclick="show('reproductive')">← Reproductive System</button><div class="section-title"><h2>Reproductive System — Anatomy</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Anatomy sheets will be added here.</p></div></section>
+<section id="reproductive-physiology" class="section"><button class="back" onclick="show('reproductive')">← Reproductive System</button><div class="section-title"><h2>Reproductive System — Physiology</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Physiology sheets will be added here.</p></div></section>
+<section id="urinary" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Urinary System</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('urinary-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('urinary-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="urinary-anatomy" class="section">
+<button class="back" onclick="show('urinary')">← Urinary System</button>
+<div class="section-title"><h2>🫀 Urinary System — Anatomy</h2><p>Semester 3</p></div>
+<div class="lecture"><h3>Lecture 1 — PAW — Skeleton & Blood Supply</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1_HTnemdd11EssWZmv1SrWT5Hp4NNhPX5/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%201%20PAW-%20Skeleton%20Blood%20Supply.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — PAW — Muscles</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1b3FgaqvJOUhNUUJNw3_svn7LPS554_5B/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%202%20PAW-%20Muscles.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — PAW — Nerves</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1x2yjmaUXLVpk-o2rB5P2HNN60r4x5Qdx/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%203%20PAW-%20Nerves.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Anatomy of Kidney</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1zkcj7ume_T7k-0lezG3bXMvzV4GTG_IV/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%204%20Anatomy%20of%20kidney.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Anatomy of Ureter</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1IsnMEjmv_nqiRbh9d9REZyGULC7lghnZ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%205%20Anatomy%20of%20Ureter.paf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — Anatomy of Urinary Bladder</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1brlsp4iEW3LQ5vDV1N-7pTW9Dk2bVcD7/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%206%20Anatomy%20of%20Urinary%20Bladder.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 7 — Anatomy of Urethra</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1rzsvx9nOtlNWfZhcJm5P0P8USPxWhGS2/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%207%20Anatomy%20of%20Urethra.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 8 — Histology of Renal System</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1GWP1kU_18AxfCf99VjozC-PyZtfK3fgJ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%208%20Histology%20of%20Renal%20System.pptx" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 9 — Development of Renal System</h3><p>Urinary Anatomy</p><a href="https://drive.google.com/file/d/1Zqqahj5B2NHoDWrMqCgj_dD-vygxleAh/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/LEC%209%20Development%20of%20Renal%20System.pdf" download>⬇️ Download</a></div>
+</section>
+<section id="urinary-physiology" class="section">
+<button class="back" onclick="show('urinary')">← Urinary System</button>
+<div class="section-title"><h2>⚡ Urinary System — Physiology</h2><p>Semester 3</p></div>
+<div class="lecture"><h3>Lecture 1 — Introduction to Renal Physiology</h3><p>Urinary Physiology</p><a href="https://drive.google.com/file/d/12tM41kexXSx0NmztH1xfpb6Ld2BPwNaQ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/1.Introduction%20to%20renal%20physiology.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 2 — GFR and Clearance</h3><p>Urinary Physiology</p><a href="https://drive.google.com/file/d/1lit3bqDIrCViRB2o1TudYsZl5nTkFMgU/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/2.GFRand%20clearance.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 3 — Tubular Function — Diuretics</h3><p>Urinary Physiology</p><a href="https://drive.google.com/file/d/1lsmQ_ypxq7Q8WMqH3YAuvQM8PTHXfgk6/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/3.tubular%20function%20-%20diuretics.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 4 — Counter Current Mechanism</h3><p>Urinary Physiology</p><a href="https://drive.google.com/file/d/1hxQyi-8xMci-afDxTi3-OkFOOe-24sjJ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/4.counter%20current%20mechanism.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 5 — Micturition</h3><p>Urinary Physiology</p><a href="https://drive.google.com/file/d/1ZNYOdYNo4y1oa2vbU-cVXm96xzeIgcDz/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/5.micturition.pdf" download>⬇️ Download</a></div>
+<div class="lecture"><h3>Lecture 6 — Acid–Base Balance</h3><p>Urinary Physiology</p><a href="https://drive.google.com/file/d/18OLjvMmGfBlQSp7PHVmD-LZRm9xoYPa8/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/madain-medical/madain-medical/raw/refs/heads/main/6.acid%20base%20balance.pdf" download>⬇️ Download</a></div>
+</section>
+<section id="cns" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>CNS</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('cns-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('cns-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="cns-anatomy" class="section"><button class="back" onclick="show('cns')">← CNS</button><div class="section-title"><h2>CNS — Anatomy</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Anatomy sheets will be added here.</p></div></section>
+<section id="cns-physiology" class="section"><button class="back" onclick="show('cns')">← CNS</button><div class="section-title"><h2>CNS — Physiology</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Physiology sheets will be added here.</p></div></section>
+<section id="special-senses" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Special Senses</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('special-senses-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('special-senses-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="special-senses-anatomy" class="section"><button class="back" onclick="show('special-senses')">← Special Senses</button><div class="section-title"><h2>Special Senses — Anatomy</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Anatomy sheets will be added here.</p></div></section>
+<section id="special-senses-physiology" class="section"><button class="back" onclick="show('special-senses')">← Special Senses</button><div class="section-title"><h2>Special Senses — Physiology</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Physiology sheets will be added here.</p></div></section>
+<section id="head-neck" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Head & Neck</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('head-neck-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('head-neck-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="head-neck-anatomy" class="section"><button class="back" onclick="show('head-neck')">← Head & Neck</button><div class="section-title"><h2>Head & Neck — Anatomy</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Anatomy sheets will be added here.</p></div></section>
+<section id="head-neck-physiology" class="section"><button class="back" onclick="show('head-neck')">← Head & Neck</button><div class="section-title"><h2>Head & Neck — Physiology</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Physiology sheets will be added here.</p></div></section>
+<section id="behavioral-science" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Behavioral Science</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('behavioral-science-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('behavioral-science-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="behavioral-science-anatomy" class="section"><button class="back" onclick="show('behavioral-science')">← Behavioral Science</button><div class="section-title"><h2>Behavioral Science — Anatomy</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Anatomy sheets will be added here.</p></div></section>
+<section id="behavioral-science-physiology" class="section"><button class="back" onclick="show('behavioral-science')">← Behavioral Science</button><div class="section-title"><h2>Behavioral Science — Physiology</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Physiology sheets will be added here.</p></div></section>
+<section id="endocrine" class="section"><button class="back" onclick="show('second')">← Second Year</button><div class="section-title"><h2>Endocrine System</h2><p>Choose a section</p></div><div class="track-selector"><div class="track-card" onclick="show('endocrine-anatomy')"><div class="track-icon">🫀</div><h3>Anatomy</h3><p>Anatomy sheets & lectures</p></div><div class="track-card" onclick="show('endocrine-physiology')"><div class="track-icon">⚡</div><h3>Physiology</h3><p>Physiology sheets & lectures</p></div></div></section>
+<section id="endocrine-anatomy" class="section"><button class="back" onclick="show('endocrine')">← Endocrine System</button><div class="section-title"><h2>Endocrine System — Anatomy</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Anatomy sheets will be added here.</p></div></section>
+<section id="endocrine-physiology" class="section"><button class="back" onclick="show('endocrine')">← Endocrine System</button><div class="section-title"><h2>Endocrine System — Physiology</h2></div><div class="coming"><h2>Coming Soon 🚀</h2><p>Physiology sheets will be added here.</p></div></section>
+
+<!-- THIRD YEAR -->
+<section id="third" class="section">
+<button class="back" onclick="show('academic')">← Academic Years</button>
+<div class="section-title"><h2>Third Year</h2><p>Semester 5 & 6</p></div>
+<div class="semester"><h3>Semester 5</h3><div class="subject-grid">
+<div class="subject"><h4>Pathology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Pharmacology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Medicine 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Microbiology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Surgery 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Communicable and Non-communicable Diseases</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Environmental</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+<div class="semester"><h3>Semester 6</h3><div class="subject-grid">
+<div class="subject"><h4>Pharmacology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Medicine 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Surgery 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Pathology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Environmental Health</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+</section>
+
+<!-- FOURTH YEAR -->
+<section id="fourth" class="section">
+<button class="back" onclick="show('academic')">← Academic Years</button>
+<div class="section-title"><h2>Fourth Year</h2><p>Semester 7 & 8</p></div>
+<div class="semester"><h3>Semester 7</h3><div class="subject-grid">
+<div class="subject"><h4>Surgery</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Medicine</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Obstetrics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Pediatrics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Research Methodology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Forensic</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Medical Ethics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+<div class="semester"><h3>Semester 8</h3><div class="subject-grid">
+<div class="subject"><h4>Medicine</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Surgery</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Obstetrics & Gynaecology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Pediatrics</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Toxicology</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Research</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+</section>
+
+<!-- FIFTH YEAR -->
+<section id="fifth" class="section">
+<button class="back" onclick="show('academic')">← Academic Years</button>
+<div class="section-title"><h2>Fifth Year</h2><p>Semester 9 & 10</p></div>
+<div class="semester"><h3>Semester 9</h3><div class="subject-grid">
+<div class="subject"><h4>Medicine 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Surgery 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Pediatrics 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Obstetrics & Gynaecology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Psychiatry 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Ophthalmology 1</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+<div class="semester"><h3>Semester 10</h3><div class="subject-grid">
+<div class="subject"><h4>Medicine 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Surgery 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Pediatrics 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Obstetrics & Gynaecology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Psychiatry 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+<div class="subject"><h4>Ophthalmology 2</h4><button onclick="soon()">📚 Lectures</button><button onclick="soon()">📝 MCQs</button><button onclick="soon()">📖 References</button><button onclick="soon()">📺 Explanation Channels</button></div>
+</div></div>
+</section>
+
+<!-- BIOLOGY -->
+<section id="biology" class="section">
+<button class="back" onclick="show('first')">← Biology</button>
+<div class="section-title"><h2>📚 Biology — Lectures</h2><p>Available lectures</p></div>
+<div class="lecture"><h3>Lecture 2 — The Cell Structure and Function</h3><p>Biology Lecture</p><a href="https://github.com/apdalmnemtag-maker/B7-gallery/blob/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf" target="_blank" rel="noopener noreferrer">📖 Open Lecture</a><a class="download-btn" href="https://github.com/apdalmnemtag-maker/B7-gallery/raw/refs/heads/main/LECTURE%202%20The%20Cell%20structure%20and%20function.pdf" download>⬇️ Download</a></div>
+</section>
+
+<!-- AI -->
+<section id="ai" class="section">
+<div class="section-title"><button class="back" onclick="show('dashboard')">← Dashboard</button><h2>🤖 Ask B7 AI</h2><p>Your academic medical assistant</p></div>
+<div class="ai-box">
+<textarea id="aiQuestion" placeholder="Ask B7 AI a medical question..."></textarea>
+<button id="askButton" onclick="askAI()">Ask B7 AI</button>
+<div id="aiLoading" style="display:none">⏳ Thinking...</div>
+<div id="aiAnswer"></div>
+</div>
+</section>
+
+<!-- LIBRARY -->
+<section id="library" class="section">
+<div class="section-title"><button class="back" onclick="show('dashboard')">← Dashboard</button><h2>📚 Madain Medical Association Library</h2></div>
+<div class="coming"><h2>Coming Soon</h2><p>Medical books and references will be added here.</p></div>
+</section>
+
+<!-- MEMBERS -->
+<section id="founders" class="section">
+<div class="section-title"><button class="back" onclick="show('dashboard')">← Dashboard</button><h2>👥 Members</h2></div>
+<div class="founders">
+<div class="founder"><h3>Abdelmonem Taj Eldin Hassan</h3><div class="role">Founder</div></div>
+<div class="founder"><h3>Ehab Hamdy</h3><div class="role">Member</div></div>
+<div class="founder"><h3>Abrar Hijazi</h3><div class="role">Member</div></div>
+<div class="founder"><h3>Mohannad Siddig Mohamed Ahmed</h3><div class="role">Co-Founder</div></div>
+</div>
+</section>
+
+<!-- SUPPORT -->
+<section id="support" class="section">
+<div class="section-title"><button class="back" onclick="show('dashboard')">← Dashboard</button><h2>✉️ Contact & Support</h2></div>
+<div class="support"><p>For problems, suggestions or questions, contact us.</p><p>Email: <a href="mailto:almdainb7@gmail.com">almdainb7@gmail.com</a></p></div>
+</section>
+
+</main>
+
+<script src="questions.js"></script>
+
+<script>
+const sections=[
+"dashboard","rules","academic","first","second","third","fourth","fifth",
+"biology","blood","cardiology","cardiology-anatomy","cardiology-physiology","hemostasis","respiratory","respiratory-anatomy","respiratory-physiology","histology","biochemistry","embryology",
+"git","git-anatomy","git-physiology","musculoskeletal","musculoskeletal-anatomy","musculoskeletal-physiology","reproductive","reproductive-anatomy","reproductive-physiology","urinary","urinary-anatomy","urinary-physiology","cns","cns-anatomy","cns-physiology","special-senses","special-senses-anatomy","special-senses-physiology","head-neck","head-neck-anatomy","head-neck-physiology","behavioral-science","behavioral-science-anatomy","behavioral-science-physiology","endocrine","endocrine-anatomy","endocrine-physiology",
+"mcqViewer","ai","library","founders","support"
+];
+
+const mcqSubjectInfo={
+blood:{title:"🩸 Blood & Immune System — MCQs",subtitle:"Semester 2 — Dr. Wafaa"},
+cardiology:{title:"❤️ Cardiology — MCQs",subtitle:"Semester 2 — Dr. Osman Ahmed Osman"},
+respiratory:{title:"🫁 Respiratory System — MCQs",subtitle:"Semester 2 — Dr. Osman Ahmed Osman"},
+biochemistry:{title:"🧬 Biochemistry — MCQs",subtitle:"Semester 2 — Dr. Mohamed Osama"},
+hemostasis:{title:"🩸 Hemostasis / Physiology — MCQs",subtitle:"Semester 2 — Dr. Wafaa"},
+histology:{title:"🔬 Histology — MCQs",subtitle:"Semester 2 — Dr. Osman Ahmed Osman"},
+embryology:{title:"🧫 Embryology — MCQs",subtitle:"Semester 2 — General Embryology"}
+};
+
+let currentMCQSubject="";
+
+function show(id){
+sections.forEach(function(name){
+const element=document.getElementById(name);
+if(element){element.style.display="none";}
+});
+const selected=document.getElementById(id);
+if(selected){selected.style.display="block";}
+window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function soon(){alert("Coming Soon 🚀");}
+
+function escapeHTML(value){
+return String(value ?? "")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+}
+
+function openMCQs(subject){
+currentMCQSubject=subject;
+const info=mcqSubjectInfo[subject];
+document.getElementById("mcqTitle").textContent=info ? info.title : "📝 MCQs";
+document.getElementById("mcqSubtitle").textContent=info ? info.subtitle : "Questions & Answers";
+document.getElementById("mcqSearch").value="";
+
+const filter=document.getElementById("mcqPartFilter");
+filter.innerHTML='<option value="">All sections</option>';
+const parts=[...new Set((mcqData[subject]||[]).map(q=>q.part).filter(Boolean))];
+parts.forEach(part=>{
+const option=document.createElement("option");
+option.value=part;
+option.textContent=part;
+filter.appendChild(option);
+});
+
+show("mcqViewer");
+renderMCQs();
+}
+
+function renderMCQs(){
+const container=document.getElementById("mcqContainer");
+const search=(document.getElementById("mcqSearch").value||"").trim().toLowerCase();
+const part=document.getElementById("mcqPartFilter").value;
+const questions=mcqData[currentMCQSubject]||[];
+
+const filtered=questions.filter(q=>{
+const matchesPart=!part || q.part===part;
+const hay=(q.question+" "+q.options.map(o=>o.text).join(" ")).toLowerCase();
+const matchesSearch=!search || hay.includes(search);
+return matchesPart && matchesSearch;
+});
+
+document.getElementById("mcqCount").textContent=filtered.length+" question(s)";
+
+if(!filtered.length){
+container.innerHTML='<div class="empty-mcq">No questions found.</div>';
+return;
+}
+
+let output="";
+filtered.forEach((q,index)=>{
+const originalIndex=questions.indexOf(q)+1;
+const answerId="mcq-answer-"+currentMCQSubject+"-"+originalIndex;
+
+let answerText=q.answer ? q.answer : "Not available";
+const selectedOptionTexts=[];
+if(q.answer){
+const letters=String(q.answer).match(/[A-F]/g)||[];
+letters.forEach(letter=>{
+const opt=q.options.find(o=>o.label===letter);
+if(opt){selectedOptionTexts.push(letter+") "+opt.text);}
+});
+}
+
+output+=`
+<div class="mcq-card">
+<div class="mcq-meta">${escapeHTML(q.part||"MCQs")} • Source Q${escapeHTML(q.sourceNumber||originalIndex)}</div>
+<div class="mcq-question">${originalIndex}. ${escapeHTML(q.question)}</div>
+<ul class="mcq-options">
+${q.options.map(o=>`<li><strong>${escapeHTML(o.label)})</strong> ${escapeHTML(o.text)}</li>`).join("")}
+</ul>
+<button class="answer-btn" onclick="toggleAnswer('${answerId}',this)">Show Answer</button>
+<div class="mcq-answer" id="${answerId}">
+<strong>Answer: ${escapeHTML(answerText)}</strong>
+${selectedOptionTexts.length ? `<div>${selectedOptionTexts.map(escapeHTML).join("<br>")}</div>` : ""}
+${q.answerNote ? `<span class="note">${escapeHTML(q.answerNote)}</span>` : ""}
+</div>
+</div>`;
+});
+container.innerHTML=output;
+}
+
+function toggleAnswer(id,button){
+const answer=document.getElementById(id);
+if(!answer)return;
+const open=answer.style.display==="block";
+answer.style.display=open ? "none" : "block";
+if(button){button.textContent=open ? "Show Answer" : "Hide Answer";}
+}
+
+async function askAI(){
+const question=document.getElementById("aiQuestion").value.trim();
+const answer=document.getElementById("aiAnswer");
+const loading=document.getElementById("aiLoading");
+const button=document.getElementById("askButton");
+
+if(!question){
+answer.textContent="Please write your question first.";
+return;
+}
+
+loading.style.display="block";
+answer.textContent="";
+button.disabled=true;
+
+try{
+const response=await fetch("/api/chat",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({message:question})
+});
+const data=await response.json();
+if(!response.ok){throw new Error(data.error||"Something went wrong.");}
+answer.textContent=data.reply||"No answer received.";
+}catch(error){
+answer.textContent="Sorry, something went wrong. Please try again.";
+console.error(error);
+}finally{
+loading.style.display="none";
+button.disabled=false;
+}
+}
+
+window.onload=function(){show("dashboard");};
+
+</script>
+
+</body>
+</html>
